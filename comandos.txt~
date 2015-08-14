@@ -1,0 +1,35 @@
+ventana 500 500
+fps 30
+letras eqrtisdfghjklzxcn
+letras mpbv
+letras a
+letras ow
+letras uy
+coloca guille 150 30
+centra nuria 200 125
+camara 30 30 300 300
+coloca nuria 30 30
+//escala nuria 50 50
+forma nuria cabeza frontal
+forma guille cabeza frontal
+profundidad guille cabeza 2
+forma nuria boca m
+profundidad nuria cabeza -1
+forma nuria pelo negro
+forma nuria ojo normal
+forma nuria pupila azulizquierda
+profundidad nuria pupila 1
+
+//camara 200 100 400 200
+
+mueveconcamara nuria 200 100 1000
+//mueve nuria 200 100 1000
+
+//elimina guille
+//quita nuria pelo
+
+forma nuria pupila azulderecha
+habla nuria adiosm prova.ogg
+tiempo 500
+habla nuria astalaproximam 2000
+luz 100 1000

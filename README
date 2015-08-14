@@ -1,0 +1,37 @@
+Lista de instrucciones:
+
+ventana 'ancho' 'alto'
+fps 'framespersecond'
+coloca 'idpersonaje' 'xfin' 'yfin'
+centra 'idpersonaje' 'xfin' 'yfin'
+escala 'idpersonaje' 'xfin' 'yfin' (porcentaje?)
+elimina 'idpersonaje'
+habla 'idpersonaje' 'frase' ('tiempo'||'ficheroaudio')
+letras listaletras
+mueve 'idpersonaje' 'xfin' 'yfin' 'tiempo'
+mueveconcamara 'idpersonaje' 'xfin' 'yfin' 'tiempo'
+camara 'xini' 'yini' 'ancho' 'alto'
+muevecamara 'xini' 'yini' 'ancho' 'alto' 'tiempo'
+forma 'idpersonaje' 'idcaracteristica' 'forma'
+quita 'idpersonaje' 'idcaracteristica'
+profundidad 'idpersonaje' 'idcaracteristica' 'profundidad(entero)'
+prefijoboca 'idpersonaje' 'stringprefijoboca'
+tiempo 'tiempo'
+sonido 'ficheroaudio'
+obviar
+finobviar
+
+Los tiempos son en milisegundos. La escala es en tanto por ciento.
+Todos los valores numericos son numeros naturales, excepto el de profundidad
+y las coordenadas de posiciones, que tambien pueden ser negativos.
+La lista de letras empieza por aquella en
+la que seran transformadas las otras letras al hablar.
+Las instrucciones fps y ventana solo deberian ejecutarse una vez, preferiblemente
+al principio de todo. Si hay varias ejecuciones de ellas, solo se tiene en cuenta
+la ultima, como si se hubiese hecho al principio. La instruccion tiempo tan solo
+pierde el tiempo manteniendo el estado actual. mueveconcamara mueve un personaje
+y desplaza la camara relativa a ese personaje.
+
+
+
+
