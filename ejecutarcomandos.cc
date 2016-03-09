@@ -546,7 +546,7 @@ struct estadogeneral {
   int xcamara,ycamara,anchocamara,altocamara,luz;
   map<string,estadopersonaje> p;
   int accionaudio;// 0=nada, 1=iniciaraudio, 2=oyendose.
-  string nombreaudio;
+  string nombreaudio,fraseaudio,fraseaudioaux;
   float tantoaudio; // tanto por uno de audio ya escuchado del audio que esta oyendose.
   estadogeneral() {
     xcamara=ycamara=0;
@@ -652,6 +652,14 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     } else {
       for (int frame=0;frame<numframes;frame++) {
 	c=letra2letra[frase[int(frase.size())*frame/numframes]];
+	int ifraseaudio=int(frase.size())*frame/numframes;
+	e.fraseaudio=frase.substr(0,ifraseaudio)+"["+frase[ifraseaudio]+"]"+frase.substr(ifraseaudio+1);
+	e.fraseaudioaux="";
+	int lenfraseaudio=int(e.fraseaudio.size());
+	if (lenfraseaudio>40) {
+	  e.fraseaudioaux=e.fraseaudio.substr(lenfraseaudio/2);
+	  e.fraseaudio=e.fraseaudio.substr(0,lenfraseaudio/2);
+	}
 	if (hayaudio) {
 	  if (frame==0) {
 	    e.accionaudio=1;
@@ -666,6 +674,7 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
 	ve.push_back(e);
       }
       c=letra2letra[frase[int(frase.size())-1]];
+      e.fraseaudio=e.fraseaudioaux="";
       if (hayaudio)
 	e.accionaudio=0;
     }
@@ -1084,14 +1093,36 @@ void dibujarestadogeneral(estadogeneral &e,int frame,int totalframes)
     }
     
     if (e.accionaudio==1 or e.accionaudio==2) {
-      sf::Text text;
-      text.setString(e.nombreaudio);
-      text.setFont(font);
-      text.setColor(sf::Color::Yellow);
-      text.setOrigin(sf::Vector2f(text.getLocalBounds().width/2.0,text.getLocalBounds().height/2.0));
-      text.setScale(sf::Vector2f(float(ladoboton)/text.getLocalBounds().height,float(ladoboton)/text.getLocalBounds().height));
-      text.setPosition(sf::Vector2f(window.getSize().x/2.0,window.getSize().y-5*ladoboton));
-      window.draw(text);
+      {
+	sf::Text text;
+	text.setString(e.nombreaudio);
+	text.setFont(font);
+	text.setColor(sf::Color::Yellow);
+	text.setOrigin(sf::Vector2f(text.getLocalBounds().width/2.0,text.getLocalBounds().height/2.0));
+	text.setScale(sf::Vector2f(float(ladoboton)/text.getLocalBounds().height,float(ladoboton)/text.getLocalBounds().height));
+	text.setPosition(sf::Vector2f(window.getSize().x/2.0,window.getSize().y-7*ladoboton));
+	window.draw(text);
+      }
+      if (e.fraseaudio!="") {
+	sf::Text text;
+	text.setString(e.fraseaudio);
+	text.setFont(font);
+	text.setColor(sf::Color::Red);
+	text.setOrigin(sf::Vector2f(text.getLocalBounds().width/2.0,text.getLocalBounds().height/2.0));
+	text.setScale(sf::Vector2f(float(ladoboton)*0.75/text.getLocalBounds().height,float(ladoboton)*0.75/text.getLocalBounds().height));
+	text.setPosition(sf::Vector2f(window.getSize().x/2.0,window.getSize().y-6*ladoboton));
+	window.draw(text);
+      }
+      if (e.fraseaudioaux!="") {
+	sf::Text text;
+	text.setString(e.fraseaudioaux);
+	text.setFont(font);
+	text.setColor(sf::Color::Red);
+	text.setOrigin(sf::Vector2f(text.getLocalBounds().width/2.0,text.getLocalBounds().height/2.0));
+	text.setScale(sf::Vector2f(float(ladoboton)*0.75/text.getLocalBounds().height,float(ladoboton)*0.75/text.getLocalBounds().height));
+	text.setPosition(sf::Vector2f(window.getSize().x/2.0,window.getSize().y-5*ladoboton));
+	window.draw(text);
+      }
     }
   }
   sf::View view;
