@@ -1,6 +1,11 @@
 //ventana 12 4320
-ventana 1280 720
-camara 640 360 1280 720
+//<<<<<<< HEAD
+//ventana 1280 720
+//camara 640 360 1280 720
+//=======
+ventana 16384 3137
+camara 640 360 16384 3137
+//>>>>>>> 7dc33f2d3e569d25f12e13d94fa036c72ffd7254
 //camara 640 360 1280 720
 //ventana 640 360
 fps 30
@@ -35,13 +40,15 @@ forma friend camisetafriend normal
 forma kevin camisetakevin normal
 forma person camisetaperson normal
 
-forma friend pantalonesfriend normal
-forma kevin pantaloneskevin normal
-forma person pantalonesperson normal
+//forma friend pantalonesfriend normal
+forma friend pantaloneskevin sentado
+forma kevin pantaloneskevin sentado
+//forma person pantalonesperson normal
+forma person pantaloneskevin sentado
 
-forma friend zapatosfriend normal
-forma kevin zapatoskevin normal
-forma person zapatosperson normal
+//forma friend zapatosfriend normal
+// forma kevin zapatoskevin normal
+//forma person zapatosperson normal
 
 forma friend pelofriend dos
 forma kevin pelokevin normal
@@ -70,7 +77,8 @@ forma person narizperson normal
 forma friend bocafriend normal
 forma kevin bocakevin normal
 forma person bocaperson normal
-forma fondo fondo normal2
+forma fondo fondo parque2
+forma fondo fondoparque delante
 
 prefijoboca kevin bocakevin
 prefijoboca person bocaperson
@@ -80,7 +88,8 @@ forma person orejasperson normal
 
 // gafas orejas
 
-profundidad fondo fondonormal2 -10
+profundidad fondo fondoparque2 -10
+profundidad fondo fondoparquedelante 100000
 
 profundidad friend cuello 10
 profundidad friend zapatosfriend 20
@@ -98,7 +107,7 @@ profundidad friend pelofriend 130
 
 profundidad kevin cuello 10
 profundidad kevin zapatoskevin 20
-profundidad kevin pantaloneskevin 30
+profundidad kevin pantaloneskevin 19
 profundidad kevin camisetakevin 40
 profundidad kevin cabeza 50
 profundidad kevin brazoizquierda 20
@@ -135,17 +144,18 @@ centra kevin 352 100
 centra person 352 100
 
 
-camara 200 360 350 197
+camara 7152 1008 2560 1440
 
 // COLOCAMOS A LOS PERSONAJES
 
-coloca friend 100 270
-coloca kevin 200 270
-coloca person 300 270
+coloca friend 7180 990
+coloca kevin 7452 990
+coloca person 7970 1010
 
-escala friend 45 45 
-escala kevin 45 45
-escala person 45 45
+
+escala friend 100 100 
+escala kevin 100 100
+escala person 100 100
 
 //camara 3840 2160 7680 4320
 
