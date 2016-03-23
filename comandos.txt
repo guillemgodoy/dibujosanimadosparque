@@ -1,6 +1,11 @@
 //ventana 12 4320
+//<<<<<<< HEAD
+//ventana 1280 720
+//camara 640 360 1280 720
+//=======
 ventana 16384 3137
 camara 640 360 16384 3137
+//>>>>>>> 7dc33f2d3e569d25f12e13d94fa036c72ffd7254
 //camara 640 360 1280 720
 //ventana 640 360
 fps 30
