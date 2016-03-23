@@ -68,15 +68,23 @@ forma monica cuerpomonica normal
 forma friend ojosfriend medio
 forma kevin ojoskevin medio
 forma person ojosperson medio
-forma
+forma nuria ojosnuria centro
+forma monica ojos monica centro
 
 forma friend ocularfriend normal
 forma kevin ocularkevin normal
 forma person ocularperson normal
+forma nuria ocularnuria normal
+forma monica ocularnuria normal
+
+forma nuria pestanyasnuria normal
+forma monica pestanyasnuria normal
 
 forma friend cejasfriend normal
 forma kevin cejaskevin normal
 forma person cejasperson normal
+
+
 
 forma friend narizfriend normal
 forma kevin narizkevin normal
