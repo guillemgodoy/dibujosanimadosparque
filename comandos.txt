@@ -72,7 +72,9 @@ forma person narizperson normal
 forma friend bocafriend normal
 forma kevin bocakevin normal
 forma person bocaperson normal
-forma fondo fondo parque2
+
+//forma fondo fondo parque2
+forma fondo fondo parque
 forma fondo fondoparque delante
 
 prefijoboca kevin bocakevin
@@ -83,7 +85,8 @@ forma person orejasperson normal
 
 // gafas orejas
 
-profundidad fondo fondoparque2 -10
+//profundidad fondo fondoparque2 -10
+profundidad fondo fondoparque 200000
 profundidad fondo fondoparquedelante 100000
 
 profundidad friend cuello 10
