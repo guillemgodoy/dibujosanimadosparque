@@ -1,11 +1,6 @@
 //ventana 12 4320
-//<<<<<<< HEAD
-//ventana 1280 720
-//camara 640 360 1280 720
-//=======
 ventana 16384 3137
 camara 640 360 16384 3137
-//>>>>>>> 7dc33f2d3e569d25f12e13d94fa036c72ffd7254
 //camara 640 360 1280 720
 //ventana 640 360
 fps 30
@@ -27,10 +22,14 @@ letras a
 forma friend cabeza normal
 forma kevin cabeza normal
 forma person cabeza normal
+forma nuria cabeza normal2
+forma monica cabeza normal2
 
 forma friend brazoizquierda normal
 forma kevin brazoizquierda normal
 forma person brazoizquierda normal
+forma nuria brazonuria normal
+forma monica brazomonica normal
 
 forma friend brazoderecha normal
 forma kevin brazoderecha normal
@@ -39,12 +38,16 @@ forma person brazoderecha normal
 forma friend camisetafriend normal
 forma kevin camisetakevin normal
 forma person camisetaperson normal
+forma nuria vestidonuria normal
+forma monica vestidomonica normal
 
 //forma friend pantalonesfriend normal
 forma friend pantaloneskevin sentado
 forma kevin pantaloneskevin sentado
 //forma person pantalonesperson normal
 forma person pantaloneskevin sentado
+forma nuria piernasnuria idle
+forma monica piernasnuria idle
 
 //forma friend zapatosfriend normal
 // forma kevin zapatoskevin normal
@@ -53,14 +56,19 @@ forma person pantaloneskevin sentado
 forma friend pelofriend dos
 forma kevin pelokevin normal
 forma person peloperson normal
+forma nuria pelonuria normal
+forma monica pelomonica normal
 
 forma friend cuello normal
 forma kevin cuello normal
 forma person cuello normal
+forma nuria cuerponuria normal
+forma monica cuerpomonica normal
 
 forma friend ojosfriend medio
 forma kevin ojoskevin medio
 forma person ojosperson medio
+forma
 
 forma friend ocularfriend normal
 forma kevin ocularkevin normal
