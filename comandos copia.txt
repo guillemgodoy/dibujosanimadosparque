@@ -1,0 +1,716 @@
+//ventana 12 4320
+ventana 1280 720
+camara 640 360 1280 720
+//camara 640 360 1280 720
+//ventana 640 360
+fps 30
+
+letras fv
+letras mbp
+letras uqw
+letras cdhjx
+letras lnrz
+letras ts
+letras igy
+letras ek
+letras o
+letras a
+
+
+// DEFINIMOS LOS PERSONAJES:
+
+forma friend cabeza normal
+forma kevin cabeza normal
+forma person cabeza normal
+
+forma friend brazoizquierda normal
+forma kevin brazoizquierda normal
+forma person brazoizquierda normal
+
+forma friend brazoderecha normal
+forma kevin brazoderecha normal
+forma person brazoderecha normal
+
+forma friend camisetafriend normal
+forma kevin camisetakevin normal
+forma person camisetaperson normal
+
+forma friend pantalonesfriend normal
+forma kevin pantaloneskevin normal
+forma person pantalonesperson normal
+
+forma friend zapatosfriend normal
+forma kevin zapatoskevin normal
+forma person zapatosperson normal
+
+forma friend pelofriend dos
+forma kevin pelokevin normal
+forma person peloperson normal
+
+forma friend cuello normal
+forma kevin cuello normal
+forma person cuello normal
+
+forma friend ojosfriend medio
+forma kevin ojoskevin medio
+forma person ojosperson medio
+
+forma friend ocularfriend normal
+forma kevin ocularkevin normal
+forma person ocularperson normal
+
+forma friend cejasfriend normal
+forma kevin cejaskevin normal
+forma person cejasperson normal
+
+forma friend narizfriend normal
+forma kevin narizkevin normal
+forma person narizperson normal
+
+forma friend bocafriend normal
+forma kevin bocakevin normal
+forma person bocaperson normal
+forma fondo fondo normal2
+
+prefijoboca kevin bocakevin
+prefijoboca person bocaperson
+
+// gafas orejas
+
+profundidad fondo fondonormal2 -10
+
+profundidad friend cuello 10
+profundidad friend zapatosfriend 20
+profundidad friend pantalonesfriend 30
+profundidad friend camisetafriend 40
+profundidad friend cabeza 50
+profundidad friend brazoizquierda 20
+profundidad friend brazoderecha 20
+profundidad friend ocularfriend 80
+profundidad friend ojosfriend 90
+profundidad friend narizfriend 100
+profundidad friend cejasfriend 110
+profundidad friend bocafriend 120
+profundidad friend pelofriend 130
+
+profundidad kevin cuello 10
+profundidad kevin zapatoskevin 20
+profundidad kevin pantaloneskevin 30
+profundidad kevin camisetakevin 40
+profundidad kevin cabeza 50
+profundidad kevin brazoizquierda 20
+profundidad kevin brazoderecha 20
+profundidad kevin ocularkevin 80
+profundidad kevin ojoskevin 90
+profundidad kevin narizkevin 100
+profundidad kevin cejaskevin 110
+profundidad kevin bocakevin 120
+profundidad kevin pelokevin 130
+
+
+profundidad person cuello 100
+profundidad person zapatosperson 200
+profundidad person pantalonesperson 300
+profundidad person camisetaperson 400
+profundidad person cabeza 500
+profundidad person brazoizquierda 200
+profundidad person brazoderecha 200
+profundidad person ocularperson 800
+profundidad person ojosperson 900
+profundidad person narizperson 1000
+profundidad person cejasperson 1100
+profundidad person bocaperson 1200
+profundidad person peloperson 1300
+
+
+
+// CENTRAMOS A LOS PERSONAJES
+
+centra friend 352 100
+centra kevin 352 100
+centra person 352 100
+
+
+camara 175 360 350 197
+
+// COLOCAMOS A LOS PERSONAJES
+
+coloca friend 100 270
+coloca kevin 200 270
+coloca person 800 240
+
+escala friend 45 45 
+escala kevin 45 45
+escala person 45 45
+
+//camara 3840 2160 7680 4320
+
+luz 0
+mueveluz 255 2000
+
+tiempo 1000
+
+muevecamara 200 310 150 84 1000
+
+tiempo 1000
+
+forma kevin bocakevin puaj
+forma kevin cejaskevin oneup
+
+tiempo 1000
+
+forma kevin narizkevin respira 
+sonido snif.wav
+forma kevin narizkevin normal
+tiempo 200
+forma kevin narizkevin respira
+sonido snif.wav
+forma kevin narizkevin normal
+
+tiempo 400
+
+forma friend ojosfriend izquierda
+
+forma kevin cejaskevin centro
+
+habla kevin buaa buaf.wav
+
+forma kevin ojoskevin derecha
+forma kevin brazoizquierda palma
+forma kevin brazoderecha palma
+
+
+habla kevin mmeroooqeseeseooollooooooooooooooo peroqueeseseolor.wav
+
+
+
+forma kevin brazoizquierda normal
+
+forma friend bocafriend uh
+
+forma kevin narizkevin respira 
+sonido snif.wav
+forma kevin narizkevin normal
+tiempo 200
+forma kevin narizkevin respira
+sonido snif.wav
+forma kevin narizkevin normal
+tiempo 200
+
+profundidad kevin brazoderecha 500
+forma kevin brazoderecha tapacara
+profundidad friend brazoderecha 500
+forma friend brazoderecha tapacara
+
+muevecamara 175 360 350 197 1000
+
+
+forma kevin cejaskevin admirado
+
+habla kevin peeroooqeaaasssoooooooooossttiiaaaaaaa peroqueascoostia.wav
+tiempo 100
+
+
+
+forma kevin brazoizquierda palma
+profundidad kevin brazoderecha 20
+forma kevin brazoderecha palma
+profundidad friend brazoderecha 20
+forma friend brazoderecha normal
+
+habla kevin peerooooottiieecaaauuuuffaaaaaoooooooooo  peroquiensehayufao.wav
+tiempo 200
+
+forma friend bocafriend puaj
+
+habla kevin oooooiieeerrrrrr joder.wav
+forma kevin ojoskevin izquierda
+forma kevin cejaskevin centro
+
+habla kevin mmeeooooeemmaaalluueeelleeeeeeee    peroquemalhuele.wav
+
+forma friend bocafriend f
+
+forma kevin brazoderecha normal
+forma kevin brazoizquierda normal
+
+tiempo 300
+forma kevin cejaskevin normal
+
+forma kevin ojoskevin derecha
+habla kevin ppoooorraaaiiiiiaaaiiaallgggiieenneessttaaaapppoooddrriiddooooppooorrddeeennttoooooooooooo  poraquihayalguienqueestapodridopordentro.wav
+
+
+
+forma kevin ojoskevin izquierda
+forma friend ojosfriend derecha
+
+tiempo 200
+forma kevin narizkevin respira 
+habla kevin mmmmm snif.wav
+forma kevin narizkevin normal
+tiempo 200
+forma kevin narizkevin respira
+habla kevin mmmmm snif.wav
+forma kevin narizkevin normal
+tiempo 200
+
+habla kevin sseeaaaaiiiiieeeesseeaaaasseettiieenneeaabbeerrzzaaaammuuuuttiiooooooooo seaquienseasetienequehaberzambutido.wav
+
+forma kevin ojoskevin derecha
+
+habla kevin uuuuaasslleeetteeaassccoooottooooooorriittoooooooo  unaslentejasconchorizo.wav
+
+forma friend bocafriend puajdos
+
+forma kevin ojoskevin izquierda
+forma kevin brazoizquierda palma
+
+habla kevin mooollooommeennoooocccmmmm porlomenos.wav
+forma friend ojosfriend izquierda
+
+tiempo 1000
+
+forma kevin ojoskevin derecha
+
+tiempo 1000
+
+forma kevin ojoskevin izquierda
+forma friend ojosfriend derecha
+
+tiempo 1000
+
+forma kevin cejaskevin oneup
+forma kevin bocakevin o
+
+tiempo 1000
+
+forma kevin brazoizquierda indica
+forma kevin ojoskevin izquierda
+forma friend cejasfriend oneup
+habla kevin miiraaa mira.wav
+
+forma kevin bocakevin normal
+forma kevin cejaskevin normal
+
+tiempo 1000
+
+
+forma friend ojosfriend izquierda
+forma friend bocafriend uh
+tiempo 100
+
+habla kevin sseeeeuuuoooooeeeaassiittoooeeesseettiiooooooooo seguroquehasidoesetio.wav
+
+tiempo 300
+
+//camara 700 320 300 169
+camara 800 310 300 169
+
+
+tiempo 1000
+forma friend bocafriend normal
+camara 175 360 350 197
+habla kevin eeettuuuuuu etu.wav
+//tiempo 1000
+
+//camara 700 320 300 169
+camara 800 310 300 169
+
+tiempo 500
+forma person ojosperson derecha
+forma person brazoderecha yo
+forma person cejasperson oneup
+tiempo 1000
+camara 175 360 350 197
+habla kevin ssiissiiittuuuuuuuu sisitu.wav
+tiempo 200
+
+//camara 700 320 300 169
+camara 800 310 300 169
+
+forma person cejasperson admirado
+
+habla kevin eaeadoodeeaasaaoonooooooooo tehasquedadodescansandono.wav
+
+
+forma person bocaperson o
+
+tiempo 1000
+
+forma kevin brazoizquierda normal
+habla kevin veeengaaa venga.wav
+forma friend cejasfriend oneup
+habla kevin nopongasesacaradeinocenton nopongasesacaradeinocenton.wav
+forma person cejasperson oneup
+forma person bocaperson u
+
+habla kevin quesabemosloquehashecho quesabemosloquehashecho.wav
+
+
+habla kevin quetehaspetaoquenoveas quetehaspetaoquenoveas.wav
+
+forma person cejasperson enojado
+forma person bocaperson m
+
+habla kevin vamoosreconocelooo vamosreconocelo.wav
+
+forma friend cejasfriend enojado
+forma kevin bocakevin m
+forma person brazoderecha normal
+tiempo 300
+
+
+
+//mueveconcamara person 300 270 1000
+transicionini desplazamiento
+tiempo 1000
+transicionter desplazamiento
+camara 175 360 350 197
+coloca person 300 270
+transicionfin desplazamiento
+
+forma friend cejasfriend oneup
+forma person cejasperson enojado
+forma friend bocafriend puaj
+forma kevin bocakevin puaj
+forma kevin cejaskevin oneup
+
+tiempo 500
+
+forma kevin ojoskevin derecha
+
+tiempo 500
+
+forma kevin ojoskevin izquierda
+
+tiempo 500
+
+habla person lllooorreeeccoooonnoozzccoooooooooooooo loreconozco.wav
+
+forma friend bocafriend oh
+forma friend cejasfriend admirado
+forma kevin bocakevin o
+forma kevin cejaskevin admirado
+
+
+habla person immeecceeddaaddooooooaagguuuuttooooooooo ymehequedadoagusto.wav
+
+
+forma friend bocafriend puaj
+forma friend cejasfriend oneup
+forma kevin bocakevin u
+forma kevin cejaskevin centro
+
+
+tiempo 500
+habla person yynnootteennggooppoorreeddaarrlleepplliiaacciiooooonneessaannaaddiieeeeeeeee ynotengoporquedarleexplicacionesanadie.wav
+
+forma friend bocafriend puaj
+forma friend cejasfriend oneup
+forma kevin bocakevin m
+
+
+habla person iimmeeoooossssaauuuuttooiiooooppaattaaaaaa ymenosaunsociopata.wav
+
+forma friend bocafriend oh
+forma friend cejasfriend enojado
+forma kevin bocakevin triste
+forma kevin cejaskevin normal
+
+tiempo 500
+
+habla kevin ppeeooooooeeeuuuueeeeooooosssssssssss peroquehuevos.wav
+
+//forma friend cejasfriend oneup
+forma friend bocafriend triste
+
+habla kevin eettiimmaallooootteeoonnooootteeeeeeeeeee encimaloreconoce.wav
+
+habla kevin iitteettiieetteeoooouuuuoooooossoooooooooooooo ysesienteorgulloso.wav
+forma person brazoderecha palma
+forma person brazoizquierda palma
+
+
+
+habla person mmeettooooooooeeeennooooaammiittoottoooooooooddeettaammoooooooooosssssss peroesquenohasvistodondeestamos.wav
+
+forma kevin bocakevin o
+forma kevin cejaskevin admirado
+forma friend bocafriend oh
+forma friend cejasfriend admirado
+
+tiempo 400
+
+muevecamara 640 360 1280 720 1000
+forma person brazoizquierda indica
+forma person brazoderecha normal
+habla person eettooeessssssuuuuuuuuttaammaammoooooooooooommuuuuiiiiooooooo estoesunlavabopublico.wav
+forma kevin bocakevin f
+forma friend bocafriend f
+
+
+habla person mmmmmmmmmmmmmmmmmmmm toilet_flush_automatic.wav
+
+forma kevin cejaskevin centro
+forma friend cejasfriend normal
+
+
+habla person aaiiiiiiiimmiieetteettaaeetteeaacceerreessttoooooooooo aquivienelagenteahaceresto.wav
+
+forma person brazoderecha palma
+forma person brazoizquierda palma
+
+habla person iimmiittccoooossaassmmaasssssssseeeennnnooootteenneennppooorreesseeerrddeellaarraaddooooddeennaaddiieeeeeeeeee  ymilcosasmasquenotienenporqueserdelagradodenadie.wav
+
+habla person eetteeiittiioooooooooeessttaappaattaaeeesssttooooooooooo estesitioestaparaesto.wav
+
+forma person brazoizquierda normal
+forma person brazoderecha normal
+
+muevecamara 200 360 350 197 1000
+
+tiempo 400
+
+forma kevin cejaskevin normal
+forma kevin bocakevin triste
+forma friend bocafriend triste
+forma friend cejasfriend enojado
+
+habla kevin aaaa va.wav
+//forma friend bocafriend puaj
+forma kevin brazoizquierda palma
+habla kevin eeeettoooonnooooeesseesssuuuussaaaaaaaappaattaaddeeaarreeettteeeeoolloooooorrddeemmiiddeeeemmooonniiooooooooooooossssss  estonoesexcusaparadejaresteolordemildemonios.wav
+forma friend cejasfriend enojado
+forma friend bocafriend triste
+forma kevin brazoizquierda normal
+tiempo 500
+habla person eeeennoooeesseessssuuuuuussaaaaaaaaaa quenoesexcusa.wav
+
+//forma kevin ojoskevin derecha
+
+habla person llooooeeeennoooottiieenneessuuuussaaaaaaaaaa loquenotieneexcusa.wav
+
+forma friend bocafriend puaj
+forma kevin bocakevin o
+forma kevin cejaskevin admirado
+forma friend cejasfriend admirado
+forma person brazoderecha unodos
+forma person brazoizquierda normal
+//forma kevin ojoskevin izquierda
+
+
+
+habla person eeeesssseeaaatteeeennuuppaaaddeeeettaarraaddooooooossss esquehacenunpardetarados.wav
+
+forma person brazoderecha palma
+forma person brazoizquierda palma
+forma kevin cejaskevin normal
+forma kevin bocakevin triste
+forma friend cejasfriend enojado
+forma friend bocafriend triste
+
+habla person ppaaaaaattttiiffiiaaaaddoooossddeettoooooooodduuuullaaaammaammoooommuuuummlliiooooooooooooiiiirriittiiaaaaaaddooaaooooooddeemmmaaaaaaaaassssssss plantificadosdentrodeunlavabopublicoycriticandoalosdemas.wav
+
+forma kevin cejaskevin oneup
+forma kevin bocakevin o
+
+tiempo 600
+
+forma kevin brazoizquierda el
+forma person brazoderecha normal
+forma person brazoizquierda normal
+forma friend ojosfriend izquierda
+forma kevin ojoskevin derecha
+
+habla kevin mmiirraaaaaaa mira2.wav
+
+forma friend bocafriend uh
+forma friend cejasfriend oneup
+
+habla kevin eeeettttiimmaaaannoooosseettaaaaeeeerrmmoooonneeaaaaddooooeeeettiiiioooooooooooo encimanosestasermoneandoeltio.wav
+
+forma kevin ojoskevin izquierda
+forma kevin bocakevin m
+forma friend cejasfriend normal
+forma kevin cejaskevin normal
+forma friend bocafriend mh
+
+
+habla person uuaaddddooeetteenneeeellllaammaaammoooooooooooo cuandoentreenellavabo.wav
+forma kevin brazoizquierda normal
+
+habla person iiimmiiaaeeddoooorriiiiooooooosssssss yviaestostios.wav
+
+forma kevin cejaskevin centro
+forma friend cejasfriend normal
+forma kevin bocakevin u
+forma friend bocafriend uh
+
+habla person aaaammmeeeemmeerraammaalloooooommeeooooooorrrrrr yameesperabalopeor.wav
+
+forma kevin cejaskevin oneup
+forma friend cejasfriend oneup
+forma kevin bocakevin o
+forma friend bocafriend oh
+
+
+habla person eesseeennoooooosseeemmuueeddeeemmeediiirrmmmmmmmmmmmmmeerraaassaaalloooollmmooooooooooooo esquenosepuedenpedirperasalholmo.wav
+
+forma person bocaperson m
+forma kevin cejaskevin normal
+forma kevin bocakevin triste
+forma friend cejasfriend enojado
+forma friend bocafriend triste
+
+
+
+forma person brazoizquierda normal
+forma person brazoderecha normal
+
+
+//mueve person 150 300 1000
+//forma friend ojosfriend medio
+//forma kevin ojoskevin medio
+//forma person ojosperson medio
+//habla person iirroooossaauummaaaarreeeeeeeeeeeoooommrreeeeeeeeeee irosaunparquehombre.wav
+//forma person bocaperson m
+//forma person ojosperson derecha
+//mueve person 0 400 1500
+
+transicionini personseva
+tiempo 500
+forma friend ojosfriend medio
+forma kevin ojoskevin medio
+forma person ojosperson medio
+habla person iirroooossaauummaaaarreeeeeeeeeeeoooommrreeeeeeeeeee irosaunparquehombre.wav
+forma kevin brazoderecha fuckyou
+forma friend brazoderecha fuckyou
+forma person bocaperson m
+forma person ojosperson derecha
+forma friend ojosfriend derecha
+forma kevin ojoskevin derecha
+tiempo 1000
+transicionter personseva
+coloca person 0 400
+
+
+transicionfin personseva
+
+tiempo 1000
+
+forma kevin brazoderecha normal
+forma friend brazoderecha normal
+
+
+forma friend cejasfriend oneup
+
+tiempo 1000
+
+
+forma friend ojosfriend izquierda
+forma kevin ojoskevin derecha
+forma friend bocafriend uh
+
+forma kevin narizkevin respira 
+habla kevin mmmmm snif.wav
+forma kevin narizkevin normal
+tiempo 200
+forma kevin narizkevin respira
+habla kevin mmmmm snif.wav
+forma kevin narizkevin normal
+tiempo 200
+
+habla kevin oooossttiiaaaaaaaa ostia.wav
+
+forma friend bocafriend mh
+
+habla kevin eeesseeeeelloolloorrrnnooooosseemmaaaaaaaaaaaaa esqueelolornoseva.wav
+
+forma friend bocafriend puajdos
+forma friend cejasfriend oneup
+
+habla kevin nnooooooooossiieeesseeaaaaaaaallffiiiinnaaaaaaaaaaallmmaaaammooossaatteenneerreeiirrooooossaaoottoooiittiiooooppoorrssuuuuuuuuuullllmmaaaaaaaaaaaaaaaa nosiesquealfinalvamosatenerqueirnosaotrositioporsuculpa.wav
+
+forma friend bocafriend triste
+forma kevin bocakevin f
+
+
+mueveluz 0 2000
+
+tiempo 1000
+
+//camara 00 200 1280 720
+
+
+//este es el bueno
+
+
+//habla person eeooeuuueimmmpeeaaaomooo esquenosepuedenpedirperasalholmo.wav
+
+
+//tiempo 1000
+
+
+
+// PARTE GUILLE
+
+//tiempo 1000
+
+//habla kevin buaa buaf.wav
+//habla person cuandoooentrenelaavaaboooooooooo cuandoentreenellavabo.wav
+
+
+
+//muevecamara 400 300 400 300 500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obviar
+coloca guille 150 30
+centra nuria 200 125
+//camara 30 30 300 300
+coloca nuria 30 30
+//escala nuria 50 50
+forma nuria cabeza frontal
+forma guille cabeza frontal
+profundidad guille cabeza 2
+forma nuria boca m
+profundidad nuria cabeza -1
+forma nuria pelo negro
+forma nuria ojo normal
+forma nuria pupila azulizquierda
+profundidad nuria pupila 1
+
+//camara 200 100 400 200
+
+//mueveconcamara nuria 200 100 1000
+//obviar
+//instantaneo
+mueve nuria 200 100 1000
+//fininstantaneo
+//finobviar
+
+muevecamara 200 100 200 200 1000
+
+//elimina guille
+//quita nuria pelo
+//instantaneo
+forma nuria pupila azulderecha
+habla nuria aoaoem esquenosepuedenpedirperasalholmo.wav
+tiempo 500
+//fininstantaneo
+habla nuria astalaproximam 2000
+
+finobviar

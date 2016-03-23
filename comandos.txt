@@ -1,0 +1,923 @@
+//ventana 12 4320
+ventana 16384 3137
+camara 640 360 16384 3137
+//camara 640 360 1280 720
+//ventana 640 360
+fps 30
+
+letras fv
+letras mbp
+letras uqw
+letras chjx
+letras lnrzd
+letras ts
+letras igy
+letras ek
+letras o
+letras a
+
+
+// DEFINIMOS LOS PERSONAJES:
+
+forma friend cabeza normal
+forma kevin cabeza normal
+forma person cabeza normal
+
+forma friend brazoizquierda normal
+forma kevin brazoizquierda normal
+forma person brazoizquierda normal
+
+forma friend brazoderecha normal
+forma kevin brazoderecha normal
+forma person brazoderecha normal
+
+forma friend camisetafriend normal
+forma kevin camisetakevin normal
+forma person camisetaperson normal
+
+//forma friend pantalonesfriend normal
+forma friend pantaloneskevin sentado
+forma kevin pantaloneskevin sentado
+//forma person pantalonesperson normal
+forma person pantaloneskevin sentado
+
+//forma friend zapatosfriend normal
+// forma kevin zapatoskevin normal
+//forma person zapatosperson normal
+
+forma friend pelofriend dos
+forma kevin pelokevin normal
+forma person peloperson normal
+
+forma friend cuello normal
+forma kevin cuello normal
+forma person cuello normal
+
+forma friend ojosfriend medio
+forma kevin ojoskevin medio
+forma person ojosperson medio
+
+forma friend ocularfriend normal
+forma kevin ocularkevin normal
+forma person ocularperson normal
+
+forma friend cejasfriend normal
+forma kevin cejaskevin normal
+forma person cejasperson normal
+
+forma friend narizfriend normal
+forma kevin narizkevin normal
+forma person narizperson normal
+
+forma friend bocafriend normal
+forma kevin bocakevin normal
+forma person bocaperson normal
+forma fondo fondo parque2
+forma fondo fondoparque delante
+
+prefijoboca kevin bocakevin
+prefijoboca person bocaperson
+
+forma person gafasperson normal
+forma person orejasperson normal
+
+// gafas orejas
+
+profundidad fondo fondoparque2 -10
+profundidad fondo fondoparquedelante 100000
+
+profundidad friend cuello 10
+profundidad friend zapatosfriend 20
+profundidad friend pantalonesfriend 30
+profundidad friend camisetafriend 40
+profundidad friend cabeza 50
+profundidad friend brazoizquierda 20
+profundidad friend brazoderecha 20
+profundidad friend ocularfriend 80
+profundidad friend ojosfriend 90
+profundidad friend narizfriend 100
+profundidad friend cejasfriend 110
+profundidad friend bocafriend 120
+profundidad friend pelofriend 130
+
+profundidad kevin cuello 10
+profundidad kevin zapatoskevin 20
+profundidad kevin pantaloneskevin 19
+profundidad kevin camisetakevin 40
+profundidad kevin cabeza 50
+profundidad kevin brazoizquierda 20
+profundidad kevin brazoderecha 20
+profundidad kevin ocularkevin 80
+profundidad kevin ojoskevin 90
+profundidad kevin narizkevin 100
+profundidad kevin cejaskevin 110
+profundidad kevin bocakevin 120
+profundidad kevin pelokevin 130
+
+
+profundidad person cuello 100
+profundidad person zapatosperson 200
+profundidad person pantalonesperson 300
+profundidad person camisetaperson 400
+profundidad person cabeza 500
+profundidad person brazoizquierda 200
+profundidad person brazoderecha 200
+profundidad person ocularperson 800
+profundidad person ojosperson 900
+profundidad person narizperson 1000
+profundidad person cejasperson 1100
+profundidad person bocaperson 1200
+profundidad person peloperson 1300
+profundidad person gafasperson 1400
+profundidad person orejasperson 1400
+
+
+// CENTRAMOS A LOS PERSONAJES
+
+centra friend 352 100
+centra kevin 352 100
+centra person 352 100
+
+
+camara 7152 1008 2560 1440
+
+// COLOCAMOS A LOS PERSONAJES
+
+coloca friend 7180 990
+coloca kevin 7452 990
+coloca person 7970 1010
+
+
+escala friend 100 100 
+escala kevin 100 100
+escala person 100 100
+
+//camara 3840 2160 7680 4320
+
+
+luz 0
+//tiempo 10000
+mueveluz 255 2000
+
+tiempo 1000
+
+sonido manu_suspiro.wav
+
+tiempo 500
+
+sonido manu_esquemenosmalqueporfinhepuestolalavadora.wav
+
+tiempo 500
+
+sonido manu_laprimeraenmeses.wav
+
+tiempo 500
+
+sonido manu_esquellevosietediasconlosmismoscalzoncillostu.wav
+
+tiempo 500
+
+sonido manu_yyaparecequepodrianandarsolos.wav
+
+tiempo 500
+
+sonido manu_ymiraquemehacostadopocoalfinalporquetotal.wav
+
+tiempo 500
+
+sonido manu_lounicoquetienesquehaceres.wav
+
+sonido manu_meterlaropa.wav
+
+tiempo 200
+
+sonido manu_cierraslapuertahechaseljabon.wav
+
+tiempo 200
+
+sonido manu_yaprietaselbotondela.wav
+
+tiempo 200
+
+sonido manu_mecagoentodojoder.wav
+
+tiempo 200
+
+sonido manu_perocomosemepuedehaberpasadoostianoheapretadoelputobotondelalavadora.wav
+
+tiempo 200
+
+sonido manu_buenosienverdaddaigualsiestoyamediacalledecasa.wav
+
+tiempo 200
+
+sonido manu_medatiempo.wav
+
+
+
+
+
+
+
+
+
+
+
+tiempo 1000
+
+habla kevin eeeeee guille_eh.wav
+
+forma kevin bocakevin e
+
+tiempo 200
+
+habla kevin uuumooooomeeettoooooo guille_unmomento.wav
+
+forma kevin bocakevin m
+
+tiempo 200
+
+habla kevin ameissmmiissttooeessoooooooooo guille_habeisvistoeso.wav
+
+forma kevin bocakevin m
+
+tiempo 200
+
+habla kevin eesseettiiooibbaaappaarraallaaaaaaaa guille_esetioibaparaalla.wav
+
+habla kevin iideerreemeetteeeeiirraaaaaa guille_iderepentegira.wav
+
+habla kevin iimuullmeemaarraaalliiiiiiiiii guille_yvuelveparaalli.wav
+
+habla kevin mmeeroommeennoooottiiooooooooo guille_perobuenotio.wav
+
+habla kevin eeesseennoossaammeessaaddoooddeemmaaassoooooeeeeeeeeeeee guille_esquenosabesadondevasoque.wav
+
+habla kevin jjoootteerrr guille_joder.wav
+
+habla kevin eeeellaaddiissssttaaacciiaammaaassccoooorrttaaeerreedoossmmuuuttooosseessllaalliinneeaarreeeccttaaooommrreeeeeeeeeeeeeee guille_queladistanciamascortaentredospuntoseslalinearectahombre.wav
+
+
+
+
+habla person mmiimmiimmooooossddeessseeeffooccaaddoosssss ferran_vivimosdesenfocados.wav
+
+
+habla person llllaassoocciieeddaaddddddnnnnnnnoossddeessoorriieennrraaoonuunneexxcceessooddeinnffoorrmmaacciiooooooooommm ferran_lasociedadnosdesorientaconunexcesodeinformacion.wav
+
+habla person yyffiinnaallmmeennrreeeeeeepperrddeemoooeeelsseennrriiddooddeenuueessrraassmmiiddaaassssss ferran_yfinalmenteperdemoselsentidodenuestrasvidas.wav
+
+// Hemos repasado hasta aqui.
+
+habla person ppppeerrsseeggiimmooosseesssssppeejjiissmmoossddiissffrraazzaaddoossddeeddeessttiinnoossproommeetteeddoorreeeessssssssss ferran_perseguimosespejismosdisfrazadosdedestinosprometedores.wav
+
+
+habla person eeeeeesseessffuummaanneennsseeggiiddaaaaaa ferran_queseesfumanenseguida.wav
+
+
+
+
+
+
+
+tiempo 1000
+
+sonido monica_quieroelinformesobremimesaaprimerahoradelamanyana.wav
+
+tiempo 200
+
+sonido monica_zorra.wav
+
+tiempo 200
+
+sonido monica_estanochenohedormidonadaparapoderacabartuputoinforme.wav
+
+tiempo 500
+
+sonido monica_desdequellegoestanuevajefa.wav
+
+tiempo 200
+
+sonido monica_quemelatienejurada.wav
+
+tiempo 500
+
+sonido monica_yseguroquelamuycabronaluegodicequeelinformenoeraurgente.wav
+
+tiempo 500
+
+sonido monica_lounicobuenodetodoestoesquehetenidounabuenaexcusaparanotenerquefollarconminovio.wav
+
+tiempo 200
+
+sonido monica_yademas.wav
+
+tiempo 200
+
+sonido monica_elinformemehaquedadomuybien.wav
+
+tiempo 500
+
+sonido monica_esquelomiro.wav
+
+tiempo 200
+
+sonido monica_ymesientoorgullosa.wav
+
+tiempo 500
+
+sonido monica_aver.wav
+
+tiempo 200
+
+sonido monica_eim.wav
+
+tiempo 200
+
+sonido monica_perodondeestaelinforme.wav
+
+tiempo 500
+
+sonido monica_mierdamelohedejado.wav
+
+tiempo 200
+
+sonido monica_avolverjoder.wav
+
+tiempo 500
+
+sonido monica_perosimegiroasiaboteprontoparecereunapirada.wav
+
+tiempo 1000
+
+sonido monica_ostiasquedespistadamelohedejado.wav
+
+tiempo 1000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+habla kevin eehh guille_eh2.wav
+
+habla kevin uuumoomeennooooooooooo guille_unmomento2.wav
+
+habla kevin mmmaiaaiiaallggoorraarroonnooooooooooo guille_ahihayalgorarono.wav
+
+habla kevin mllooaabeissbbiissnnoooooooooo guille_lohabeisvisto.wav
+
+habla kevin mmeessaaaarriiaaaaaaaacabaddeexxaaeerarelleeeessrroooooooo guille_esatiaacabadeexagerarelgesto.wav
+
+habla kevin pparauuuusriffiicarrssseeeeeeeee guille_parajustificarse.wav
+
+// ---> vamos por aqui.
+
+habla kevin jjooooddeerrppeerrooooqquueeffaallttaaddeeppeerrssoooonnaalliiddaadd guille_joderperoquefaltadepersonalidad.wav
+
+habla kevin ttiiaa guille_tia.wav
+
+habla kevin aammiimmeeddaaiigguuaallssiitteehhaassddeejjaaooooaallggoooooooonnoooo guille_amimedaigualsitehasdejaoalgoono.wav
+
+habla kevin aassiiqquueegguuaarrddaatteettuusspprroooobblleemmaassppaarraattiimmiissmmaa guille_asiqueguardatetusproblemasparatimisma.wav
+
+
+
+
+
+
+
+habla person mmuucchhaassppeerrssoooonnaassssiieenntteennmmiieeddooooaallrreecchhaazzoooo ferran_muchaspersonassientenmiedoalrechazo.wav
+
+
+habla person yynneecceessiittaannaapprroooobbaacciioooonnppoooorrppaarrtteeddeelloooossddeemmaass ferran_ynecesitanaprobacionporpartedelosdemas.wav
+
+habla person sseeccrreeee ferran_secree.wav
+
+habla person qquueeeessaasseemmoooocciioooonneessnnaacceennddeellaaffaallttaaddeeaaffeeccttooooppaatteerrnnoooo ferran_queesasemocionesnacendelafaltadeafectopaterno.wav
+
+habla person ppeerrooooeessttooooeennrreeaalliiddaaddnnooooeessttaaeemmppiirriiccaammeenntteeccoooommpprroooobbaaddoooo ferran_peroestoenrealidadnoestaempiricamentecomprobado.wav
+
+habla person aauunnaassii ferran_aunasi.wav
+
+habla person sseegguurrooooqquueettaammbbiieennccoooonnttrriibbuuyyeenn ferran_seguroquetambiencontribuyen.wav
+
+habla person lloooossmmaassiivvoooossccaassoooossddeerreepprreessiioooonnssoooocciiaall ferran_losmasivoscasosderepresionsocial.wav
+
+habla person eexxcclluussiioooonn ferran_exclusion.wav
+
+habla person ddeessaaccttiivvaacciioooonnppoooolliittiiccaa ferran_desactivacionpolitica.wav
+
+habla person yyuussooooddeeaannttiippssiiccoooottiiccooooss ferran_yusodeantipsicoticos.wav
+
+
+
+
+
+habla kevin ppeerroooobbuueennoooo guille_perobueno.wav
+
+habla kevin ppeerrooooaaeesstteettiiooooqquueeccoooonnyyoooolleeppaassaa guille_peroaestetioqueconyolepasa.wav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tiempo 1000
+
+sonido xavi_otravezhetenidoquepringaryo.wav
+
+tiempo 100
+
+sonido xavi_comprandoelregalodeldiadelamadre.wav
+
+tiempo 200
+
+sonido xavi_misdiezhermanospasandodetodocomodecostumbre.wav
+
+tiempo 500
+
+sonido xavi_ynoentiendoniporquelohago.wav
+
+tiempo 500
+
+sonido xavi_paramimadre.wav
+
+tiempo 200
+
+sonido xavi_siemprehesidoelpeor.wav
+
+tiempo 200
+
+sonido xavi_elquenosabehacernada.wav
+
+tiempo 200
+
+sonido xavi_elmastontodetodos.wav
+
+tiempo 500
+
+sonido xavi_ymirasiseretonto.wav
+
+tiempo 200
+
+sonido xavi_queyosoyelunico.wav
+
+tiempo 100
+
+sonido xavi_quelacuidaahoraaella.wav
+
+tiempo 500
+
+sonido xavi_mientraslosdemassiguenconsusvidas.wav
+
+tiempo 200
+
+sonido xavi_consusparejas.wav
+
+tiempo 200
+
+sonido xavi_consusfamilias.wav
+
+tiempo 200
+
+sonido xavi_debarbacoaodeplaya.wav
+
+tiempo 500
+
+sonido xavi_mientrastanto.wav
+
+tiempo 100
+
+sonido xavi_aquiestoyyootravezconel.wav
+
+sonido xavi_putoregalo.wav
+
+tiempo 500
+
+sonido xavi_diosmio.wav
+
+tiempo 200
+
+sonido xavi_elregalo.wav
+
+tiempo 200
+
+sonido xavi_melohedejado.wav
+
+tiempo 500
+
+sonido xavi_perosimegirosinmas.wav
+
+tiempo 100
+
+sonido xavi_parecereuntarado.wav
+
+tiempo 500
+
+sonido xavi_tengoquevolver.wav
+
+tiempo 200
+
+sonido xavi_tengoquevolver2.wav
+
+tiempo 500
+
+sonido xavi_mehedejadoalgo.wav
+
+tiempo 300
+
+sonido xavi_tengoquedarmediavuelta.wav
+
+tiempo 200
+
+sonido xavi_yvolverabuscarlo.wav
+
+tiempo 500
+
+sonido xavi_estotalmentenatural.wav
+
+tiempo 100
+
+sonido xavi_ynotengonadadeloqueavergonzarme.wav
+
+tiempo 500
+
+sonido xavi_asiquevoyparaalla.wav
+
+tiempo 500
+
+sonido xavi_vale.wav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tiempo 500
+
+habla kevin jjaajjaajjaa guille_jajaja.wav
+
+habla kevin lloooohhaabbeeiissvviissttoooo guille_lohabeisvisto2.wav
+
+habla kevin mmeennuuddoooopprriinnggaaddooooddiioooossmmiioooo guille_menudopringadodiosmio.wav
+
+habla kevin ttiioooo guille_tio.wav
+
+habla kevin rreeppaassaattooooddoooollooooqquueehhaasshheecchhooooeenneessttaavviiddaa guille_repasatodoloquehashechoenestavida.wav
+
+habla kevin aavveerrssiieennccuueennttrraasseennqquueemmoooommeennttooootteeeeqquuiivvooooccaasstteeddeeccaammiinnoooo guille_aversiencuentrasenquemomentoteequivocastedecamino.wav
+
+
+
+
+
+
+
+
+
+habla person uuff ferran_uf.wav
+
+habla person eessttaaccllaarrooooqquueeeessaappeerrssoooonnaattiieennee ferran_estaclaroqueesapersonatiene.wav
+
+habla person ppaarrooooxxiissmmooooeessqquuiizzooooiiddeeeessppeeccuullaarr ferran_paroxismoesquizoideespecular.wav
+
+habla person uunnaassccuuaannttaasssseessiioooonneessddeetteerraappiiaa ferran_unascuantassesionesdeterapia.wav
+
+habla person ppooooddrriiaannaayyuuddaarrlleeaaaaffrroooonnttaarreellpprroooobblleemmaa ferran_podrianayudarleaafrontarelproblema.wav
+
+habla person ppeerroooojjaammaassjjaammaass ferran_perojamasjamas.wav
+
+habla person ppooooddrraassuuppeerraarrllooooccoooommpplleettaammeennttee ferran_podrasuperarlocompletamente.wav
+
+
+
+
+
+
+
+
+
+
+
+habla kevin ppeerrooooqquueeeesseessttoooo guille_peroqueesesto.wav
+
+habla kevin uunnaaffoooottooooddeeuunnaattiiaaeennbbiiqquuiinnii guille_unafotodeunatiaenbiquini.wav
+
+habla kevin ppeerrooooqquueeccoooojjoooonneesseesseessttooooeehh guille_peroquecojonesesestoeh.wav
+
+habla kevin qquueettiieenneessqquueeddeecciirrnnoooossaahhoooorraa guille_quetienesquedecirnosahora.wav
+
+habla kevin oooosseeaaqquueetteeddeeddiiccaassaammiirraarrffoooottoooossddeettiiaass guille_oseaquetededicasamirarfotosdetias.wav
+
+habla kevin mmiieennttrraassnnoooossvvaassddeeiinntteelleeccttuuaall guille_mientrasnosvasdeintelectual.wav
+
+habla kevin qquueeeexxpplliiccaacciioooonnttiieenneessqquueeddaarrnnoooossaahhoooorraa guille_queexplicaciontienesquedarnosahora.wav
+
+habla kevin uunnccaassooooddeeppaarraaxxiisseessppeeccuullaarr guille_uncasodeparaxisespecular.wav
+
+habla kevin eehhlliissttiilllloooo guille_ehlistillo.wav
+
+habla person ddeevvuueellvveemmeellaaffoooottooooddeemmiinnoooovviiaa ferran_devuelvemelafotodeminovia.wav
+
+habla kevin llaaffoooottooooddeettuunnoooovviiaa guille_lafotodetunovia.wav
+
+habla kevin jjaa guille_ja.wav
+
+habla kevin eessttaassfflliippaannddoooottiioooo guille_estasflipandotio.wav
+
+habla kevin nniinngguunnaattiiaaeessttaarriiaaddiissppuueesstt guille_ningunatiaestariadispuest.wav
+
+habla kevin aaaagguuaannttaarrttuussffrriikkaaddaass guille_aaguantartusfrikadas.wav
+
+habla kevin yymmeennoooossuunnaaccoooommooooeessaa guille_ymenosunacomoesa.wav
+
+habla kevin vveennggaaeessttaammoooosseessppeerraannddoooouunnaaeexxpplliiccaacciioooonnccoooonnvviinncceennttee guille_vengaestamosesperandounaexplicacionconvincente.wav
+
+
+
+
+
+
+
+
+
+
+habla kevin eehh guille_eh3.wav
+
+habla kevin nnooootteeeessccaaqquueeeessaahhoooorraa guille_noteescaqueesahora.wav
+
+habla kevin vvaavveennggaavvuueellvveeqquueennooootteevvaammoooossaaddeecciirrnnaaddaammaass guille_vavengavuelvequenotevamosadecirnadamas.wav
+
+
+
+
+
+
+
+
+habla kevin lloooovveess guille_loves.wav
+
+habla kevin ssiieemmpprreeppaassaalloooommiissmmoooo guille_siemprepasalomismo.wav
+
+habla kevin eessttoooossttiioooossqquueevvaannddeegguuaayyss guille_estostiosquevandeguays.wav
+
+habla kevin aallffiinnaallrreessuullttaaqquueeeessttaannttaannqquueemmaaddoooossccoooommoooolloooossddeemmaass guille_alfinalresultaqueestantanquemadoscomolosdemas.wav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tiempo 1000
+
+sonido nuria_suspiro.wav
+
+tiempo 100
+
+sonido nuria_averquetostonmecuentahoymimaridodurantelacomida.wav
+
+tiempo 500
+
+sonido nuria_esegordoseboso.wav
+
+tiempo 100
+
+sonido nuria_solosirvepararecargarmelatargetadecreditoafinaldemes.wav
+
+tiempo 500
+
+sonido nuria_encambio.wav
+
+tiempo 200
+
+sonido nuria_brunoesunautenticosemental.wav
+
+tiempo 200
+
+sonido nuria_suspiro2.wav
+
+tiempo 100
+
+sonido nuria_comomehadejado.wav
+
+tiempo 500
+
+sonido nuria_esunencanto.wav
+
+tiempo 200
+
+sonido nuria_exceptocuantoabrelabocaparaablar.wav
+
+tiempo 500
+
+sonido nuria_follaycallabruno.wav
+
+tiempo 200
+
+sonido nuria_follaycallabruno2.wav
+
+tiempo 200
+
+sonido nuria_follaycalla.wav
+
+sonido nuria_follaycalla2.wav
+
+sonido nuria_hazquemesientaliberada.wav
+
+tiempo 300
+
+sonido nuria_suspiro3.wav
+
+tiempo 500
+
+sonido nuria_aunqueelmomentoenquemesientomasliberadaescuandomequitoelanillo.wav
+
+tiempo 300
+
+sonido nuria_esquemeloquito.wav
+
+tiempo 100
+
+sonido nuria_ylaimagenmentaldeesesacodemierdagrasosaysebosasedesvanece.wav
+
+tiempo 200
+
+sonido nuria_meliberoy.wav
+
+tiempo 300
+
+sonido nuria_ostias.wav
+
+tiempo 200
+
+sonido nuria_elanillo.wav
+
+tiempo 500
+
+sonido nuria_mecachisvoyatenerquevolverabuscarlo.wav
+
+tiempo 300
+
+sonido nuria_perosimegiroderepentepareceregilipollas.wav
+
+tiempo 1000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+habla kevin qquueeaabbuurrrriiddoooo guille_queaburrido.wav
+
+habla kevin eessqquueehhaacceerraattooooqquueennoooonnoooossmmeetteemmoooossccoooonnnnaaddiiee guille_esquehaceratoquenonosmetemosconnadie.wav
+
+habla kevin yyttuuqquuee guille_ytuque.wav
+
+habla kevin ppeerrooooddiiaallggoooonnoooo guille_perodialgono.wav
+
+
+
+
+
+
+
+
+
+obviar
+coloca guille 150 30
+centra nuria 200 125
+//camara 30 30 300 300
+coloca nuria 30 30
+//escala nuria 50 50
+forma nuria cabeza frontal
+forma guille cabeza frontal
+profundidad guille cabeza 2
+forma nuria boca m
+profundidad nuria cabeza -1
+forma nuria pelo negro
+forma nuria ojo normal
+forma nuria pupila azulizquierda
+profundidad nuria pupila 1
+
+//camara 200 100 400 200
+
+//mueveconcamara nuria 200 100 1000
+//obviar
+//instantaneo
+mueve nuria 200 100 1000
+//fininstantaneo
+//finobviar
+
+muevecamara 200 100 200 200 1000
+
+//elimina guille
+//quita nuria pelo
+//instantaneo
+forma nuria pupila azulderecha
+habla nuria aoaoem esquenosepuedenpedirperasalholmo.wav
+tiempo 500
+//fininstantaneo
+habla nuria astalaproximam 2000
+
+finobviar
