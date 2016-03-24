@@ -63,7 +63,7 @@ forma friend cuello normal
 forma kevin cuello normal
 forma person cuello normal
 forma nuria cuerponuria normal
-forma monica cuerponuria normal
+forma monica cuerpomonica normal
 
 forma friend ojosfriend medio
 forma kevin ojoskevin medio
@@ -84,7 +84,7 @@ forma friend cejasfriend normal
 forma kevin cejaskevin normal
 forma person cejasperson normal
 forma nuria cejasnuria normal
-forma monica cejasnuria normal
+forma monica cejasmonica normal
 
 
 forma friend narizfriend normal
@@ -96,14 +96,10 @@ forma monica narizmonica normal
 forma friend bocafriend normal
 forma kevin bocakevin normal
 forma person bocaperson normal
-forma nuria bocamonica normal
-forma monica bocamonica normal
 
-forma nuria perronuria normal
-
-//forma fondo fondo parquebueno
-forma fondo fondo parquebueno
-//forma fondo fondoparquebueno delante
+//forma fondo fondo parque2
+forma fondo fondo parque
+forma fondo fondoparque delante
 
 prefijoboca kevin bocakevin
 prefijoboca person bocaperson
@@ -114,38 +110,8 @@ forma person orejasperson normal
 // gafas orejas
 
 //profundidad fondo fondoparque2 -10
-profundidad fondo fondoparque -10
-//profundidad fondo fondoparquedelante 500
-
-profundidad nuria cuerpo 10
-profundidad nuria piernasnuria 20
-profundidad nuria vestidonuria 30
-profundidad nuria brazonuria 40
-profundidad nuria cabeza 50
-//profundidad nuria brazoizquierda 20
-//profundidad nuria brazoderecha 20
-profundidad nuria ocularnuria 80
-profundidad nuria ojosnuria 90
-profundidad nuria narizmonica 100
-profundidad nuria cejasnuria 110
-profundidad nuria bocamonica 130
-profundidad nuria pelonuria 130
-profundidad nuria perronuria 30
-
-profundidad monica cuerpo 10
-profundidad monica piernasnuria 20
-profundidad monica vestidomonica 30
-profundidad monica brazomonica 40
-profundidad monica cabeza 50
-//profundidad monica brazoizquierda 20
-//profundidad monica brazoderecha 20
-profundidad monica ocularnuria 80
-profundidad monica ojosmonica 90
-profundidad monica narizmonica 100
-profundidad monica cejasnuria 110
-profundidad monica bocamonica 130
-profundidad monica pelomonica 130
-//profundidad monica perronuria 30
+profundidad fondo fondoparque 200000
+profundidad fondo fondoparquedelante 100000
 
 profundidad friend cuello 10
 profundidad friend zapatosfriend 20
@@ -198,25 +164,20 @@ profundidad person orejasperson 1400
 centra friend 352 100
 centra kevin 352 100
 centra person 352 100
-centra nuria 352 100
-centra monica 352 100
 
 
-camara 4000 700 2560 1440
+camara 7152 1008 2560 1440
 
 // COLOCAMOS A LOS PERSONAJES
 
-coloca friend 4000 650
-coloca kevin 4252 650
-coloca person 4970 650
-coloca nuria 3500 450
-coloca monica 3200 450
+coloca friend 7180 990
+coloca kevin 7452 990
+coloca person 7970 1010
+
 
 escala friend 100 100 
 escala kevin 100 100
 escala person 100 100
-escala nuria 100 100
-escala monica 100 100
 
 //camara 3840 2160 7680 4320
 
