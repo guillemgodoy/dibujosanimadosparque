@@ -131,6 +131,7 @@ profundidad nuria cejasnuria 110
 profundidad nuria bocamonica 130
 profundidad nuria pelonuria 130
 profundidad nuria perronuria 30
+profundidad nuria pestanyasnuria 95
 
 profundidad monica cuerpo 10
 profundidad monica piernasnuria 20
@@ -146,6 +147,7 @@ profundidad monica cejasnuria 110
 profundidad monica bocamonica 130
 profundidad monica pelomonica 130
 //profundidad monica perronuria 30
+profundidad monica pestanyasnuria 95
 
 profundidad friend cuello 10
 profundidad friend zapatosfriend 20
