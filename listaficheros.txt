@@ -1,1 +1,1 @@
--rw-r--r--@ 1 nikita  staff  19064 24 mar 01:36:58 2016 comandos.txt
+-rw-r--r--@ 1 nikita  staff  19994 24 mar 02:05:26 2016 comandos.txt

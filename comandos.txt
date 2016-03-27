@@ -286,7 +286,10 @@ sonido manu_medatiempo.wav
 
 
 
-
+//forma kevin brazoderecha indica
+forma kevin ojoskevin derecha
+forma friend ojosfriend derecha
+forma person ojosperson derecha
 
 
 
@@ -308,16 +311,33 @@ tiempo 200
 habla kevin ameissmmiissttooeessoooooooooo guille_habeisvistoeso.wav
 
 forma kevin bocakevin m
+forma kevin brazoderecha normal
+forma kevin ojoskevin medio
+forma friend ojosfriend medio
 
 tiempo 200
-
+forma kevin brazoizquierda indica
+forma kevin ojoskevin izquierda
+forma friend ojosfriend izquierda
 habla kevin eesseettiiooibbaaappaarraallaaaaaaaa guille_esetioibaparaalla.wav
+
+
 
 habla kevin iideerreemeetteeeeiirraaaaaa guille_iderepentegira.wav
 
+forma kevin brazoizquierda normal
+forma kevin brazoderecha indica
+forma kevin ojoskevin derecha
+forma friend ojosfriend derecha
+
 habla kevin iimuullmeemaarraaalliiiiiiiiii guille_yvuelveparaalli.wav
 
+forma kevin brazoderecha normal
+forma kevin ojoskevin medio
+
 habla kevin mmeeroommeennoooottiiooooooooo guille_perobuenotio.wav
+forma friend ojosfriend izquierda
+forma friend bocafriend mh
 
 habla kevin eeesseennoossaammeessaaddoooddeemmaaassoooooeeeeeeeeeeee guille_esquenosabesadondevasoque.wav
 
@@ -326,7 +346,8 @@ habla kevin jjoootteerrr guille_joder.wav
 habla kevin eeeellaaddiissssttaaacciiaammaaassccoooorrttaaeerreedoossmmuuuttooosseessllaalliinneeaarreeeccttaaooommrreeeeeeeeeeeeeee guille_queladistanciamascortaentredospuntoseslalinearectahombre.wav
 
 
-
+forma kevin ojoskevin izquierda
+forma friend bocafriend normal
 
 habla person mmiimmiimmooooossddeessseeeffooccaaddoosssss ferran_vivimosdesenfocados.wav
 
@@ -337,11 +358,21 @@ habla person yyffiinnaallmmeennrreeeeeeepperrddeemoooeeelsseennrriiddooddeenuuee
 
 // Hemos repasado hasta aqui.
 
+forma kevin brazoderecha palma
+forma kevin brazoizquierda palma
+forma kevin ojoskevin derecha
+forma friend bocafriend puaj
+forma kevin bocakevin puaj
+
 habla person ppppeerrsseeggiimmooosseesssssppeejjiissmmoossddiissffrraazzaaddoossddeeddeessttiinnoossproommeetteeddoorreeeessssssssss ferran_perseguimosespejismosdisfrazadosdedestinosprometedores.wav
 
+forma kevin brazoderecha normal
+forma kevin brazoizquierda normal
+forma kevin ojoskevin izquierda
+forma friend bocafriend mh
+forma kevin bocakevin m
 
 habla person eeeeeesseessffuummaanneennsseeggiiddaaaaaa ferran_queseesfumanenseguida.wav
-
 
 
 
