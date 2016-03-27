@@ -482,25 +482,27 @@ transicionter seguimientomonica
 coloca monica 4500 450
 camara 4000 700 2560 1440
 transicionbucle seguimientomonica
-tiempo 200
+tiempo 50
 forma monica piernasnuria uno
-tiempo 200
+tiempo 250
 forma monica piernasnuria dos
-tiempo 200
+tiempo 250
 forma monica piernasnuria tres
 tiempo 200
 forma monica piernasnuria cuatro
-tiempo 200
+forma monica brazomonica normal
+tiempo 50
 forma monica piernasnuria cinco
-tiempo 200
+tiempo 50
 forma monica piernasnuria seis
-tiempo 200
+tiempo 300
 forma monica piernasnuria siete
-tiempo 200
+tiempo 300
 forma monica piernasnuria ocho
 tiempo 200
 forma monica piernasnuria nueve
-tiempo 200
+forma monica brazomonica camina
+tiempo 50
 forma monica piernasnuria diez
 transicionfin seguimientomonica
 

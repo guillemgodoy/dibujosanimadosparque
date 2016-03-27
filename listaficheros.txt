@@ -1,1 +1,1 @@
--rw-rw-r-- 1 ggodoy ggodoy 22596 2016-03-27 18:52:53.000000000 +0200 comandos.txt
+-rw-rw-r-- 1 ggodoy ggodoy 22656 2016-03-27 19:12:12.000000000 +0200 comandos.txt
