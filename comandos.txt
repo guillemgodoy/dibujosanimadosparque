@@ -117,21 +117,21 @@ forma person orejasperson normal
 profundidad fondo fondoparque -10
 //profundidad fondo fondoparquedelante 500
 
-profundidad nuria cuerpo 10
-profundidad nuria piernasnuria 20
-profundidad nuria vestidonuria 30
-profundidad nuria brazonuria 40
-profundidad nuria cabeza 50
-//profundidad nuria brazoizquierda 20
-//profundidad nuria brazoderecha 20
-profundidad nuria ocularnuria 80
-profundidad nuria ojosnuria 90
-profundidad nuria narizmonica 100
-profundidad nuria cejasnuria 110
-profundidad nuria bocanuria 130
-profundidad nuria pelonuria 130
-profundidad nuria perronuria 30
-profundidad nuria pestanyasnuria 95
+profundidad nuria cuerpo 110
+profundidad nuria piernasnuria 120
+profundidad nuria vestidonuria 130
+profundidad nuria brazonuria 140
+profundidad nuria cabeza 150
+//profundidad nuria brazoizquierda 120
+//profundidad nuria brazoderecha 120
+profundidad nuria ocularnuria 180
+profundidad nuria ojosnuria 190
+profundidad nuria narizmonica 1100
+profundidad nuria cejasnuria 1110
+profundidad nuria bocanuria 1130
+profundidad nuria pelonuria 1130
+profundidad nuria perronuria 130
+profundidad nuria pestanyasnuria 195
 
 profundidad monica cuerpo 10
 profundidad monica piernasnuria 20
@@ -239,7 +239,7 @@ mueveluz 255 2000
 // PROBAMOS LAS TRANSICIONES:
 transicionini hola
 
-tiempo 2000
+tiempo 4000
 
 transicionter hola
 
@@ -247,34 +247,34 @@ coloca nuria 4500 450
 
 transicionbucle hola
 
-tiempo 100
+tiempo 200
 forma nuria perronuria 1
 forma nuria piernasnuria uno
-tiempo 100
+tiempo 200
 forma nuria perronuria 2
 forma nuria piernasnuria dos
-tiempo 100
+tiempo 200
 forma nuria perronuria 1
 forma nuria piernasnuria tres
-tiempo 100
+tiempo 200
 forma nuria perronuria 2
 forma nuria piernasnuria cuatro
-tiempo 100
+tiempo 200
 forma nuria perronuria 1
 forma nuria piernasnuria cinco
-tiempo 100
+tiempo 200
 forma nuria perronuria 2
 forma nuria piernasnuria seis
-tiempo 100
+tiempo 200
 forma nuria perronuria 1
 forma nuria piernasnuria siete
-tiempo 100
+tiempo 200
 forma nuria perronuria 2
 forma nuria piernasnuria ocho
-tiempo 100
+tiempo 200
 forma nuria perronuria 1
 forma nuria piernasnuria nueve
-tiempo 100
+tiempo 200
 forma nuria perronuria 2
 forma nuria piernasnuria diez
 
