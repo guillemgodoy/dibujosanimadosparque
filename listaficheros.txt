@@ -1,0 +1,1 @@
+-rw-r--r--  1 nikita  staff  22596 27 mar 18:57:41 2016 comandos.txt
