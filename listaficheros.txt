@@ -1,5 +1,1 @@
-<<<<<<< HEAD
--rw-rw-r-- 1 ggodoy ggodoy 22656 2016-03-27 19:12:12.000000000 +0200 comandos.txt
-=======
--rw-r--r--  1 nikita  staff  22596 27 mar 18:57:41 2016 comandos.txt
->>>>>>> 7272088625d268cbc3f15f114d188f7cbd5c28af
+-rw-r--r--  1 nikita  staff  22656 27 mar 19:35:52 2016 comandos.txt
