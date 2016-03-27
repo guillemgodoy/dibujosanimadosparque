@@ -403,7 +403,10 @@ void transformainstruccion(int linea,vector<pair<int,string> > &vis,vector<vecto
     if (int(vis.size())!=2)
       morir(linea,columna,vis[0].second+" requiere 'idpersonaje'.");
     push_back_instruccion(vis,vvs);
-  } else if (vis[0].second=="transicionini" or vis[0].second=="transicionter" or vis[0].second=="transicionfin") {
+  } else if (vis[0].second=="transicionini" or
+	     vis[0].second=="transicionter" or
+	     vis[0].second=="transicionbucle" or
+	     vis[0].second=="transicionfin") {
     if (int(vis.size())!=2)
       morir(linea,columna,vis[0].second+" requiere 'idtransicion'.");
     push_back_instruccion(vis,vvs);
@@ -556,6 +559,21 @@ struct estadogeneral {
     accionaudio=0;
   }
 };
+
+void plasmarestado(estadogeneral &e1,estadogeneral &e2)
+{
+  for (map<string,estadopersonaje>::iterator it=e1.p.begin();it!=e1.p.end();it++) {
+    string nombre=it->first;
+    map<string,string> &caracteristica2forma=it->second.caracteristica2forma;
+    for (map<string,string>::iterator it2=caracteristica2forma.begin();it2!=caracteristica2forma.end();it2++)
+      e2.p[nombre].caracteristica2forma[it2->first]=it2->second;
+    map<string,int> &caracteristica2profundidad=it->second.caracteristica2profundidad;
+    for (map<string,int>::iterator it2=caracteristica2profundidad.begin();
+	 it2!=caracteristica2profundidad.end();it2++)
+      e2.p[nombre].caracteristica2profundidad[it2->first]=it2->second;
+  }
+}
+
 
 void escribe(estadopersonaje &p)
 {
@@ -849,9 +867,9 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
       int framefintransicion=int(ve.size())-1;
       i++;
       int jini=i;
-      while (i<int(vvs.size()) and vvs[i][0]!="transicionfin") i++;
+      while (i<int(vvs.size()) and vvs[i][0]!="transicionbucle" and vvs[i][0]!="transicionfin") i++;
       if (i>=int(vvs.size()) or vvs[i][1]!=idtransicion) {
-	cout<<"Transicion "<<idtransicion<<" sin marca de final."<<endl;
+	cout<<"Transicion "<<idtransicion<<" sin bucle ni marca de final."<<endl;
 	exit(0);
       }
       int jfin=i-1;
@@ -890,6 +908,42 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	  }
 	}
       }
+      if (vvs[i][0]=="transicionbucle") {
+	i++;
+	jini=i;
+	bool haytiempodentro=false;
+	while (i<int(vvs.size()) and vvs[i][0]!="transicionfin") {
+	  haytiempodentro=haytiempodentro or (vvs[i][0]=="tiempo" and mystoi(vvs[i][1])>0);
+	  i++;
+	}
+	if (i>=int(vvs.size()) or vvs[i][1]!=idtransicion) {
+	  cout<<"Transicion "<<idtransicion<<" sin marca de final."<<endl;
+	  exit(0);
+	}
+	if (not haytiempodentro) {
+	  cout<<"Transicion "<<idtransicion<<" con bucle sin tiempo positivo."<<endl;
+	  exit(0);
+	}
+	jfin=i-1;
+	estadogeneral ebucle;
+	for (int frame=frameinitransicion,j=jini;frame<=framefintransicion;j=(j>=jfin?jini:j+1)) {
+	  vector<string> &vs=vvs[j];
+	  if (vs[0]=="forma") {
+	    ebucle.p[vs[1]].caracteristica2forma[vs[2]]=vs[3];
+	  } else if (vs[0]=="profundidad") {
+	    ebucle.p[vs[1]].caracteristica2profundidad[vs[2]]=mystoi(vs[3]);
+	  } else if (vs[0]=="tiempo") {
+	    int numframestiempo=mystoi(vs[1]);
+	    for (int k=0;k<numframestiempo and frame<=framefintransicion;k++,frame++)
+	      plasmarestado(ebucle,ve[frame]);
+	  } else {
+	    cout<<"Instruccion "<<vs[0]<<" no permitida en bucle de transicion "<<idtransicion<<"."<<endl;
+	    exit(0);
+	  }
+	}
+	plasmarestado(ebucle,e);
+      }
+      //--->
     } else
       transformaaestados(vvs[i],ve,e,color,letra2letra/*,listaaudios*/,instantaneo);
   }

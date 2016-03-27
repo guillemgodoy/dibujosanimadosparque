@@ -227,6 +227,62 @@ luz 0
 //tiempo 10000
 mueveluz 255 2000
 
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// PROBAMOS LAS TRANSICIONES:
+transicionini hola
+
+tiempo 2000
+
+transicionter hola
+
+coloca nuria 4500 450
+
+transicionbucle hola
+
+tiempo 100
+forma nuria perronuria 1
+forma nuria piernasnuria uno
+tiempo 100
+forma nuria perronuria 2
+forma nuria piernasnuria dos
+tiempo 100
+forma nuria perronuria 1
+forma nuria piernasnuria tres
+tiempo 100
+forma nuria perronuria 2
+forma nuria piernasnuria cuatro
+tiempo 100
+forma nuria perronuria 1
+forma nuria piernasnuria cinco
+tiempo 100
+forma nuria perronuria 2
+forma nuria piernasnuria seis
+tiempo 100
+forma nuria perronuria 1
+forma nuria piernasnuria siete
+tiempo 100
+forma nuria perronuria 2
+forma nuria piernasnuria ocho
+tiempo 100
+forma nuria perronuria 1
+forma nuria piernasnuria nueve
+tiempo 100
+forma nuria perronuria 2
+forma nuria piernasnuria diez
+
+transicionfin hola
+
+
+
+
 tiempo 1000
 
 sonido manu_suspiro.wav
