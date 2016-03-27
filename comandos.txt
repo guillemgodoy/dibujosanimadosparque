@@ -41,11 +41,11 @@ forma person camisetaperson normal
 forma nuria vestidonuria normal
 forma monica vestidomonica normal
 
-//forma friend pantalonesfriend normal
-forma friend pantaloneskevin sentado
+forma friend pantalonesfriend sentado
+//forma friend pantaloneskevin sentado
 forma kevin pantaloneskevin sentado
-//forma person pantalonesperson normal
-forma person pantaloneskevin sentado
+forma person pantalonesperson sentado
+//forma person pantaloneskevin sentado
 forma nuria piernasnuria idle
 forma monica piernasnuria idle
 
