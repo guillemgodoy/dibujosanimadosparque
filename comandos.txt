@@ -99,7 +99,7 @@ forma person bocaperson normal
 forma nuria bocamonica normal
 forma monica bocamonica normal
 
-forma nuria perronuria normal
+forma nuria perronuria 1
 
 //forma fondo fondo parquebueno
 forma fondo fondo parquebueno
