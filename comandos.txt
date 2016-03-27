@@ -96,7 +96,7 @@ forma monica narizmonica normal
 forma friend bocafriend normal
 forma kevin bocakevin normal
 forma person bocaperson normal
-forma nuria bocamonica normal
+forma nuria bocanuria normal
 forma monica bocamonica normal
 
 forma nuria perronuria 1
@@ -128,7 +128,7 @@ profundidad nuria ocularnuria 80
 profundidad nuria ojosnuria 90
 profundidad nuria narizmonica 100
 profundidad nuria cejasnuria 110
-profundidad nuria bocamonica 130
+profundidad nuria bocanuria 130
 profundidad nuria pelonuria 130
 profundidad nuria perronuria 30
 profundidad nuria pestanyasnuria 95
