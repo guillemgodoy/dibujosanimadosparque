@@ -211,8 +211,6 @@ camara 4000 700 2560 1440
 coloca friend 4000 650
 coloca kevin 4252 650
 coloca person 4970 650
-coloca nuria 3500 450
-coloca monica 3200 450
 
 escala friend 100 100 
 escala kevin 100 100
@@ -228,57 +226,6 @@ luz 0
 mueveluz 255 2000
 
 
-
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-// PROBAMOS LAS TRANSICIONES:
-transicionini hola
-
-tiempo 4000
-
-transicionter hola
-
-coloca nuria 4500 450
-
-transicionbucle hola
-
-tiempo 200
-forma nuria perronuria 1
-forma nuria piernasnuria uno
-tiempo 200
-forma nuria perronuria 2
-forma nuria piernasnuria dos
-tiempo 200
-forma nuria perronuria 1
-forma nuria piernasnuria tres
-tiempo 200
-forma nuria perronuria 2
-forma nuria piernasnuria cuatro
-tiempo 200
-forma nuria perronuria 1
-forma nuria piernasnuria cinco
-tiempo 200
-forma nuria perronuria 2
-forma nuria piernasnuria seis
-tiempo 200
-forma nuria perronuria 1
-forma nuria piernasnuria siete
-tiempo 200
-forma nuria perronuria 2
-forma nuria piernasnuria ocho
-tiempo 200
-forma nuria perronuria 1
-forma nuria piernasnuria nueve
-tiempo 200
-forma nuria perronuria 2
-forma nuria piernasnuria diez
-
-transicionfin hola
 
 
 
@@ -435,6 +382,27 @@ habla person eeeeeesseessffuummaanneennsseeggiiddaaaaaa ferran_queseesfumanenseg
 
 
 
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// TRANSICION DE MONICA
+
+tiempo 1000
+camara 500 700 2560 1440
+coloca monica 500 450
+
+transicionini seguimientomonica
+
 tiempo 1000
 
 sonido monica_quieroelinformesobremimesaaprimerahoradelamanyana.wav
@@ -508,6 +476,44 @@ tiempo 1000
 sonido monica_ostiasquedespistadamelohedejado.wav
 
 tiempo 1000
+
+
+transicionter seguimientomonica
+coloca monica 4500 450
+camara 4000 700 2560 1440
+transicionbucle seguimientomonica
+tiempo 200
+forma monica piernasnuria uno
+tiempo 200
+forma monica piernasnuria dos
+tiempo 200
+forma monica piernasnuria tres
+tiempo 200
+forma monica piernasnuria cuatro
+tiempo 200
+forma monica piernasnuria cinco
+tiempo 200
+forma monica piernasnuria seis
+tiempo 200
+forma monica piernasnuria siete
+tiempo 200
+forma monica piernasnuria ocho
+tiempo 200
+forma monica piernasnuria nueve
+tiempo 200
+forma monica piernasnuria diez
+transicionfin seguimientomonica
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -895,18 +901,20 @@ habla kevin aallffiinnaallrreessuullttaaqquueeeessttaannttaannqquueemmaaddooooss
 
 
 
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// TRANSICION DE NURIA
 
+tiempo 1000
+camara 500 700 2560 1440
+coloca nuria 500 450
 
-
-
-
-
-
-
-
-
-
-
+transicionini seguimientonuria
 
 tiempo 1000
 
@@ -1001,6 +1009,64 @@ tiempo 300
 sonido nuria_perosimegiroderepentepareceregilipollas.wav
 
 tiempo 1000
+
+
+
+
+
+
+
+transicionter seguimientonuria
+coloca nuria 4500 450
+camara 4000 700 2560 1440
+transicionbucle seguimientonuria
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria uno
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria dos
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria tres
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria cuatro
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria cinco
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria seis
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria siete
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria ocho
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria nueve
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria diez
+transicionfin seguimientonuria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

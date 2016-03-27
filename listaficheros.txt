@@ -1,1 +1,1 @@
--rw-r--r--@ 1 nikita  staff  21318 27 mar 18:14:44 2016 comandos.txt
+-rw-rw-r-- 1 ggodoy ggodoy 22596 2016-03-27 18:52:53.000000000 +0200 comandos.txt
