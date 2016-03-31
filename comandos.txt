@@ -29,7 +29,7 @@ forma ferran cabezaferran normal
 
 forma friend brazoizquierda normal
 forma kevin brazoizquierda normal
-forma person brazoizquierda normal
+forma person brazoizquierdaintelectual libro
 forma nuria brazoizquierdanuria normal
 forma monica brazoizquierdamonica normal
 forma manu brazoizquierdamanu normal
@@ -37,7 +37,7 @@ forma ferran brazoizquierdaferran normal
 
 forma friend brazoderecha normal
 forma kevin brazoderecha normal
-forma person brazoderecha normal
+forma person brazoderechaintelectual libro
 forma nuria brazoderechanuria normal
 forma monica brazoderechamonica normal
 forma manu brazoderechamanu normal
@@ -67,7 +67,7 @@ forma ferran piernasferran idle
 
 forma friend pelofriend dos
 forma kevin pelokevin normal
-forma person peloperson normal
+forma person pelointelectual normal
 forma nuria pelonuria normal
 forma monica pelomonica normal
 forma manu pelomanu normal
@@ -119,7 +119,7 @@ forma ferran narizferran normal
 
 forma friend bocafriend normal
 forma kevin bocakevin normal
-forma person bocaperson normal
+forma person bocakevin normal
 forma nuria bocanuria normal
 forma monica bocamonica normal
 forma manu bocamanu normal
@@ -132,14 +132,16 @@ forma fondo fondo parquebueno
 //forma fondo fondoparquebueno delante
 
 prefijoboca kevin bocakevin
-prefijoboca person bocaperson
+prefijoboca person bocakevin
 
-forma person gafasperson normal
+forma person gafasintelectual normal
 forma ferran gafasferran normal
 
 forma person orejasperson normal
 forma manu orejamanu normal
 forma ferran orejaferran normal
+
+forma person librointelectual normal
 
 
 // gafas orejas
@@ -242,16 +244,17 @@ profundidad person zapatosperson 20
 profundidad person pantalonesperson 30
 profundidad person camisetaperson 40
 profundidad person cabeza 50
-profundidad person brazoizquierda 20
-profundidad person brazoderecha 20
+profundidad person brazoizquierdaintelectual 50
+profundidad person brazoderechaintelectual 50
 profundidad person ocularperson 80
 profundidad person ojosperson 90
 profundidad person narizperson 100
 profundidad person cejasperson 110
-profundidad person bocaperson 120
-profundidad person peloperson 130
-profundidad person gafasperson 140
+profundidad person bocakevin 120
+profundidad person pelointelectual 130
+profundidad person gafasintelectual 140
 profundidad person orejasperson 140
+profundidad person librointelectual 100
 
 
 // CENTRAMOS A LOS PERSONAJES
@@ -262,7 +265,7 @@ centra person 352 100
 centra nuria 352 100
 centra monica 352 100
 centra manu 352 100
-centra ferran 352 100
+centra ferran 510 100
 
 
 camara 4000 700 2560 1440
@@ -948,8 +951,37 @@ tiempo 50
 forma ferran piernasferran 10
 transicionfin seguimientoferran
 
+transicionini seguimientoferran2
+tiempo 5000
+flip ferran
 
-
+transicionter seguimientoferran2
+coloca ferran 1000 450
+//camara 4600 700 2560 1440
+transicionbucle seguimientoferran2
+tiempo 50
+forma ferran piernasferran 1
+tiempo 250
+forma ferran piernasferran 2
+tiempo 250
+forma ferran piernasferran 3
+tiempo 200
+forma ferran piernasferran 4
+forma ferran brazoderechaferran normal
+tiempo 50
+forma ferran piernasferran 5
+tiempo 50
+forma ferran piernasferran 6
+tiempo 300
+forma ferran piernasferran 7
+tiempo 300
+forma ferran piernasferran 8
+tiempo 200
+forma ferran piernasferran 9
+//forma ferran brazoderechaferran camina
+tiempo 50
+forma ferran piernasferran 10
+transicionfin seguimientoferran2
 
 
 
