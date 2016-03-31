@@ -1,1 +1,0 @@
--rw-rw-r-- 1 ggodoy ggodoy 32640 2016-03-31 17:50:38.000000000 +0200 comandos.txt

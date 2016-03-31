@@ -1188,6 +1188,8 @@ sonido nuria_follaycalla.wav
 
 forma nuria ojosnuria abajo
 forma nuria bocanuria normal
+forma nuria pestanyasnuria mitad
+forma nuria cejasnuria admirada
 sonido nuria_follaycalla2.wav
 
 forma nuria ojosnuria arriba
