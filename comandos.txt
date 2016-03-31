@@ -25,6 +25,7 @@ forma person cabeza normal
 forma nuria cabeza normal2
 forma monica cabeza normal2
 forma manu cabezamanu normal
+forma ferran cabezaferran normal
 
 forma friend brazoizquierda normal
 forma kevin brazoizquierda normal
@@ -32,6 +33,7 @@ forma person brazoizquierda normal
 forma nuria brazoizquierdanuria normal
 forma monica brazoizquierdamonica normal
 forma manu brazoizquierdamanu normal
+forma ferran brazoizquierdaferran normal
 
 forma friend brazoderecha normal
 forma kevin brazoderecha normal
@@ -39,6 +41,7 @@ forma person brazoderecha normal
 forma nuria brazoderechanuria normal
 forma monica brazoderechamonica normal
 forma manu brazoderechamanu normal
+forma ferran brazoderechaferran normal
 
 forma friend camisetafriend normal
 forma kevin camisetakevin normal
@@ -46,6 +49,7 @@ forma person camisetaperson normal
 forma nuria vestidonuria normal
 forma monica vestidomonica normal
 forma manu camisetamanu normal
+forma ferran camisetaferran normal
 
 forma friend pantalonesfriend sentado
 //forma friend pantaloneskevin sentado
@@ -53,8 +57,9 @@ forma kevin pantaloneskevin sentado
 forma person pantalonesperson sentado
 //forma person pantaloneskevin sentado
 forma nuria piernasnuria idle
-forma monica piernasnuria idle
+forma monica piernasmonica idle
 forma manu piernasmanu idle
+forma ferran piernasferran idle
 
 //forma friend zapatosfriend normal
 //forma kevin zapatoskevin normal
@@ -66,6 +71,7 @@ forma person peloperson normal
 forma nuria pelonuria normal
 forma monica pelomonica normal
 forma manu pelomanu normal
+forma ferran peloferran normal
 
 forma friend cuello normal
 forma kevin cuello normal
@@ -73,13 +79,15 @@ forma person cuello normal
 forma nuria cuerponuria normal
 forma monica cuerponuria normal
 forma manu cuerpomanu normal
+forma ferran cuerpoferran normal
 
 forma friend ojosfriend medio
 forma kevin ojoskevin medio
 forma person ojosperson medio
 forma nuria ojosnuria centro
 forma monica ojosmonica centro
-forma manu ojosmanu frente
+forma manu ojosmanu centro
+forma ferran ojosferran centro
 
 forma friend ocularfriend normal
 forma kevin ocularkevin normal
@@ -87,6 +95,7 @@ forma person ocularperson normal
 forma nuria ocularnuria normal
 forma monica ocularnuria normal
 forma manu ocularmanu normal
+forma ferran ocularferran normal
 
 forma nuria pestanyasnuria normal
 forma monica pestanyasnuria normal
@@ -97,6 +106,7 @@ forma person cejasperson normal
 forma nuria cejasnuria normal
 forma monica cejasnuria normal
 forma manu cejasmanu normal
+forma ferran cejasferran normal
 
 
 forma friend narizfriend normal
@@ -105,6 +115,7 @@ forma person narizperson normal
 forma nuria narizmonica normal
 forma monica narizmonica normal
 forma manu narizmanu normal
+forma ferran narizferran normal
 
 forma friend bocafriend normal
 forma kevin bocakevin normal
@@ -112,6 +123,7 @@ forma person bocaperson normal
 forma nuria bocanuria normal
 forma monica bocamonica normal
 forma manu bocamanu normal
+forma ferran bocaferran normal
 
 forma nuria perronuria 1
 
@@ -123,7 +135,12 @@ prefijoboca kevin bocakevin
 prefijoboca person bocaperson
 
 forma person gafasperson normal
+forma ferran gafasferran normal
+
 forma person orejasperson normal
+forma manu orejamanu normal
+forma ferran orejaferran normal
+
 
 // gafas orejas
 
@@ -149,7 +166,7 @@ profundidad nuria pestanyasnuria 3295
 //profundidad nuria brazoizquierdanuria 3220
 
 profundidad monica cuerponuria 210
-profundidad monica piernasnuria 220
+profundidad monica piernasmonica 220
 profundidad monica vestidomonica 230
 //profundidad monica brazomonica 240
 profundidad monica cabeza 250
@@ -176,7 +193,22 @@ profundidad manu narizmanu 2100
 profundidad manu cejasmanu 2110
 profundidad manu bocamanu 2130
 profundidad manu pelomanu 2130
+profundidad manu orejamanu 2140
 
+profundidad ferran cuerpoferran 1210
+profundidad ferran piernasferran 1220
+profundidad ferran camisetaferran 1230
+profundidad ferran cabezaferran 1250
+profundidad ferran brazoizquierdaferran 1220
+profundidad ferran brazoderechaferran 1240
+profundidad ferran ocularferran 1280
+profundidad ferran ojosferran 1290
+profundidad ferran narizferran 2100
+profundidad ferran gafasferran 2120
+profundidad ferran cejasferran 2110
+profundidad ferran bocaferran 2130
+profundidad ferran peloferran 2130
+profundidad ferran orejaferran 2140
 
 
 profundidad friend cuello 10
@@ -233,6 +265,7 @@ centra person 352 100
 centra nuria 352 100
 centra monica 352 100
 centra manu 352 100
+centra ferran 352 100
 
 
 camara 4000 700 2560 1440
@@ -244,6 +277,7 @@ coloca kevin 4252 650
 coloca person 4970 650
 coloca nuria -500 -500
 coloca monica -500 -500
+coloca ferran -500 -500
 
 
 escala friend 100 100 
@@ -252,6 +286,7 @@ escala person 100 100
 escala nuria 100 100
 escala monica 100 100
 escala manu 100 100
+escala ferran 100 100
 
 
 //camara 3840 2160 7680 4320
@@ -286,7 +321,7 @@ sonido manu_suspiro.wav
 
 
 tiempo 500
-forma manu ojosmanu frente
+forma manu ojosmanu centro
 forma manu cejasmanu normal
 sonido manu_esquemenosmalqueporfinhepuestolalavadora.wav
 
@@ -306,7 +341,7 @@ forma manu cejasmanu oneup
 sonido manu_yyaparecequepodrianandarsolos.wav
 
 tiempo 500
-forma manu ojosmanu frente
+forma manu ojosmanu centro
 forma manu cejasmanu admirado
 sonido manu_ymiraquemehacostadopocoalfinalporquetotal.wav
 
@@ -314,7 +349,7 @@ tiempo 500
 forma manu ojosmanu abajo
 forma manu cejasmanu enojado
 sonido manu_lounicoquetienesquehaceres.wav
-forma manu ojosmanu frente
+forma manu ojosmanu centro
 forma manu cejasmanu oneup
 sonido manu_meterlaropa.wav
 
@@ -575,27 +610,27 @@ coloca monica 4500 450
 camara 4600 700 2560 1440
 transicionbucle seguimientomonica
 tiempo 50
-forma monica piernasnuria uno
+forma monica piernasmonica 1
 tiempo 250
-forma monica piernasnuria dos
+forma monica piernasmonica 2
 tiempo 250
-forma monica piernasnuria tres
+forma monica piernasmonica 3
 tiempo 200
-forma monica piernasnuria cuatro
+forma monica piernasmonica 4
 forma monica brazoderechamonica normal
 tiempo 50
-forma monica piernasnuria cinco
+forma monica piernasmonica 5
 tiempo 50
-forma monica piernasnuria seis
+forma monica piernasmonica 6
 tiempo 300
-forma monica piernasnuria siete
+forma monica piernasmonica 7
 tiempo 300
-forma monica piernasnuria ocho
+forma monica piernasmonica 8
 tiempo 200
-forma monica piernasnuria nueve
+forma monica piernasmonica 9
 forma monica brazoderechamonica camina
 tiempo 50
-forma monica piernasnuria diez
+forma monica piernasmonica 10
 transicionfin seguimientomonica
 
 
@@ -698,11 +733,20 @@ habla kevin ppeerrooooaaeesstteettiiooooqquueeccoooonnyyoooolleeppaassaa guille_
 
 
 
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// TRANSICION DE FERRAN
 
+tiempo 1000
+camara 1600 700 2560 1440
+coloca ferran 900 450
 
-
-
-
+transicionini seguimientoferran
 
 
 
@@ -836,6 +880,33 @@ sonido xavi_vale.wav
 
 
 
+transicionter seguimientoferran
+coloca ferran 4200 450
+camara 4600 700 2560 1440
+transicionbucle seguimientoferran
+tiempo 50
+forma ferran piernasferran 1
+tiempo 250
+forma ferran piernasferran 2
+tiempo 250
+forma ferran piernasferran 3
+tiempo 200
+forma ferran piernasferran 4
+forma ferran brazoderechaferran normal
+tiempo 50
+forma ferran piernasferran 5
+tiempo 50
+forma ferran piernasferran 6
+tiempo 300
+forma ferran piernasferran 7
+tiempo 300
+forma ferran piernasferran 8
+tiempo 200
+forma ferran piernasferran 9
+//forma ferran brazoderechaferran camina
+tiempo 50
+forma ferran piernasferran 10
+transicionfin seguimientoferran
 
 
 
@@ -1144,34 +1215,34 @@ camara 4600 700 2560 1440
 transicionbucle seguimientonuria
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria uno
+forma nuria piernasnuria 1
 tiempo 200
 forma nuria perronuria 2
-//forma nuria piernasnuria dos
+//forma nuria piernasnuria 2
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria tres
+forma nuria piernasnuria 3
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria cuatro
+forma nuria piernasnuria 4
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria cinco
+forma nuria piernasnuria 5
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria seis
+forma nuria piernasnuria 6
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria siete
+forma nuria piernasnuria 7
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria ocho
+forma nuria piernasnuria 8
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria nueve
+forma nuria piernasnuria 9
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria diez
+forma nuria piernasnuria 10
 transicionfin seguimientonuria
 
 transicionini seguimientonuria2
@@ -1183,34 +1254,34 @@ camara 4600 700 2560 1440
 transicionbucle seguimientonuria2
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria uno
+forma nuria piernasnuria 1
 tiempo 200
 forma nuria perronuria 2
-//forma nuria piernasnuria dos
+//forma nuria piernasnuria 2
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria tres
+forma nuria piernasnuria 3
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria cuatro
+forma nuria piernasnuria 4
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria cinco
+forma nuria piernasnuria 5
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria seis
+forma nuria piernasnuria 6
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria siete
+forma nuria piernasnuria 7
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria ocho
+forma nuria piernasnuria 8
 tiempo 200
 forma nuria perronuria 1
-forma nuria piernasnuria nueve
+forma nuria piernasnuria 9
 tiempo 200
 forma nuria perronuria 2
-forma nuria piernasnuria diez
+forma nuria piernasnuria 10
 transicionfin seguimientonuria2
 
 
