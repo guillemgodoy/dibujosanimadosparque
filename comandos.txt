@@ -104,7 +104,7 @@ forma friend cejasfriend normal
 forma kevin cejaskevin normal
 forma person cejasperson normal
 forma nuria cejasnuria normal
-forma monica cejasnuria normal
+forma monica cejasmonica normal
 forma manu cejasmanu normal
 forma ferran cejasferran normal
 
@@ -151,7 +151,6 @@ profundidad fondo fondoparque -10
 profundidad nuria cuerponuria 3210
 profundidad nuria piernasnuria 3220
 profundidad nuria vestidonuria 3230
-//profundidad nuria brazonuria 3240
 profundidad nuria cabeza 3250
 profundidad nuria brazoizquierdanuria 3220
 profundidad nuria brazoderechanuria 3240
@@ -163,22 +162,20 @@ profundidad nuria bocanuria 32130
 profundidad nuria pelonuria 32130
 profundidad nuria perronuria 3230
 profundidad nuria pestanyasnuria 3295
-//profundidad nuria brazoizquierdanuria 3220
+
 
 profundidad monica cuerponuria 210
 profundidad monica piernasmonica 220
 profundidad monica vestidomonica 230
-//profundidad monica brazomonica 240
 profundidad monica cabeza 250
 profundidad monica brazoizquierdamonica 220
 profundidad monica brazoderechamonica 240
 profundidad monica ocularnuria 280
 profundidad monica ojosmonica 290
 profundidad monica narizmonica 2100
-profundidad monica cejasnuria 2110
+profundidad monica cejasmonica 2110
 profundidad monica bocamonica 2130
 profundidad monica pelomonica 2130
-//profundidad monica perronuria 230
 profundidad monica pestanyasnuria 295
 
 profundidad manu cuerpomanu 1210
@@ -529,33 +526,46 @@ camara 1600 700 2560 1440
 coloca monica 900 450
 
 transicionini seguimientomonica
-
+forma monica cejasmonica normal
 tiempo 1000
-
+forma monica ojosmonica arriba
+forma monica cejasmonica admirada
 sonido monica_quieroelinformesobremimesaaprimerahoradelamanyana.wav
 
 tiempo 200
-
+forma monica ojosmonica abajo
+forma monica cejasmonica enojada
+forma monica bocamonica a
 sonido monica_zorra.wav
 
 tiempo 200
-
+forma monica ojosmonica centro
+forma monica cejasmonica enojada
+forma monica bocamonica normal
 sonido monica_estanochenohedormidonadaparapoderacabartuputoinforme.wav
 
 tiempo 500
-
+forma monica ojosmonica izquierda
+forma monica cejasmonica normal
+forma monica bocamonica normal
 sonido monica_desdequellegoestanuevajefa.wav
 
 tiempo 200
-
+forma monica ojosmonica centro
+forma monica cejasmonica enojada
+forma monica bocamonica a
 sonido monica_quemelatienejurada.wav
 
 tiempo 500
-
+forma monica ojosmonica centro
+forma monica cejasmonica enojada
+forma monica bocamonica normal
 sonido monica_yseguroquelamuycabronaluegodicequeelinformenoeraurgente.wav
 
 tiempo 500
-
+forma monica ojosmonica arriba
+forma monica cejasmonica normal
+forma monica bocamonica a
 sonido monica_lounicobuenodetodoestoesquehetenidounabuenaexcusaparanotenerquefollarconminovio.wav
 
 tiempo 200
@@ -753,67 +763,83 @@ transicionini seguimientoferran
 
 
 tiempo 1000
-
+forma ferran ojosferran arriba
+forma ferran cejasferran admirado
 sonido xavi_otravezhetenidoquepringaryo.wav
 
 tiempo 100
-
+forma ferran ojosferran arriba
+forma ferran cejasferran admirado
 sonido xavi_comprandoelregalodeldiadelamadre.wav
 
 tiempo 200
-
+forma ferran ojosferran derecha
+forma ferran cejasferran enojado
 sonido xavi_misdiezhermanospasandodetodocomodecostumbre.wav
 
 tiempo 500
-
+forma ferran ojosferran arriba
+forma ferran cejasferran admirado
 sonido xavi_ynoentiendoniporquelohago.wav
 
 tiempo 500
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran normal
 sonido xavi_paramimadre.wav
 
 tiempo 200
-
+forma ferran ojosferran arriba
+forma ferran cejasferran enojado
 sonido xavi_siemprehesidoelpeor.wav
 
 tiempo 200
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
 sonido xavi_elquenosabehacernada.wav
 
 tiempo 200
-
+forma ferran ojosferran arriba
+forma ferran cejasferran admirado
 sonido xavi_elmastontodetodos.wav
 
 tiempo 500
-
+forma ferran ojosferran abajo
+forma ferran cejasferran enojado
 sonido xavi_ymirasiseretonto.wav
 
 tiempo 200
-
+forma ferran ojosferran centro
+forma ferran cejasferran normal
 sonido xavi_queyosoyelunico.wav
 
 tiempo 100
-
+forma ferran ojosferran abajo
+forma ferran cejasferran normal
 sonido xavi_quelacuidaahoraaella.wav
 
 tiempo 500
-
+forma ferran ojosferran abajo
+forma ferran cejasferran enojado
 sonido xavi_mientraslosdemassiguenconsusvidas.wav
 
 tiempo 200
-
+forma ferran ojosferran derecha
+forma ferran cejasferran enojado
 sonido xavi_consusparejas.wav
 
 tiempo 200
-
+forma ferran ojosferran centro
+forma ferran cejasferran enojado
 sonido xavi_consusfamilias.wav
 
 tiempo 200
-
+forma ferran ojosferran arriba
+forma ferran cejasferran oneup
 sonido xavi_debarbacoaodeplaya.wav
 
 tiempo 500
-
+forma ferran ojosferran abajo
+forma ferran cejasferran enojado
 sonido xavi_mientrastanto.wav
 
 tiempo 100
@@ -823,59 +849,73 @@ sonido xavi_aquiestoyyootravezconel.wav
 sonido xavi_putoregalo.wav
 
 tiempo 500
-
+forma ferran ojosferran centro
+forma ferran cejasferran admirado
 sonido xavi_diosmio.wav
 
 tiempo 200
-
+forma ferran ojosferran abajo
+forma ferran cejasferran admirado
 sonido xavi_elregalo.wav
 
 tiempo 200
-
+forma ferran ojosferran centro
+forma ferran cejasferran admirado
 sonido xavi_melohedejado.wav
 
 tiempo 500
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran normal
 sonido xavi_perosimegirosinmas.wav
 
 tiempo 100
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran normal
 sonido xavi_parecereuntarado.wav
 
 tiempo 500
-
+forma ferran ojosferran abajo
+forma ferran cejasferran enojado
 sonido xavi_tengoquevolver.wav
 
 tiempo 200
-
+forma ferran ojosferran centro
+forma ferran cejasferran enojado
 sonido xavi_tengoquevolver2.wav
 
 tiempo 500
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
 sonido xavi_mehedejadoalgo.wav
 
 tiempo 300
-
+forma ferran ojosferran derecha
+forma ferran cejasferran admirado
 sonido xavi_tengoquedarmediavuelta.wav
 
 tiempo 200
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
 sonido xavi_yvolverabuscarlo.wav
 
 tiempo 500
-
+forma ferran ojosferran derecha
+forma ferran cejasferran admirado
 sonido xavi_estotalmentenatural.wav
 
 tiempo 100
-
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
 sonido xavi_ynotengonadadeloqueavergonzarme.wav
 
 tiempo 500
-
+forma ferran ojosferran derecha
+forma ferran cejasferran admirado
 sonido xavi_asiquevoyparaalla.wav
 
 tiempo 500
-
+forma ferran ojosferran centro
+forma ferran cejasferran enojado
 sonido xavi_vale.wav
 
 
