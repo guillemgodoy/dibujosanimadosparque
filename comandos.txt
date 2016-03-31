@@ -382,6 +382,7 @@ tiempo 200
 forma manu ojosmanu izquierda
 forma manu cejasmanu enojado
 sonido manu_medatiempo.wav
+flip manu
 
 transicionter seguimientomanu
 coloca manu 5100 450
@@ -411,11 +412,9 @@ tiempo 50
 forma manu piernasmanu 10
 transicionfin seguimientomanu
 
+transicionini seguimientomanu2
 
-
-
-
-
+tiempo 500
 //forma kevin brazoderecha indica
 forma kevin ojoskevin derecha
 forma friend ojosfriend derecha
@@ -472,6 +471,41 @@ forma friend bocafriend mh
 habla kevin eeesseennoossaammeessaaddoooddeemmaaassoooooeeeeeeeeeeee guille_esquenosabesadondevasoque.wav
 
 habla kevin jjoootteerrr guille_joder.wav
+
+
+
+transicionter seguimientomanu2
+coloca manu -500 450
+camara 4600 700 2560 1440
+transicionbucle seguimientomanu2
+tiempo 50
+forma manu piernasmanu 1
+tiempo 250
+forma manu piernasmanu 2
+tiempo 250
+forma manu piernasmanu 3
+tiempo 200
+forma manu piernasmanu 4
+forma manu brazoderechamanu normal
+tiempo 50
+forma manu piernasmanu 5
+tiempo 50
+forma manu piernasmanu 6
+tiempo 300
+forma manu piernasmanu 7
+tiempo 300
+forma manu piernasmanu 8
+tiempo 200
+forma manu piernasmanu 9
+//forma manu brazoderechamanu camina
+tiempo 50
+forma manu piernasmanu 10
+transicionfin seguimientomanu2
+
+
+
+
+
 
 habla kevin eeeellaaddiissssttaaacciiaammaaassccoooorrttaaeerreedoossmmuuuttooosseessllaalliinneeaarreeeccttaaooommrreeeeeeeeeeeeeee guille_queladistanciamascortaentredospuntoseslalinearectahombre.wav
 
@@ -616,7 +650,7 @@ tiempo 1000
 sonido monica_ostiasquedespistadamelohedejado.wav
 
 tiempo 1000
-
+flip monica
 
 transicionter seguimientomonica
 coloca monica 4500 450
@@ -647,41 +681,8 @@ forma monica piernasmonica 10
 transicionfin seguimientomonica
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+transicionini seguimientomonica2
+tiempo 500
 habla kevin eehh guille_eh2.wav
 
 habla kevin uuumoomeennooooooooooo guille_unmomento2.wav
@@ -693,6 +694,68 @@ habla kevin mllooaabeissbbiissnnoooooooooo guille_lohabeisvisto.wav
 habla kevin mmeessaaaarriiaaaaaaaacabaddeexxaaeerarelleeeessrroooooooo guille_esatiaacabadeexagerarelgesto.wav
 
 habla kevin pparauuuusriffiicarrssseeeeeeeee guille_parajustificarse.wav
+
+
+transicionter seguimientomonica2
+coloca monica -500 450
+camara 4600 700 2560 1440
+transicionbucle seguimientomonica2
+tiempo 50
+forma monica piernasmonica 1
+tiempo 250
+forma monica piernasmonica 2
+tiempo 250
+forma monica piernasmonica 3
+tiempo 200
+forma monica piernasmonica 4
+forma monica brazoderechamonica normal
+tiempo 50
+forma monica piernasmonica 5
+tiempo 50
+forma monica piernasmonica 6
+tiempo 300
+forma monica piernasmonica 7
+tiempo 300
+forma monica piernasmonica 8
+tiempo 200
+forma monica piernasmonica 9
+forma monica brazoderechamonica camina
+tiempo 50
+forma monica piernasmonica 10
+transicionfin seguimientomonica2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ---> vamos por aqui.
 
@@ -920,7 +983,7 @@ tiempo 500
 forma ferran ojosferran centro
 forma ferran cejasferran enojado
 sonido xavi_vale.wav
-
+flip ferran
 
 
 transicionter seguimientoferran
@@ -952,11 +1015,37 @@ forma ferran piernasferran 10
 transicionfin seguimientoferran
 
 transicionini seguimientoferran2
-tiempo 5000
-flip ferran
+tiempo 500
+
+habla kevin jjaajjaajjaa guille_jajaja.wav
+
+habla kevin lloooohhaabbeeiissvviissttoooo guille_lohabeisvisto2.wav
+
+habla kevin mmeennuuddoooopprriinnggaaddooooddiioooossmmiioooo guille_menudopringadodiosmio.wav
+
+habla kevin ttiioooo guille_tio.wav
+
+habla kevin rreeppaassaattooooddoooollooooqquueehhaasshheecchhooooeenneessttaavviiddaa guille_repasatodoloquehashechoenestavida.wav
+
+habla kevin aavveerrssiieennccuueennttrraasseennqquueemmoooommeennttooootteeeeqquuiivvooooccaasstteeddeeccaammiinnoooo guille_aversiencuentrasenquemomentoteequivocastedecamino.wav
+
+habla person uuff ferran_uf.wav
+
+habla person eessttaaccllaarrooooqquueeeessaappeerrssoooonnaattiieennee ferran_estaclaroqueesapersonatiene.wav
+
+habla person ppaarrooooxxiissmmooooeessqquuiizzooooiiddeeeessppeeccuullaarr ferran_paroxismoesquizoideespecular.wav
+
+habla person uunnaassccuuaannttaasssseessiioooonneessddeetteerraappiiaa ferran_unascuantassesionesdeterapia.wav
+
+habla person ppooooddrriiaannaayyuuddaarrlleeaaaaffrroooonnttaarreellpprroooobblleemmaa ferran_podrianayudarleaafrontarelproblema.wav
+
+habla person ppeerroooojjaammaassjjaammaass ferran_perojamasjamas.wav
+
+habla person ppooooddrraassuuppeerraarrllooooccoooommpplleettaammeennttee ferran_podrasuperarlocompletamente.wav
+
 
 transicionter seguimientoferran2
-coloca ferran 1000 450
+coloca ferran -500 450
 //camara 4600 700 2560 1440
 transicionbucle seguimientoferran2
 tiempo 50
@@ -985,81 +1074,6 @@ transicionfin seguimientoferran2
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-tiempo 500
-
-habla kevin jjaajjaajjaa guille_jajaja.wav
-
-habla kevin lloooohhaabbeeiissvviissttoooo guille_lohabeisvisto2.wav
-
-habla kevin mmeennuuddoooopprriinnggaaddooooddiioooossmmiioooo guille_menudopringadodiosmio.wav
-
-habla kevin ttiioooo guille_tio.wav
-
-habla kevin rreeppaassaattooooddoooollooooqquueehhaasshheecchhooooeenneessttaavviiddaa guille_repasatodoloquehashechoenestavida.wav
-
-habla kevin aavveerrssiieennccuueennttrraasseennqquueemmoooommeennttooootteeeeqquuiivvooooccaasstteeddeeccaammiinnoooo guille_aversiencuentrasenquemomentoteequivocastedecamino.wav
-
-
-
-
-
-
-
-
-
-habla person uuff ferran_uf.wav
-
-habla person eessttaaccllaarrooooqquueeeessaappeerrssoooonnaattiieennee ferran_estaclaroqueesapersonatiene.wav
-
-habla person ppaarrooooxxiissmmooooeessqquuiizzooooiiddeeeessppeeccuullaarr ferran_paroxismoesquizoideespecular.wav
-
-habla person uunnaassccuuaannttaasssseessiioooonneessddeetteerraappiiaa ferran_unascuantassesionesdeterapia.wav
-
-habla person ppooooddrriiaannaayyuuddaarrlleeaaaaffrroooonnttaarreellpprroooobblleemmaa ferran_podrianayudarleaafrontarelproblema.wav
-
-habla person ppeerroooojjaammaassjjaammaass ferran_perojamasjamas.wav
-
-habla person ppooooddrraassuuppeerraarrllooooccoooommpplleettaammeennttee ferran_podrasuperarlocompletamente.wav
 
 
 
@@ -1320,7 +1334,7 @@ forma nuria piernasnuria 10
 transicionfin seguimientonuria
 
 transicionini seguimientonuria2
-tiempo 20000
+tiempo 12000
 
 transicionter seguimientonuria2
 coloca nuria 7200 450
