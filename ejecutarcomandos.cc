@@ -926,6 +926,7 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	exit(0);
       }
       int jfin=i-1;
+      int offsetxcamara=0,offsetycamara=0;
       for (int frame=frameinitransicion;frame<=framefintransicion;frame++) {
 	double factor0=0,factor1=1;
 	if (frame<framefintransicion) {
@@ -969,6 +970,19 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	    p.y=mystoi(vs[3]);
 	    ve[frame].p[vs[1]].x=xini*factor0+p.x*factor1;
 	    ve[frame].p[vs[1]].y=yini*factor0+p.y*factor1;
+	    
+	    // Si hay cambio a camara relativa con respecto de este personaje, hay que hacer tambien el ajuste.
+	    if (frame>0 and ve[frame].camararelativaapersonaje==vs[1] and
+		ve[frame-1].camararelativaapersonaje=="") {
+	      offsetxcamara-=(ve[frame].p[vs[1]].x-xini);
+	      offsetycamara-=(ve[frame].p[vs[1]].y-yini);
+	    } else if (frame>0 and ve[frame].camararelativaapersonaje=="" and
+		ve[frame-1].camararelativaapersonaje==vs[1]) {
+	      offsetxcamara+=(ve[frame].p[vs[1]].x-xini);
+	      offsetycamara+=(ve[frame].p[vs[1]].y-yini);
+	    }
+	    ve[frame].xcamara+=offsetxcamara;
+	    ve[frame].ycamara+=offsetycamara;
 	  } else {
 	    cout<<"Instruccion "<<vs[0]<<" no permitida en definicion de transicion "<<idtransicion<<"."<<endl;
 	    exit(0);
@@ -1212,7 +1226,10 @@ void dibujarestadogeneral(estadogeneral &e,int frame,int totalframes)
     info.b.setOrigin(p.xcentro-info.x,p.ycentro-info.y);
     info.b.setPosition(xdesp*xescala,ydesp*yescala);
     //d.setPosition(p.x,p.y);
-    info.b.setScale(xescala*p.xescala/100.0,yescala*p.yescala/100.0);
+    if (p.flip)
+      info.b.setScale(-xescala*p.xescala/100.0,yescala*p.yescala/100.0);
+    else
+      info.b.setScale(xescala*p.xescala/100.0,yescala*p.yescala/100.0);
     info.b.setColor(sf::Color(e.luz,e.luz,e.luz,255));
     window.draw(info.b);
   }
