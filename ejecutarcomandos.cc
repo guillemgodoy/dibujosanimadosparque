@@ -437,10 +437,23 @@ void transformainstruccion(int linea,vector<pair<int,string> > &vis,vector<vecto
 	! esnatural(vis[3].second) || ! esnatural(vis[4].second))
       morir(linea,columna,vis[0].second+" requiere 'xini' 'yini' 'ancho' 'alto'.");
     push_back_instruccion(vis,vvs);
+  } else if (vis[0].second=="posicioncamara" or vis[0].second=="tamanyocamara") {
+    if (int(vis.size())!=3 || ! esnatural(vis[1].second) || ! esnatural(vis[2].second))
+      morir(linea,columna,vis[0].second+" requiere 'ancho' 'alto'.");
+    push_back_instruccion(vis,vvs);
+  } else if (vis[0].second=="camararelativa") {
+    if (int(vis.size())>2)
+      morir(linea,columna,vis[0].second+" requiere o bien nada o bien 'idpersonaje'.");
+    push_back_instruccion(vis,vvs);
   } else if (vis[0].second=="muevecamara") {
     if (int(vis.size())!=6 || ! esentero(vis[1].second) || ! esentero(vis[2].second) ||
 	! esnatural(vis[3].second) || ! esnatural(vis[4].second) || ! esnatural(vis[5].second))
       morir(linea,columna,vis[0].second+" requiere 'xini' 'yini' 'ancho' 'alto' 'tiempo'.");
+    push_back_instruccion(vis,vvs);
+  } else if (vis[0].second=="muevetamanyocamara") {
+    if (int(vis.size())!=4 ||
+	! esnatural(vis[1].second) || ! esnatural(vis[2].second) || ! esnatural(vis[3].second))
+      morir(linea,columna,vis[0].second+" requiere 'ancho' 'alto' 'tiempo'.");
     push_back_instruccion(vis,vvs);
   } else if (vis[0].second=="luz") {
     if (int(vis.size())!=2 || ! esnatural(vis[1].second) || mystoi(vis[1].second)>=256)
@@ -479,6 +492,10 @@ void transformainstruccion(int linea,vector<pair<int,string> > &vis,vector<vecto
     if (int(vis.size())!=4 || ! esentero(vis[3].second))
       morir(linea,columna,vis[0].second+" requiere 'idpersonaje' 'idcaracteristica' 'profundidad(entero)'.");
     push_back_instruccion(vis,vvs);
+  } else if (vis[0].second=="profundidadpersonaje") {
+    if (int(vis.size())!=3 || ! esentero(vis[2].second))
+      morir(linea,columna,vis[0].second+" requiere 'idpersonaje' 'profundidad(entero)'.");
+    push_back_instruccion(vis,vvs);
   } else if (vis[0].second=="flip") {
     if (int(vis.size())!=2)
       morir(linea,columna,vis[0].second+" requiere 'idpersonaje'.");
@@ -509,11 +526,13 @@ void transformaaframes(string &s)
   s=itos(mystoi(s)*framespersecond/1000);
 }
 
+
 void transformaaframes(vector<string> &vs)
 {
   if (vs[0]=="habla" and esnatural(vs[3])) transformaaframes(vs[3]);
   else if (vs[0]=="mueve" || vs[0]=="mueveconcamara") transformaaframes(vs[4]);
   else if (vs[0]=="muevecamara") transformaaframes(vs[5]);
+  else if (vs[0]=="muevetamanyocamara") transformaaframes(vs[3]);
   else if (vs[0]=="tiempo") transformaaframes(vs[1]);
   else if (vs[0]=="mueveluz") transformaaframes(vs[2]);
 }
@@ -533,19 +552,23 @@ struct estadopersonaje {
   int x,y;
   int xcentro,ycentro;
   int xescala,yescala;
+  int profundidad;
   int flip;
   map<string,string> caracteristica2forma;
   map<string,int> caracteristica2profundidad;
   map<string,int> caracteristica2color;
   string prefijoboca;
   estadopersonaje() {
-    x=y=xcentro=ycentro=flip=0;
+    x=y=xcentro=ycentro=profundidad=flip=0;
     xescala=yescala=100;
     prefijoboca="boca";
   }
 };
 
 struct estadogeneral {
+  // Si el siguiente campo no es vacio, entonces la xcamara,ycamara son
+  // relativas al xcentro,ycentro del personaje indicado.
+  string camararelativaapersonaje;
   int xcamara,ycamara,anchocamara,altocamara,luz;
   map<string,estadopersonaje> p;
   int accionaudio;// 0=nada, 1=iniciaraudio, 2=oyendose.
@@ -736,7 +759,7 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
 	ve.push_back(e);
       }
     }
-  } else if (vs[0]=="muevecamara") {
+  } else if (vs[0]=="muevecamara" or vs[0]=="muevetamanyocamara") {
     int &x=e.xcamara;
     int &y=e.ycamara;
     int &ancho=e.anchocamara;
@@ -745,11 +768,20 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     int yini=y;
     int anchoini=ancho;
     int altoini=alto;
-    int xfin=mystoi(vs[1]);
-    int yfin=mystoi(vs[2]);
-    int anchofin=mystoi(vs[3]);
-    int altofin=mystoi(vs[4]);
-    int numframes=mystoi(vs[5]);
+    int xfin,yfin,anchofin,altofin,numframes;
+    if (vs[0]=="muevecamara") {
+      xfin=mystoi(vs[1]);
+      yfin=mystoi(vs[2]);
+      anchofin=mystoi(vs[3]);
+      altofin=mystoi(vs[4]);
+      numframes=mystoi(vs[5]);
+    } else {
+      xfin=x;
+      yfin=y;
+      anchofin=mystoi(vs[1]);
+      altofin=mystoi(vs[2]);
+      numframes=mystoi(vs[3]);
+    }
     if (instantaneo or numframes<=0) {
       x=xfin;
       y=yfin;
@@ -818,6 +850,25 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     e.ycamara=mystoi(vs[2]);
     e.anchocamara=mystoi(vs[3]);
     e.altocamara=mystoi(vs[4]);
+  } else if (vs[0]=="posicioncamara") {
+    e.xcamara=mystoi(vs[1]);
+    e.ycamara=mystoi(vs[2]);
+  } else if (vs[0]=="tamanyocamara") {
+    e.anchocamara=mystoi(vs[1]);
+    e.altocamara=mystoi(vs[2]);
+  } else if (vs[0]=="camararelativa") {
+    if (int(vs.size()==2)) {
+      e.camararelativaapersonaje=vs[1];
+      if (e.p.count(e.camararelativaapersonaje)==0)
+	morir("Camara relativa a personaje \""+e.camararelativaapersonaje+
+	      "\" que no existe.");
+      e.xcamara=e.xcamara-e.p[e.camararelativaapersonaje].x;
+      e.ycamara=e.ycamara-e.p[e.camararelativaapersonaje].y;
+    } else if (e.camararelativaapersonaje!="") {
+      e.xcamara=e.xcamara+e.p[e.camararelativaapersonaje].x;
+      e.ycamara=e.ycamara+e.p[e.camararelativaapersonaje].y;
+      e.camararelativaapersonaje="";
+    }
   } else if (vs[0]=="definecolor") {
     //color[vs[1]]=makecol(mystoi(vs[2]),mystoi(vs[3]),mystoi(vs[4]));
   } else if (vs[0]=="color") {
@@ -826,6 +877,8 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     e.p[vs[1]].caracteristica2forma[vs[2]]=vs[3];
   } else if (vs[0]=="profundidad") {
     e.p[vs[1]].caracteristica2profundidad[vs[2]]=mystoi(vs[3]);
+  } else if (vs[0]=="profundidadpersonaje") {
+    e.p[vs[1]].profundidad=mystoi(vs[2]);
   } else if (vs[0]=="flip") {
     e.p[vs[1]].flip^=1;
   } else {
@@ -894,6 +947,20 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	    ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
 	    ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
 	    ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
+	  } else if (vs[0]=="posicioncamara") {
+	    int xcamaraini=ve[frameinitransicion].xcamara;
+	    int ycamaraini=ve[frameinitransicion].ycamara;
+	    e.xcamara=mystoi(vs[1]);
+	    e.ycamara=mystoi(vs[2]);
+	    ve[frame].xcamara=xcamaraini*factor0+e.xcamara*factor1;
+	    ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
+	  } else if (vs[0]=="tamanyocamara") {
+	    int anchocamaraini=ve[frameinitransicion].anchocamara;
+	    int altocamaraini=ve[frameinitransicion].altocamara;
+	    e.anchocamara=mystoi(vs[1]);
+	    e.altocamara=mystoi(vs[2]);
+	    ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
+	    ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
 	  } else if (vs[0]=="coloca") {
 	    int xini=ve[frameinitransicion].p[vs[1]].x;
 	    int yini=ve[frameinitransicion].p[vs[1]].y;
@@ -932,6 +999,12 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	    ebucle.p[vs[1]].caracteristica2forma[vs[2]]=vs[3];
 	  } else if (vs[0]=="profundidad") {
 	    ebucle.p[vs[1]].caracteristica2profundidad[vs[2]]=mystoi(vs[3]);
+	    // El problema de plasmar profundidadpersonaje es que no
+	    // hay ningun indicador de si realmente ha sido inicializado o no.
+	    // No se hasta que punto es necesario que se pueda meter esto en el bucle.
+	    // Ni si quiera parece necesario el caso de profundidad.
+	    //} else if (vs[0]=="profundidadpersonaje") {
+	    //ebucle.p[vs[1]].profundidad=mystoi(vs[2]);
 	  } else if (vs[0]=="tiempo") {
 	    int numframestiempo=mystoi(vs[1]);
 	    for (int k=0;k<numframestiempo and frame<=framefintransicion;k++,frame++)
@@ -943,7 +1016,6 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	}
 	plasmarestado(ebucle,e);
       }
-      //--->
     } else
       transformaaestados(vvs[i],ve,e,color,letra2letra/*,listaaudios*/,instantaneo);
   }
@@ -995,7 +1067,7 @@ void transformaaplandibujo(estadopersonaje &p,vector<plandibujo> &vp)
 {
   for (map<string,string>::iterator it=p.caracteristica2forma.begin();it!=p.caracteristica2forma.end();it++)
     vp.push_back(plandibujo(p.x,p.y,p.xcentro,p.ycentro,p.xescala,p.yescala,
-			    p.flip,p.caracteristica2profundidad[it->first],
+			    p.flip,p.caracteristica2profundidad[it->first]+p.profundidad,
 			    p.caracteristica2color[it->first],
 			    it->first+it->second));
 }
@@ -1059,8 +1131,19 @@ void texturarestadogeneral(estadogeneral &e)
   vector<plandibujo> vp=transformaaplandibujo(e);
   float xescala=float(renderTexture.getSize().x)/e.anchocamara;
   float yescala=float(renderTexture.getSize().y)/e.altocamara;
-  float leftrenderTexture=e.xcamara-e.anchocamara/2.0;
-  float toprenderTexture=e.ycamara-e.altocamara/2.0;
+
+  float xcamara=e.xcamara;
+  float ycamara=e.ycamara;
+  if (e.camararelativaapersonaje!="") {
+    if (e.p.count(e.camararelativaapersonaje)==0)
+      morir("Camara relativa a personaje \""+e.camararelativaapersonaje+
+	    "\" que no existe.");
+    xcamara=e.p[e.camararelativaapersonaje].x+e.xcamara;
+    ycamara=e.p[e.camararelativaapersonaje].y+e.ycamara;
+  }
+
+  float leftrenderTexture=xcamara-e.anchocamara/2.0;
+  float toprenderTexture=ycamara-e.altocamara/2.0;
   //cout<<"("<<renderTexture.getSize().x<<","<<renderTexture.getSize().y<<")";
   for (int i=0;i<int(vp.size());i++) {
     plandibujo &p=vp[i];
@@ -1103,10 +1186,21 @@ void dibujarestadogeneral(estadogeneral &e,int frame,int totalframes)
   vector<plandibujo> vp=transformaaplandibujo(e);
   //cout<<endl<<endl;
   //escribe(vp);
+
+  float xcamara=e.xcamara;
+  float ycamara=e.ycamara;
+  if (e.camararelativaapersonaje!="") {
+    if (e.p.count(e.camararelativaapersonaje)==0)
+      morir("Camara relativa a personaje \""+e.camararelativaapersonaje+
+	    "\" que no existe.");
+    xcamara=e.p[e.camararelativaapersonaje].x+e.xcamara;
+    ycamara=e.p[e.camararelativaapersonaje].y+e.ycamara;
+  }
+
   float xescala=float(window.getSize().x)/e.anchocamara;
   float yescala=float(window.getSize().y)/e.altocamara;
-  float leftwindow=e.xcamara-e.anchocamara/2.0;
-  float topwindow=e.ycamara-e.altocamara/2.0;
+  float leftwindow=xcamara-e.anchocamara/2.0;
+  float topwindow=ycamara-e.altocamara/2.0;
   //cout<<"("<<window.getSize().x<<","<<window.getSize().y<<")";
   for (int i=0;i<int(vp.size());i++) {
     plandibujo &p=vp[i];
