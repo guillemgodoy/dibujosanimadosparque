@@ -583,6 +583,24 @@ struct estadogeneral {
   }
 };
 
+struct instruccioncamara {
+  // tipo==-1 === camararelativa (quitar personaje)
+  // tipo==0 === camararelativa personaje
+  // tipo==1 === mueveposicioncamara
+  int tipo,frameini,framefin,x,y;
+  string personaje;
+  instruccioncamara() {
+  }
+  instruccioncamara(int intipo,int inframe,string inpersonaje) {
+    tipo=intipo;
+    frameini=framefin=inframe;
+    personaje=inpersonaje;
+  }
+  instruccioncamara(int inframeini,int inframefin,int inx,int iny) {
+    tipo=1;frameini=inframeini;framefin=inframefin;x=inx;y=iny;
+  }
+};
+
 void plasmarestado(estadogeneral &e1,estadogeneral &e2)
 {
   for (map<string,estadopersonaje>::iterator it=e1.p.begin();it!=e1.p.end();it++) {
@@ -632,7 +650,8 @@ void escribe(vector<estadogeneral> &ve)
     escribe(ve[i]);
 }
 
-void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogeneral &e,
+void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,vector<instruccioncamara> &vc,
+			estadogeneral &e,
 			map<string,int> &color,map<char,char> &letra2letra,
 			//vector<pair<int,string> > &listaaudios,
 			bool &instantaneo)
@@ -733,41 +752,52 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     int &ycamara=e.ycamara;
     int despxcamara=xcamara-x;
     int despycamara=ycamara-y;
+    if (vs[0]=="mueveconcamara")
+      vc.push_back(instruccioncamara(int(ve.size()),int(ve.size())+max(0,numframes-1),
+				     xfin+despxcamara,yfin+despycamara));
     if (instantaneo or numframes<=0) {
       x=xfin;
       y=yfin;
+      /*
       if (vs[0]=="mueveconcamara") {
 	xcamara=x+despxcamara;
 	ycamara=y+despycamara;
       }
+      */
     } else if (numframes==1) {
       x=xfin;
       y=yfin;
+      /*
       if (vs[0]=="mueveconcamara") {
 	xcamara=x+despxcamara;
 	ycamara=y+despycamara;
       }
+      */
       ve.push_back(e);
     } else {
       for (int frame=0;frame<numframes;frame++) {
 	x=(xini*(numframes-1-frame)+xfin*frame)/(numframes-1);
 	y=(yini*(numframes-1-frame)+yfin*frame)/(numframes-1);
+	/*
 	if (vs[0]=="mueveconcamara") {
 	  xcamara=x+despxcamara;
 	  ycamara=y+despycamara;
 	}
+	*/
 	ve.push_back(e);
       }
     }
   } else if (vs[0]=="muevecamara" or vs[0]=="muevetamanyocamara") {
-    int &x=e.xcamara;
-    int &y=e.ycamara;
+    //int &x=e.xcamara;
+    //int &y=e.ycamara;
     int &ancho=e.anchocamara;
     int &alto=e.altocamara;
-    int xini=x;
-    int yini=y;
+    //int xini=x;
+    //int yini=y;
     int anchoini=ancho;
     int altoini=alto;
+    int anchofin,altofin,numframes;
+    /*
     int xfin,yfin,anchofin,altofin,numframes;
     if (vs[0]=="muevecamara") {
       xfin=mystoi(vs[1]);
@@ -778,21 +808,35 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     } else {
       xfin=x;
       yfin=y;
+    */
+    if (vs[0]=="muevecamara") {
+      int xfin=mystoi(vs[1]);
+      int yfin=mystoi(vs[2]);
+      anchofin=mystoi(vs[3]);
+      altofin=mystoi(vs[4]);
+      numframes=mystoi(vs[5]);
+      vc.push_back(instruccioncamara(int(ve.size()),int(ve.size())+max(0,numframes-1),xfin,yfin));
+    } else {
       anchofin=mystoi(vs[1]);
       altofin=mystoi(vs[2]);
       numframes=mystoi(vs[3]);
     }
-    if (instantaneo or numframes<=0) {
-      x=xfin;
-      y=yfin;
+    //}
+    if (numframes<=0) {
+      //x=xfin;
+      //y=yfin;
+      ancho=anchofin;
+      alto=altofin;
     } else if (numframes==1) {
-      x=xfin;
-      y=yfin;
+      //x=xfin;
+      //y=yfin;
+      ancho=anchofin;
+      alto=altofin;
       ve.push_back(e);
     } else {
       for (int frame=0;frame<numframes;frame++) {
-	x=(xini*(numframes-1-frame)+xfin*frame)/(numframes-1);
-	y=(yini*(numframes-1-frame)+yfin*frame)/(numframes-1);
+	//x=(xini*(numframes-1-frame)+xfin*frame)/(numframes-1);
+	//y=(yini*(numframes-1-frame)+yfin*frame)/(numframes-1);
 	ancho=(anchoini*(numframes-1-frame)+anchofin*frame)/(numframes-1);
 	alto=(altoini*(numframes-1-frame)+altofin*frame)/(numframes-1);
 	ve.push_back(e);
@@ -846,29 +890,44 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
     for (int i=0;i<int(letras.size());i++)
       letra2letra[letras[i]]=letras[0];
   } else if (vs[0]=="camara") {
-    e.xcamara=mystoi(vs[1]);
-    e.ycamara=mystoi(vs[2]);
+    //e.xcamara=mystoi(vs[1]);
+    //e.ycamara=mystoi(vs[2]);
+    vc.push_back(instruccioncamara(int(ve.size()),int(ve.size()),mystoi(vs[1]),mystoi(vs[2])));
     e.anchocamara=mystoi(vs[3]);
     e.altocamara=mystoi(vs[4]);
   } else if (vs[0]=="posicioncamara") {
-    e.xcamara=mystoi(vs[1]);
-    e.ycamara=mystoi(vs[2]);
+    //e.xcamara=mystoi(vs[1]);
+    //e.ycamara=mystoi(vs[2]);
+    vc.push_back(instruccioncamara(int(ve.size()),int(ve.size()),mystoi(vs[1]),mystoi(vs[2])));
   } else if (vs[0]=="tamanyocamara") {
     e.anchocamara=mystoi(vs[1]);
     e.altocamara=mystoi(vs[2]);
   } else if (vs[0]=="camararelativa") {
+    /*
+    if (int(vs.size())==2) {
+      vc.push_back(instruccioncamara(int(ve.size()),vs[1]));
+      if (e.p.count(vs[1])==0)
+	morir("Camara relativa a personaje \""+vs[1]+"\" que no existe.");
+    } else vc.push_back(instruccioncamara(int(ve.size()),""));
+    */
+    
+    if (e.camararelativaapersonaje!="")
+      vc.push_back(instruccioncamara(-1,int(ve.size()),e.camararelativaapersonaje));
+    e.camararelativaapersonaje="";
     if (int(vs.size()==2)) {
       e.camararelativaapersonaje=vs[1];
       if (e.p.count(e.camararelativaapersonaje)==0)
 	morir("Camara relativa a personaje \""+e.camararelativaapersonaje+
 	      "\" que no existe.");
-      e.xcamara=e.xcamara-e.p[e.camararelativaapersonaje].x;
-      e.ycamara=e.ycamara-e.p[e.camararelativaapersonaje].y;
-    } else if (e.camararelativaapersonaje!="") {
-      e.xcamara=e.xcamara+e.p[e.camararelativaapersonaje].x;
-      e.ycamara=e.ycamara+e.p[e.camararelativaapersonaje].y;
-      e.camararelativaapersonaje="";
-    }
+      vc.push_back(instruccioncamara(0,int(ve.size()),e.camararelativaapersonaje));
+      //e.xcamara=e.xcamara-e.p[e.camararelativaapersonaje].x;
+      //e.ycamara=e.ycamara-e.p[e.camararelativaapersonaje].y;
+    }// else if (e.camararelativaapersonaje!="") {
+    //e.xcamara=e.xcamara+e.p[e.camararelativaapersonaje].x;
+    //e.ycamara=e.ycamara+e.p[e.camararelativaapersonaje].y;
+    //e.camararelativaapersonaje="";
+    //}
+
   } else if (vs[0]=="definecolor") {
     //color[vs[1]]=makecol(mystoi(vs[2]),mystoi(vs[3]),mystoi(vs[4]));
   } else if (vs[0]=="color") {
@@ -890,148 +949,205 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,estadogener
 void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 //vector<pair<int,string> > &listaaudios)
 {
-  estadogeneral e;
-  map<string,int> frametransicion;
-  e.xcamara=anchowindow/2;//window.getSize().x/2;
-  e.ycamara=altowindow/2;//window.getSize().y/2;
-  e.anchocamara=anchowindow;//window.getSize().x;
-  e.altocamara=altowindow;//window.getSize().y;
-  bool instantaneo=false;
-  map<string,int> color;
-  map<char,char> letra2letra;
-  for (int i=0;i<int(vvs.size());i++) {
-    if (vvs[i][0]=="obviar")
-      while (i<int(vvs.size()) and vvs[i][0]!="finobviar")
-	i++;
-    else if (vvs[i][0]=="transicionini") {
-      string idtransicion=vvs[i][1];
-      if (frametransicion.count(idtransicion)) {
-	cout<<"Transicion "<<idtransicion<<" se definio dos veces."<<endl;
-	exit(0);
-      }
-      frametransicion[idtransicion]=int(ve.size());
-    } else if (vvs[i][0]=="transicionter") {
-      string idtransicion=vvs[i][1];
-      if (frametransicion.count(idtransicion)==0) {
-	cout<<"Transicion "<<idtransicion<<" no definida."<<endl;
-	exit(0);
-      }
-      int frameinitransicion=frametransicion[idtransicion];
-      int framefintransicion=int(ve.size())-1;
-      i++;
-      int jini=i;
-      while (i<int(vvs.size()) and vvs[i][0]!="transicionbucle" and vvs[i][0]!="transicionfin") i++;
-      if (i>=int(vvs.size()) or vvs[i][1]!=idtransicion) {
-	cout<<"Transicion "<<idtransicion<<" sin bucle ni marca de final."<<endl;
-	exit(0);
-      }
-      int jfin=i-1;
-      int offsetxcamara=0,offsetycamara=0;
-      for (int frame=frameinitransicion;frame<=framefintransicion;frame++) {
-	double factor0=0,factor1=1;
-	if (frame<framefintransicion) {
-	  factor0=double(framefintransicion-frame)/(framefintransicion-frameinitransicion);
-	  factor1=double(frame-frameinitransicion)/(framefintransicion-frameinitransicion);
+  vector<instruccioncamara> vc;
+  {
+    estadogeneral e;
+    map<string,int> frametransicion;
+    e.xcamara=anchowindow/2;//window.getSize().x/2;
+    e.ycamara=altowindow/2;//window.getSize().y/2;
+    e.anchocamara=anchowindow;//window.getSize().x;
+    e.altocamara=altowindow;//window.getSize().y;
+    bool instantaneo=false;
+    map<string,int> color;
+    map<char,char> letra2letra;
+    for (int i=0;i<int(vvs.size());i++) {
+      if (vvs[i][0]=="obviar")
+	while (i<int(vvs.size()) and vvs[i][0]!="finobviar")
+	  i++;
+      else if (vvs[i][0]=="transicionini") {
+	string idtransicion=vvs[i][1];
+	if (frametransicion.count(idtransicion)) {
+	  cout<<"Transicion "<<idtransicion<<" se definio dos veces."<<endl;
+	  exit(0);
 	}
-	for (int j=jini;j<=jfin;j++) {
-	  vector<string> &vs=vvs[j];
-	  if (vs[0]=="camara") {
-	    int xcamaraini=ve[frameinitransicion].xcamara;
-	    int ycamaraini=ve[frameinitransicion].ycamara;
-	    int anchocamaraini=ve[frameinitransicion].anchocamara;
-	    int altocamaraini=ve[frameinitransicion].altocamara;
-	    e.xcamara=mystoi(vs[1]);
-	    e.ycamara=mystoi(vs[2]);
-	    e.anchocamara=mystoi(vs[3]);
-	    e.altocamara=mystoi(vs[4]);
-	    ve[frame].xcamara=xcamaraini*factor0+e.xcamara*factor1;
-	    ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
-	    ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
-	    ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
-	  } else if (vs[0]=="posicioncamara") {
-	    int xcamaraini=ve[frameinitransicion].xcamara;
-	    int ycamaraini=ve[frameinitransicion].ycamara;
-	    e.xcamara=mystoi(vs[1]);
-	    e.ycamara=mystoi(vs[2]);
-	    ve[frame].xcamara=xcamaraini*factor0+e.xcamara*factor1;
-	    ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
-	  } else if (vs[0]=="tamanyocamara") {
-	    int anchocamaraini=ve[frameinitransicion].anchocamara;
-	    int altocamaraini=ve[frameinitransicion].altocamara;
-	    e.anchocamara=mystoi(vs[1]);
-	    e.altocamara=mystoi(vs[2]);
-	    ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
-	    ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
-	  } else if (vs[0]=="coloca") {
-	    int xini=ve[frameinitransicion].p[vs[1]].x;
-	    int yini=ve[frameinitransicion].p[vs[1]].y;
-	    estadopersonaje &p=e.p[vs[1]];
-	    p.x=mystoi(vs[2]);
-	    p.y=mystoi(vs[3]);
-	    ve[frame].p[vs[1]].x=xini*factor0+p.x*factor1;
-	    ve[frame].p[vs[1]].y=yini*factor0+p.y*factor1;
-	    
-	    // Si hay cambio a camara relativa con respecto de este personaje, hay que hacer tambien el ajuste.
-	    if (frame>0 and ve[frame].camararelativaapersonaje==vs[1] and
-		ve[frame-1].camararelativaapersonaje=="") {
+	frametransicion[idtransicion]=int(ve.size());
+      } else if (vvs[i][0]=="transicionter") {
+	string idtransicion=vvs[i][1];
+	if (frametransicion.count(idtransicion)==0) {
+	  cout<<"Transicion "<<idtransicion<<" no definida."<<endl;
+	  exit(0);
+	}
+	int frameinitransicion=frametransicion[idtransicion];
+	int framefintransicion=int(ve.size())-1;
+	i++;
+	int jini=i;
+	while (i<int(vvs.size()) and vvs[i][0]!="transicionbucle" and vvs[i][0]!="transicionfin") i++;
+	if (i>=int(vvs.size()) or vvs[i][1]!=idtransicion) {
+	  cout<<"Transicion "<<idtransicion<<" sin bucle ni marca de final."<<endl;
+	  exit(0);
+	}
+	int jfin=i-1;
+	//int offsetxcamara=0,offsetycamara=0;
+	for (int frame=frameinitransicion;frame<=framefintransicion;frame++) {
+	  double factor0=0,factor1=1;
+	  if (frame<framefintransicion) {
+	    factor0=double(framefintransicion-frame)/(framefintransicion-frameinitransicion);
+	    factor1=double(frame-frameinitransicion)/(framefintransicion-frameinitransicion);
+	  }
+	  for (int j=jini;j<=jfin;j++) {
+	    vector<string> &vs=vvs[j];
+	    if (vs[0]=="camara") {
+	      if (frame==frameinitransicion)
+		vc.push_back(instruccioncamara(frameinitransicion,framefintransicion,mystoi(vs[1]),mystoi(vs[2])));
+	      //int xcamaraini=ve[frameinitransicion].xcamara;
+	      //int ycamaraini=ve[frameinitransicion].ycamara;
+	      int anchocamaraini=ve[frameinitransicion].anchocamara;
+	      int altocamaraini=ve[frameinitransicion].altocamara;
+	      //e.xcamara=mystoi(vs[1]);
+	      //e.ycamara=mystoi(vs[2]);
+	      e.anchocamara=mystoi(vs[3]);
+	      e.altocamara=mystoi(vs[4]);
+	      //ve[frame].xcamara=xcamaraini*factor0+e.xcamara*factor1;
+	      //ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
+	      ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
+	      ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
+	    } else if (vs[0]=="posicioncamara") {
+	      if (frame==frameinitransicion)
+		vc.push_back(instruccioncamara(frameinitransicion,framefintransicion,mystoi(vs[1]),mystoi(vs[2])));
+	      /*
+		int xcamaraini=ve[frameinitransicion].xcamara;
+		int ycamaraini=ve[frameinitransicion].ycamara;
+		e.xcamara=mystoi(vs[1]);
+		e.ycamara=mystoi(vs[2]);
+		ve[frame].xcamara=xcamaraini*factor0+e.xcamara*factor1;
+		ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
+	      */
+	    } else if (vs[0]=="tamanyocamara") {
+	      int anchocamaraini=ve[frameinitransicion].anchocamara;
+	      int altocamaraini=ve[frameinitransicion].altocamara;
+	      e.anchocamara=mystoi(vs[1]);
+	      e.altocamara=mystoi(vs[2]);
+	      ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
+	      ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
+	    } else if (vs[0]=="coloca") {
+	      int xini=ve[frameinitransicion].p[vs[1]].x;
+	      int yini=ve[frameinitransicion].p[vs[1]].y;
+	      estadopersonaje &p=e.p[vs[1]];
+	      p.x=mystoi(vs[2]);
+	      p.y=mystoi(vs[3]);
+	      ve[frame].p[vs[1]].x=xini*factor0+p.x*factor1;
+	      ve[frame].p[vs[1]].y=yini*factor0+p.y*factor1;
+	      /*
+	      // Si hay cambio a camara relativa con respecto de este personaje, hay que hacer tambien el ajuste.
+	      if (frame>0 and ve[frame].camararelativaapersonaje==vs[1] and
+	      ve[frame-1].camararelativaapersonaje=="") {
 	      offsetxcamara-=(ve[frame].p[vs[1]].x-xini);
 	      offsetycamara-=(ve[frame].p[vs[1]].y-yini);
-	    } else if (frame>0 and ve[frame].camararelativaapersonaje=="" and
-		ve[frame-1].camararelativaapersonaje==vs[1]) {
+	      } else if (frame>0 and ve[frame].camararelativaapersonaje=="" and
+	      ve[frame-1].camararelativaapersonaje==vs[1]) {
 	      offsetxcamara+=(ve[frame].p[vs[1]].x-xini);
 	      offsetycamara+=(ve[frame].p[vs[1]].y-yini);
+	      }
+	      ve[frame].xcamara+=offsetxcamara;
+	      ve[frame].ycamara+=offsetycamara;
+	      */
+	    } else {
+	      cout<<"Instruccion "<<vs[0]<<" no permitida en definicion de transicion "<<idtransicion<<"."<<endl;
+	      exit(0);
 	    }
-	    ve[frame].xcamara+=offsetxcamara;
-	    ve[frame].ycamara+=offsetycamara;
-	  } else {
-	    cout<<"Instruccion "<<vs[0]<<" no permitida en definicion de transicion "<<idtransicion<<"."<<endl;
-	    exit(0);
 	  }
 	}
-      }
-      if (vvs[i][0]=="transicionbucle") {
-	i++;
-	jini=i;
-	bool haytiempodentro=false;
-	while (i<int(vvs.size()) and vvs[i][0]!="transicionfin") {
-	  haytiempodentro=haytiempodentro or (vvs[i][0]=="tiempo" and mystoi(vvs[i][1])>0);
+	if (vvs[i][0]=="transicionbucle") {
 	  i++;
-	}
-	if (i>=int(vvs.size()) or vvs[i][1]!=idtransicion) {
-	  cout<<"Transicion "<<idtransicion<<" sin marca de final."<<endl;
-	  exit(0);
-	}
-	if (not haytiempodentro) {
-	  cout<<"Transicion "<<idtransicion<<" con bucle sin tiempo positivo."<<endl;
-	  exit(0);
-	}
-	jfin=i-1;
-	estadogeneral ebucle;
-	for (int frame=frameinitransicion,j=jini;frame<=framefintransicion;j=(j>=jfin?jini:j+1)) {
-	  vector<string> &vs=vvs[j];
-	  if (vs[0]=="forma") {
-	    ebucle.p[vs[1]].caracteristica2forma[vs[2]]=vs[3];
-	  } else if (vs[0]=="profundidad") {
-	    ebucle.p[vs[1]].caracteristica2profundidad[vs[2]]=mystoi(vs[3]);
-	    // El problema de plasmar profundidadpersonaje es que no
-	    // hay ningun indicador de si realmente ha sido inicializado o no.
-	    // No se hasta que punto es necesario que se pueda meter esto en el bucle.
-	    // Ni si quiera parece necesario el caso de profundidad.
-	    //} else if (vs[0]=="profundidadpersonaje") {
-	    //ebucle.p[vs[1]].profundidad=mystoi(vs[2]);
-	  } else if (vs[0]=="tiempo") {
-	    int numframestiempo=mystoi(vs[1]);
-	    for (int k=0;k<numframestiempo and frame<=framefintransicion;k++,frame++)
-	      plasmarestado(ebucle,ve[frame]);
-	  } else {
-	    cout<<"Instruccion "<<vs[0]<<" no permitida en bucle de transicion "<<idtransicion<<"."<<endl;
+	  jini=i;
+	  bool haytiempodentro=false;
+	  while (i<int(vvs.size()) and vvs[i][0]!="transicionfin") {
+	    haytiempodentro=haytiempodentro or (vvs[i][0]=="tiempo" and mystoi(vvs[i][1])>0);
+	    i++;
+	  }
+	  if (i>=int(vvs.size()) or vvs[i][1]!=idtransicion) {
+	    cout<<"Transicion "<<idtransicion<<" sin marca de final."<<endl;
 	    exit(0);
 	  }
+	  if (not haytiempodentro) {
+	    cout<<"Transicion "<<idtransicion<<" con bucle sin tiempo positivo."<<endl;
+	    exit(0);
+	  }
+	  jfin=i-1;
+	  estadogeneral ebucle;
+	  for (int frame=frameinitransicion,j=jini;frame<=framefintransicion;j=(j>=jfin?jini:j+1)) {
+	    vector<string> &vs=vvs[j];
+	    if (vs[0]=="forma") {
+	      ebucle.p[vs[1]].caracteristica2forma[vs[2]]=vs[3];
+	    } else if (vs[0]=="profundidad") {
+	      ebucle.p[vs[1]].caracteristica2profundidad[vs[2]]=mystoi(vs[3]);
+	      // El problema de plasmar profundidadpersonaje es que no
+	      // hay ningun indicador de si realmente ha sido inicializado o no.
+	      // No se hasta que punto es necesario que se pueda meter esto en el bucle.
+	      // Ni si quiera parece necesario el caso de profundidad.
+	      //} else if (vs[0]=="profundidadpersonaje") {
+	      //ebucle.p[vs[1]].profundidad=mystoi(vs[2]);
+	    } else if (vs[0]=="tiempo") {
+	      int numframestiempo=mystoi(vs[1]);
+	      for (int k=0;k<numframestiempo and frame<=framefintransicion;k++,frame++)
+		plasmarestado(ebucle,ve[frame]);
+	    } else {
+	      cout<<"Instruccion "<<vs[0]<<" no permitida en bucle de transicion "<<idtransicion<<"."<<endl;
+	      exit(0);
+	    }
+	  }
+	  plasmarestado(ebucle,e);
 	}
-	plasmarestado(ebucle,e);
+      } else
+	transformaaestados(vvs[i],ve,vc,e,color,letra2letra/*,listaaudios*/,instantaneo);
+    }
+  }
+  
+  // Ahora es cuando calculamos las posiciones de la camara.
+  int lastframe=-1;
+  for (int i=0;i<int(vc.size()) and vc[i].frameini<int(ve.size());i++) {
+    instruccioncamara &ic=vc[i];
+    while (lastframe<ic.frameini) {
+      lastframe++;
+      if (lastframe>0) {
+	ve[lastframe].xcamara=ve[lastframe-1].xcamara;
+	ve[lastframe].ycamara=ve[lastframe-1].ycamara;
       }
-    } else
-      transformaaestados(vvs[i],ve,e,color,letra2letra/*,listaaudios*/,instantaneo);
+    }
+    if (ic.tipo==-1) {
+      estadogeneral &e=ve[ic.frameini];
+      e.xcamara=e.xcamara+e.p[ic.personaje].x;
+      e.ycamara=e.ycamara+e.p[ic.personaje].y;
+    } else if (ic.tipo==0) {
+      estadogeneral &e=ve[ic.frameini];
+      e.xcamara=e.xcamara-e.p[ic.personaje].x;
+      e.ycamara=e.ycamara-e.p[ic.personaje].y;
+    } else {
+      int xini=ve[ic.frameini].xcamara;
+      int yini=ve[ic.frameini].ycamara;
+      int xfin=ic.x;
+      int yfin=ic.y;
+      int numframes=ic.framefin-ic.frameini+1;
+      lastframe=max(lastframe,ic.framefin);
+      if (numframes==1) {
+	estadogeneral &e=ve[ic.frameini];
+	e.xcamara=xfin;
+	e.ycamara=yfin;
+      } else {
+	for (int frame=0;frame<numframes;frame++) {
+	  estadogeneral &e=ve[ic.frameini+frame];
+	  e.xcamara=(xini*(numframes-1-frame)+xfin*frame)/(numframes-1);
+	  e.ycamara=(yini*(numframes-1-frame)+yfin*frame)/(numframes-1);
+	}
+      }
+    }
+  }
+  while (lastframe+1<int(ve.size())) {
+    lastframe++;
+    if (lastframe>0) {
+      ve[lastframe].xcamara=ve[lastframe-1].xcamara;
+      ve[lastframe].ycamara=ve[lastframe-1].ycamara;
+    }
   }
 }
 

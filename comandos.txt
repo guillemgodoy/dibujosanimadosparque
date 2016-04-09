@@ -144,27 +144,26 @@ forma ferran orejaferran normal
 forma person librointelectual normal
 
 
-// gafas orejas
-
 //profundidad fondo fondoparque2 -10
-profundidad fondo fondoparque -10
+profundidadpersonaje fondo -5000
 //profundidad fondo fondoparquedelante 500
 
-profundidad nuria cuerponuria 3210
-profundidad nuria piernasnuria 3220
-profundidad nuria vestidonuria 3230
-profundidad nuria cabeza 3250
-profundidad nuria brazoizquierdanuria 3220
-profundidad nuria brazoderechanuria 3240
-profundidad nuria ocularnuria 3280
-profundidad nuria ojosnuria 3290
-profundidad nuria narizmonica 32100
-profundidad nuria cejasnuria 32110
-profundidad nuria bocanuria 32130
-profundidad nuria pelonuria 32130
-profundidad nuria perronuria 3230
-profundidad nuria pestanyasnuria 3295
+profundidad nuria cuerponuria 210
+profundidad nuria piernasnuria 220
+profundidad nuria vestidonuria 230
+profundidad nuria cabeza 250
+profundidad nuria brazoizquierdanuria 220
+profundidad nuria brazoderechanuria 240
+profundidad nuria ocularnuria 280
+profundidad nuria ojosnuria 290
+profundidad nuria narizmonica 400
+profundidad nuria cejasnuria 410
+profundidad nuria bocanuria 430
+profundidad nuria pelonuria 430
+profundidad nuria perronuria 230
+profundidad nuria pestanyasnuria 295
 
+profundidadpersonaje nuria 5000
 
 profundidad monica cuerponuria 210
 profundidad monica piernasmonica 220
@@ -174,41 +173,46 @@ profundidad monica brazoizquierdamonica 220
 profundidad monica brazoderechamonica 240
 profundidad monica ocularnuria 280
 profundidad monica ojosmonica 290
-profundidad monica narizmonica 2100
-profundidad monica cejasmonica 2110
-profundidad monica bocamonica 2130
-profundidad monica pelomonica 2130
+profundidad monica narizmonica 300
+profundidad monica cejasmonica 310
+profundidad monica bocamonica 330
+profundidad monica pelomonica 330
 profundidad monica pestanyasnuria 295
 
-profundidad manu cuerpomanu 1210
-profundidad manu piernasmanu 1220
-profundidad manu camisetamanu 1230
-profundidad manu cabezamanu 1250
-profundidad manu brazoizquierdamanu 1220
-profundidad manu brazoderechamanu 1240
-profundidad manu ocularmanu 1280
-profundidad manu ojosmanu 1290
-profundidad manu narizmanu 2100
-profundidad manu cejasmanu 2110
-profundidad manu bocamanu 2130
-profundidad manu pelomanu 2130
-profundidad manu orejamanu 2140
+profundidadpersonaje monica 2000
 
-profundidad ferran cuerpoferran 1210
-profundidad ferran piernasferran 1220
-profundidad ferran camisetaferran 1230
-profundidad ferran cabezaferran 1250
-profundidad ferran brazoizquierdaferran 1220
-profundidad ferran brazoderechaferran 1240
-profundidad ferran ocularferran 1280
-profundidad ferran ojosferran 1290
-profundidad ferran narizferran 2100
-profundidad ferran gafasferran 2120
-profundidad ferran cejasferran 2110
-profundidad ferran bocaferran 2130
-profundidad ferran peloferran 2130
-profundidad ferran orejaferran 2140
+profundidad manu cuerpomanu 210
+profundidad manu piernasmanu 220
+profundidad manu camisetamanu 230
+profundidad manu cabezamanu 250
+profundidad manu brazoizquierdamanu 220
+profundidad manu brazoderechamanu 240
+profundidad manu ocularmanu 280
+profundidad manu ojosmanu 290
+profundidad manu narizmanu 300
+profundidad manu cejasmanu 310
+profundidad manu bocamanu 330
+profundidad manu pelomanu 330
+profundidad manu orejamanu 340
 
+profundidadpersonaje manu 2000
+
+profundidad ferran cuerpoferran 210
+profundidad ferran piernasferran 220
+profundidad ferran camisetaferran 230
+profundidad ferran cabezaferran 250
+profundidad ferran brazoizquierdaferran 220
+profundidad ferran brazoderechaferran 240
+profundidad ferran ocularferran 280
+profundidad ferran ojosferran 290
+profundidad ferran narizferran 300
+profundidad ferran gafasferran 320
+profundidad ferran cejasferran 310
+profundidad ferran bocaferran 330
+profundidad ferran peloferran 330
+profundidad ferran orejaferran 340
+
+profundidadpersonaje ferran 1500
 
 profundidad friend cuello 10
 profundidad friend zapatosfriend 20
@@ -257,18 +261,23 @@ profundidad person orejasperson 140
 profundidad person librointelectual 100
 
 
-// CENTRAMOS A LOS PERSONAJES
-
 centra friend 352 100
 centra kevin 352 100
 centra person 352 100
-centra nuria 352 100
-centra monica 352 100
-centra manu 352 100
-centra ferran 510 100
+centra nuria 510 150
+centra monica 510 150
+centra manu 510 150
+centra ferran 510 150
 
 
-camara 4000 700 2560 1440
+// COLOCAMOS A LOS PERSONAJES
+
+coloca friend 4000 650
+coloca kevin 4252 650
+coloca person 4970 650
+coloca nuria -500 -500
+coloca monica -500 -500
+coloca ferran -500 -500
 
 // COLOCAMOS A LOS PERSONAJES
 
@@ -292,10 +301,21 @@ escala ferran 100 100
 //camara 3840 2160 7680 4320
 
 
+camara 4000 700 2560 1440
+
 luz 0
 //tiempo 10000
 mueveluz 255 2000
 
+tiempo 500
+
+muevecamara 4252 750 760 432 1500
+
+tiempo 1000
+
+forma kevin ojoskevin derecha
+forma kevin bocakevin u
+forma kevin cejaskevin oneup
 
 
 
@@ -308,11 +328,26 @@ mueveluz 255 2000
 //////////////////////////////////////////////////////////////////////
 // TRANSICION DE MANU
 
+
 tiempo 1000
-camara 1600 700 2560 1440
-coloca manu 900 450
+coloca manu 1000 500
+
+
+//camara 1600 700 2560 1440
+//coloca manu 900 450
 
 transicionini seguimientomanu
+
+muevecamara 1600 700 2560 1440 2000
+forma kevin ojoskevin izquierda
+forma kevin bocakevin normal
+forma kevin cejaskevin normal
+
+tiempo 2000
+camararelativa manu
+
+muevecamara 0 0 512 290 1000
+
 
 tiempo 1000
 forma manu ojosmanu arriba
@@ -325,27 +360,40 @@ forma manu ojosmanu centro
 forma manu cejasmanu normal
 sonido manu_esquemenosmalqueporfinhepuestolalavadora.wav
 
+
 tiempo 500
 forma manu ojosmanu abajo
 forma manu cejasmanu admirado
 sonido manu_laprimeraenmeses.wav
 
+muevecamara 0 400 400 230 1000
+
+//transicionini laprimeraenmeses
 tiempo 500
 forma manu ojosmanu abajo
 forma manu cejasmanu enojado
 sonido manu_esquellevosietediasconlosmismoscalzoncillostu.wav
+//transicionter laprimeraenmeses
+//posicioncamara 0 400 
+//transicionfin laprimeraenmeses
 
+
+transicionini andarsolos
 tiempo 500
 forma manu ojosmanu izquierda
 forma manu cejasmanu oneup
 sonido manu_yyaparecequepodrianandarsolos.wav
+transicionter andarsolos
+camara 0 200 900 600 
+transicionfin andarsolos
+
 
 tiempo 500
 forma manu ojosmanu centro
 forma manu cejasmanu admirado
 sonido manu_ymiraquemehacostadopocoalfinalporquetotal.wav
 
-tiempo 500
+
 forma manu ojosmanu abajo
 forma manu cejasmanu enojado
 sonido manu_lounicoquetienesquehaceres.wav
@@ -353,17 +401,17 @@ forma manu ojosmanu centro
 forma manu cejasmanu oneup
 sonido manu_meterlaropa.wav
 
-tiempo 200
 forma manu ojosmanu arriba
 forma manu cejasmanu normal
 sonido manu_cierraslapuertahechaseljabon.wav
 
-tiempo 200
+
 forma manu ojosmanu abajo
 forma manu cejasmanu oneup
 sonido manu_yaprietaselbotondela.wav
 
-tiempo 200
+muevecamara 0 0 512 290 500
+
 forma manu ojosmanu arriba
 forma manu cejasmanu admirado
 sonido manu_mecagoentodojoder.wav
@@ -373,20 +421,25 @@ forma manu ojosmanu abajo
 forma manu cejasmanu enojado
 sonido manu_perocomosemepuedehaberpasadoostianoheapretadoelputobotondelalavadora.wav
 
-tiempo 200
+tiempo 1000
+
+camararelativa
+
+transicionini cercadecasa
 forma manu ojosmanu derecha
 forma manu cejasmanu oneup
 sonido manu_buenosienverdaddaigualsiestoyamediacalledecasa.wav
 
-tiempo 200
-forma manu ojosmanu izquierda
-forma manu cejasmanu enojado
-sonido manu_medatiempo.wav
-flip manu
+//tiempo 1000
+transicionter cercadecasa
+camara 4600 700 2560 1440
+//camara 4000 700 2560 1440
+//camara 0 500 2560 1440
+transicionfin cercadecasa
 
 transicionter seguimientomanu
-coloca manu 5100 450
-camara 4600 700 2560 1440
+coloca manu 4500 450
+//camara 4600 700 2560 1440
 transicionbucle seguimientomanu
 tiempo 50
 forma manu piernasmanu 1
@@ -412,16 +465,39 @@ tiempo 50
 forma manu piernasmanu 10
 transicionfin seguimientomanu
 
+
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+// Seguimiento manu 2
+
+flip manu
+forma manu ojosmanu izquierda
+forma manu cejasmanu enojado
+forma kevin bocakevin o
+forma kevin cejaskevin admirado
+
 transicionini seguimientomanu2
 
+
 tiempo 500
-//forma kevin brazoderecha indica
+camararelativa kevin
+sonido manu_medatiempo.wav
 forma kevin ojoskevin derecha
 forma friend ojosfriend derecha
 forma person ojosperson derecha
+tiempo 1000
 
+muevecamara 0 100 512 390 1000
+//forma kevin brazoderecha indica
 
+tiempo 500
 
+forma kevin cejaskevin oneup
+forma kevin bocakevin u
 
 tiempo 1000
 
@@ -433,16 +509,19 @@ tiempo 200
 
 habla kevin uuumooooomeeettoooooo guille_unmomento.wav
 
-forma kevin bocakevin m
+forma kevin bocakevin o
 
 tiempo 200
 
 habla kevin ameissmmiissttooeessoooooooooo guille_habeisvistoeso.wav
 
-forma kevin bocakevin m
+forma kevin cejaskevin centro
+forma kevin bocakevin u
 forma kevin brazoderecha normal
 forma kevin ojoskevin medio
 forma friend ojosfriend medio
+
+muevecamara 0 100 1024 780 1000
 
 tiempo 200
 forma kevin brazoizquierda indica
@@ -461,14 +540,25 @@ forma friend ojosfriend derecha
 
 habla kevin iimuullmeemaarraaalliiiiiiiiii guille_yvuelveparaalli.wav
 
+forma kevin bocakevin i
+
+tiempo 500
+
 forma kevin brazoderecha normal
 forma kevin ojoskevin medio
+forma kevin cejaskevin oneup
 
 habla kevin mmeeroommeennoooottiiooooooooo guille_perobuenotio.wav
 forma friend ojosfriend izquierda
 forma friend bocafriend mh
+forma kevin cejaskevin normal
+
+forma kevin brazoderecha palma
+forma kevin brazoizquierda palma
 
 habla kevin eeesseennoossaammeessaaddoooddeemmaaassoooooeeeeeeeeeeee guille_esquenosabesadondevasoque.wav
+
+tiempo 500
 
 habla kevin jjoootteerrr guille_joder.wav
 
@@ -476,7 +566,7 @@ habla kevin jjoootteerrr guille_joder.wav
 
 transicionter seguimientomanu2
 coloca manu -500 450
-camara 4600 700 2560 1440
+
 transicionbucle seguimientomanu2
 tiempo 50
 forma manu piernasmanu 1
@@ -505,25 +595,54 @@ transicionfin seguimientomanu2
 
 
 
+forma kevin cejaskevin oneup
+forma kevin ojoskevin derecha
+forma kevin brazoderecha uno
+forma kevin brazoizquierda uno
+
 
 
 habla kevin eeeellaaddiissssttaaacciiaammaaassccoooorrttaaeerreedoossmmuuuttooosseessllaalliinneeaarreeeccttaaooommrreeeeeeeeeeeeeee guille_queladistanciamascortaentredospuntoseslalinearectahombre.wav
 
+tiempo 500
 
-forma kevin ojoskevin izquierda
-forma friend bocafriend normal
+forma kevin brazoderecha normal
+forma kevin brazoizquierda normal
+
+tiempo 500
 
 habla person mmiimmiimmooooossddeessseeeffooccaaddoosssss ferran_vivimosdesenfocados.wav
 
+forma kevin ojoskevin izquierda
+forma friend bocafriend oh
+forma kevin bocakevin o
+forma person bocakevin t
+forma kevin cejaskevin admirado
+
+tiempo 1000
+
+camararelativa person
+muevecamara 0 100 512 390 1000
 
 habla person llllaassoocciieeddaaddddddnnnnnnnoossddeessoorriieennrraaoonuunneexxcceessooddeinnffoorrmmaacciiooooooooommm ferran_lasociedadnosdesorientaconunexcesodeinformacion.wav
+
+forma person ojosperson medio
+forma person cejasperson admirado
 
 habla person yyffiinnaallmmeennrreeeeeeepperrddeemoooeeelsseennrriiddooddeenuueessrraassmmiiddaaassssss ferran_yfinalmenteperdemoselsentidodenuestrasvidas.wav
 
 // Hemos repasado hasta aqui.
 
-forma kevin brazoderecha palma
-forma kevin brazoizquierda palma
+camararelativa kevin
+camara -200 100 1024 780
+
+tiempo 500
+
+
+forma kevin ojoskevin derecha
+forma friend ojosfriend izquierda
+//forma kevin brazoderecha palma
+//forma kevin brazoizquierda palma
 forma kevin ojoskevin derecha
 forma friend bocafriend puaj
 forma kevin bocakevin puaj
@@ -536,17 +655,20 @@ forma kevin ojoskevin izquierda
 forma friend bocafriend mh
 forma kevin bocakevin m
 
+camararelativa person
+camara 0 100 512 390
+
 habla person eeeeeesseessffuummaanneennsseeggiiddaaaaaa ferran_queseesfumanenseguida.wav
 
+forma person bocakevin a
 
+tiempo 400
 
+forma person bocakevin m
 
+camararelativa
 
-
-
-
-
-
+tiempo 2000
 
 
 //////////////////////////////////////////////////////////////////////
@@ -558,13 +680,21 @@ habla person eeeeeesseessffuummaanneennsseeggiiddaaaaaa ferran_queseesfumanenseg
 //////////////////////////////////////////////////////////////////////
 // TRANSICION DE MONICA
 
-tiempo 1000
 camara 1600 700 2560 1440
-coloca monica 900 450
+coloca monica 500 450
+
+
+forma person cejasperson normal
 
 transicionini seguimientomonica
 forma monica cejasmonica normal
 tiempo 1000
+
+camararelativa monica
+muevecamara 0 100 512 390 1000
+
+tiempo 1000
+
 forma monica ojosmonica arriba
 forma monica cejasmonica admirada
 sonido monica_quieroelinformesobremimesaaprimerahoradelamanyana.wav
@@ -581,11 +711,19 @@ forma monica cejasmonica enojada
 forma monica bocamonica normal
 sonido monica_estanochenohedormidonadaparapoderacabartuputoinforme.wav
 
+//muevecamara 0 100 1024 780 500
+
+transicionini nuevajefa
+
 tiempo 500
+
 forma monica ojosmonica izquierda
 forma monica cejasmonica normal
 forma monica bocamonica normal
 sonido monica_desdequellegoestanuevajefa.wav
+transicionter nuevajefa
+camara 0 100 1024 780
+transicionfin nuevajefa
 
 tiempo 200
 forma monica ojosmonica centro
@@ -599,21 +737,30 @@ forma monica cejasmonica enojada
 forma monica bocamonica normal
 sonido monica_yseguroquelamuycabronaluegodicequeelinformenoeraurgente.wav
 
-tiempo 500
+tiempo 200
+
+muevecamara 0 400 400 300 500
+
+//transicionini lounicobueno
+//tiempo 500
 forma monica ojosmonica arriba
 forma monica cejasmonica normal
 forma monica bocamonica a
 sonido monica_lounicobuenodetodoestoesquehetenidounabuenaexcusaparanotenerquefollarconminovio.wav
+//transicionter lounicobueno
+//camara 0 300 512 390
+//transicionfin lounicobueno
 
+transicionini yademas
 tiempo 200
-
 sonido monica_yademas.wav
-
 tiempo 200
-
 sonido monica_elinformemehaquedadomuybien.wav
-
 tiempo 500
+transicionter yademas
+camara 0 200 800 600
+transicionfin yademas
+
 
 sonido monica_esquelomiro.wav
 
@@ -625,15 +772,14 @@ tiempo 500
 
 sonido monica_aver.wav
 
-tiempo 200
+muevecamara 0 100 400 300 400
 
 sonido monica_eim.wav
 
 tiempo 200
 
-sonido monica_perodondeestaelinforme.wav
-
-tiempo 500
+//sonido monica_perodondeestaelinforme.wav
+//tiempo 500
 
 sonido monica_mierdamelohedejado.wav
 
@@ -641,20 +787,18 @@ tiempo 200
 
 sonido monica_avolverjoder.wav
 
-tiempo 500
 
+transicionini pirada
 sonido monica_perosimegiroasiaboteprontoparecereunapirada.wav
+transicionter pirada
+camara 0 100 1024 780
+transicionfin pirada
 
-tiempo 1000
-
-sonido monica_ostiasquedespistadamelohedejado.wav
-
-tiempo 1000
-flip monica
+camararelativa
+muevecamara 4600 700 2560 1440 1000
 
 transicionter seguimientomonica
 coloca monica 4500 450
-camara 4600 700 2560 1440
 transicionbucle seguimientomonica
 tiempo 50
 forma monica piernasmonica 1
@@ -681,24 +825,76 @@ forma monica piernasmonica 10
 transicionfin seguimientomonica
 
 
+forma friend ojosfriend izquierda
+//forma manu cejasmanu enojado
+forma kevin bocakevin u
+forma kevin cejaskevin oneup
+forma person ojosperson derecha
+
+sonido monica_ostiasquedespistadamelohedejado.wav
+
+flip monica
+
+forma kevin bocakevin o
+forma kevin cejaskevin admirado
+forma person ojosperson medio
+
 transicionini seguimientomonica2
+tiempo 1000
+forma kevin ojoskevin derecha
+forma friend ojosfriend derecha
+tiempo 1000
+
+camararelativa kevin
+
+muevecamara 0 100 512 390 1000
+//forma kevin brazoderecha indica
+
 tiempo 500
+
+forma kevin cejaskevin oneup
+forma kevin bocakevin u
+
+tiempo 1000
+
 habla kevin eehh guille_eh2.wav
+
+forma friend ojosfriend izquierda
 
 habla kevin uuumoomeennooooooooooo guille_unmomento2.wav
 
 habla kevin mmmaiaaiiaallggoorraarroonnooooooooooo guille_ahihayalgorarono.wav
 
+
+muevecamara 0 100 1024 780 1000
+
+
+forma kevin ojoskevin medio
+forma kevin cejaskevin normal
+
+forma kevin brazoderecha indica
+
 habla kevin mllooaabeissbbiissnnoooooooooo guille_lohabeisvisto.wav
+
+forma friend cejasfriend oneup
+forma friend ojosfriend derecha
+
 
 habla kevin mmeessaaaarriiaaaaaaaacabaddeexxaaeerarelleeeessrroooooooo guille_esatiaacabadeexagerarelgesto.wav
 
+forma kevin cejaskevin admirado
+forma friend cejasfriend admirado
+forma kevin brazoderecha palma
+forma kevin brazoizquierda palma
+
 habla kevin pparauuuusriffiicarrssseeeeeeeee guille_parajustificarse.wav
+
+forma kevin bocakevin e
 
 
 transicionter seguimientomonica2
 coloca monica -500 450
-camara 4600 700 2560 1440
+
 transicionbucle seguimientomonica2
 tiempo 50
 forma monica piernasmonica 1
@@ -748,65 +944,143 @@ transicionfin seguimientomonica2
 
 
 
+forma friend cejasfriend normal
+forma kevin brazoderecha normal
+forma kevin brazoizquierda normal
 
+tiempo 1000
 
+profundidad kevin brazoderecha 1000
+forma kevin brazoderecha loco
+forma friend ojosfriend izquierda
+forma kevin cejaskevin normal
 
-
-
-
-
-
-
-// ---> vamos por aqui.
 
 habla kevin jjooooddeerrppeerrooooqquueeffaallttaaddeeppeerrssoooonnaalliiddaadd guille_joderperoquefaltadepersonalidad.wav
 
+profundidad friend brazoderecha 1000
+forma friend brazoderecha loco
+profundidad kevin brazoderecha 20
+forma kevin brazoderecha normal
+forma kevin ojoskevin derecha
+forma friend ojosfriend derecha
+
 habla kevin ttiiaa guille_tia.wav
 
+forma kevin brazoderecha palma
+forma kevin brazoizquierda palma
+
 habla kevin aammiimmeeddaaiigguuaallssiitteehhaassddeejjaaooooaallggoooooooonnoooo guille_amimedaigualsitehasdejaoalgoono.wav
+
+profundidad friend brazoderecha 20
+forma friend brazoderecha normal
+forma kevin brazoderecha indica
+forma kevin brazoizquierda normal
 
 habla kevin aassiiqquueegguuaarrddaatteettuusspprroooobblleemmaassppaarraattiimmiissmmaa guille_asiqueguardatetusproblemasparatimisma.wav
 
 
+tiempo 1000
 
-
-
-
+forma kevin ojoskevin izquierda
+forma friend ojosfriend izquierda
+forma friend bocafriend oh
+forma kevin bocakevin o
+forma person bocakevin t
+forma kevin cejaskevin admirado
 
 habla person mmuucchhaassppeerrssoooonnaassssiieenntteennmmiieeddooooaallrreecchhaazzoooo ferran_muchaspersonassientenmiedoalrechazo.wav
 
 
+camararelativa person
+forma person ojosperson derecha
+muevecamara 0 100 512 390 700
+
+
 habla person yynneecceessiittaannaapprroooobbaacciioooonnppoooorrppaarrtteeddeelloooossddeemmaass ferran_ynecesitanaprobacionporpartedelosdemas.wav
+
+tiempo 1000
+forma person ojosperson medio
+
 
 habla person sseeccrreeee ferran_secree.wav
 
 habla person qquueeeessaasseemmoooocciioooonneessnnaacceennddeellaaffaallttaaddeeaaffeeccttooooppaatteerrnnoooo ferran_queesasemocionesnacendelafaltadeafectopaterno.wav
 
+
+
+camararelativa kevin
+camara -200 100 1024 780
+
 habla person ppeerrooooeessttooooeennrreeaalliiddaaddnnooooeessttaaeemmppiirriiccaammeenntteeccoooommpprroooobbaaddoooo ferran_peroestoenrealidadnoestaempiricamentecomprobado.wav
+
+
+forma kevin ojoskevin derecha
+forma friend ojosfriend izquierda
+//forma kevin brazoderecha palma
+//forma kevin brazoizquierda palma
+forma kevin ojoskevin derecha
+forma friend bocafriend puaj
+forma kevin bocakevin triste
+forma kevin brazoderecha normal
+forma kevin cejaskevin normal
+
 
 habla person aauunnaassii ferran_aunasi.wav
 
 habla person sseegguurrooooqquueettaammbbiieennccoooonnttrriibbuuyyeenn ferran_seguroquetambiencontribuyen.wav
 
+camararelativa person
+camara 0 100 512 390
+
+
+
+
+
+
+
 habla person lloooossmmaassiivvoooossccaassoooossddeerreepprreessiioooonnssoooocciiaall ferran_losmasivoscasosderepresionsocial.wav
+
+forma person cejasperson oneup
 
 habla person eexxcclluussiioooonn ferran_exclusion.wav
 
+forma person cejasperson admirado
+
 habla person ddeessaaccttiivvaacciioooonnppoooolliittiiccaa ferran_desactivacionpolitica.wav
+
+forma person cejasperson enojado
 
 habla person yyuussooooddeeaannttiippssiiccoooottiiccooooss ferran_yusodeantipsicoticos.wav
 
+forma person bocakevin m
 
+tiempo 1000
 
+camararelativa kevin
+camara -200 100 1024 780
 
+forma kevin ojoskevin izquierda
+forma friend bocafriend triste
+
+tiempo 1000
 
 habla kevin ppeerroooobbuueennoooo guille_perobueno.wav
 
+tiempo 500
+
+forma kevin ojoskevin derecha
+forma kevin brazoizquierda el
+//forma kevin brazoderecha palma
+
 habla kevin ppeerrooooaaeesstteettiiooooqquueeccoooonnyyoooolleeppaassaa guille_peroaestetioqueconyolepasa.wav
 
+forma friend brazoizquierda palma
+forma friend brazoderecha palma
 
+camararelativa
 
-
+tiempo 2000
 
 
 //////////////////////////////////////////////////////////////////////
@@ -818,14 +1092,30 @@ habla kevin ppeerrooooaaeesstteettiiooooqquueeccoooonnyyoooolleeppaassaa guille_
 //////////////////////////////////////////////////////////////////////
 // TRANSICION DE FERRAN
 
-tiempo 1000
+
 camara 1600 700 2560 1440
-coloca ferran 900 450
+coloca ferran 400 450
+forma kevin bocakevin normal
+forma person bocakevin normal
+forma friend bocafriend normal
+forma kevin brazoizquierda normal
+forma kevin brazoderecha normal
+forma friend brazoizquierda normal
+forma friend brazoderecha normal
+forma kevin cejaskevin normal
+forma friend cejasfriend normal
+forma person cejasperson normal
+forma kevin ojoskevin medio
+forma friend ojosfriend medio
+forma person ojosperson medio
+
 
 transicionini seguimientoferran
 
+tiempo 2000
 
-
+camararelativa ferran
+muevecamara 0 100 512 390 1000
 
 
 tiempo 1000
@@ -848,25 +1138,27 @@ forma ferran ojosferran arriba
 forma ferran cejasferran admirado
 sonido xavi_ynoentiendoniporquelohago.wav
 
+
+transicionini paramimadre
 tiempo 500
 forma ferran ojosferran izquierda
 forma ferran cejasferran normal
 sonido xavi_paramimadre.wav
-
 tiempo 200
 forma ferran ojosferran arriba
 forma ferran cejasferran enojado
 sonido xavi_siemprehesidoelpeor.wav
-
 tiempo 200
 forma ferran ojosferran izquierda
 forma ferran cejasferran admirado
 sonido xavi_elquenosabehacernada.wav
-
 tiempo 200
 forma ferran ojosferran arriba
 forma ferran cejasferran admirado
 sonido xavi_elmastontodetodos.wav
+transicionter paramimadre
+camara 0 100 1024 780
+transicionfin paramimadre
 
 tiempo 500
 forma ferran ojosferran abajo
@@ -888,10 +1180,10 @@ forma ferran ojosferran abajo
 forma ferran cejasferran enojado
 sonido xavi_mientraslosdemassiguenconsusvidas.wav
 
-tiempo 200
-forma ferran ojosferran derecha
-forma ferran cejasferran enojado
-sonido xavi_consusparejas.wav
+//tiempo 200
+//forma ferran ojosferran derecha
+//forma ferran cejasferran enojado
+//sonido xavi_consusparejas.wav
 
 tiempo 200
 forma ferran ojosferran centro
@@ -914,6 +1206,9 @@ sonido xavi_aquiestoyyootravezconel.wav
 
 sonido xavi_putoregalo.wav
 
+muevecamara 0 100 400 300 400
+
+
 tiempo 500
 forma ferran ojosferran centro
 forma ferran cejasferran admirado
@@ -929,15 +1224,19 @@ forma ferran ojosferran centro
 forma ferran cejasferran admirado
 sonido xavi_melohedejado.wav
 
+
+transicionini sinmas
 tiempo 500
 forma ferran ojosferran izquierda
 forma ferran cejasferran normal
 sonido xavi_perosimegirosinmas.wav
-
 tiempo 100
 forma ferran ojosferran izquierda
 forma ferran cejasferran normal
 sonido xavi_parecereuntarado.wav
+transicionter sinmas
+camara 0 100 1024 780
+transicionfin sinmas
 
 tiempo 500
 forma ferran ojosferran abajo
@@ -949,46 +1248,13 @@ forma ferran ojosferran centro
 forma ferran cejasferran enojado
 sonido xavi_tengoquevolver2.wav
 
-tiempo 500
-forma ferran ojosferran izquierda
-forma ferran cejasferran admirado
-sonido xavi_mehedejadoalgo.wav
-
-tiempo 300
-forma ferran ojosferran derecha
-forma ferran cejasferran admirado
-sonido xavi_tengoquedarmediavuelta.wav
-
-tiempo 200
-forma ferran ojosferran izquierda
-forma ferran cejasferran admirado
-sonido xavi_yvolverabuscarlo.wav
-
-tiempo 500
-forma ferran ojosferran derecha
-forma ferran cejasferran admirado
-sonido xavi_estotalmentenatural.wav
-
-tiempo 100
-forma ferran ojosferran izquierda
-forma ferran cejasferran admirado
-sonido xavi_ynotengonadadeloqueavergonzarme.wav
-
-tiempo 500
-forma ferran ojosferran derecha
-forma ferran cejasferran admirado
-sonido xavi_asiquevoyparaalla.wav
-
-tiempo 500
-forma ferran ojosferran centro
-forma ferran cejasferran enojado
-sonido xavi_vale.wav
-flip ferran
+camararelativa
+muevecamara 4600 700 2560 1440 1000
 
 
 transicionter seguimientoferran
-coloca ferran 4200 450
-camara 4600 700 2560 1440
+coloca ferran 4500 450
+//camara 4600 700 2560 1440
 transicionbucle seguimientoferran
 tiempo 50
 forma ferran piernasferran 1
@@ -1014,35 +1280,201 @@ tiempo 50
 forma ferran piernasferran 10
 transicionfin seguimientoferran
 
-transicionini seguimientoferran2
+
+tiempo 500
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
+sonido xavi_mehedejadoalgo.wav
+
+
+forma kevin bocakevin o
+forma kevin cejaskevin admirado
+forma kevin ojoskevin izquierda
+forma friend bocafriend oh
+forma friend cejasfriend admirado
+forma friend ojosfriend izquierda
+forma person cejasperson admirado
+forma person ojosperson derecha
+forma person bocakevin m
+
+
+tiempo 300
+forma ferran ojosferran derecha
+forma ferran cejasferran admirado
+sonido xavi_tengoquedarmediavuelta.wav
+
+forma kevin cejaskevin oneup
+
+tiempo 200
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
+sonido xavi_yvolverabuscarlo.wav
+
 tiempo 500
 
-habla kevin jjaajjaajjaa guille_jajaja.wav
+flip ferran
+
+transicionini ferranandaunpoco
+
+tiempo 800
+
+forma kevin ojoskevin derecha
+
+tiempo 700
+
+forma friend ojosfriend derecha
+
+tiempo 1500
+transicionter ferranandaunpoco
+coloca ferran 3600 450
+transicionbucle ferranandaunpoco
+tiempo 50
+forma ferran piernasferran 1
+tiempo 250
+forma ferran piernasferran 2
+tiempo 250
+forma ferran piernasferran 3
+tiempo 200
+forma ferran piernasferran 4
+forma ferran brazoderechaferran normal
+tiempo 50
+forma ferran piernasferran 5
+tiempo 50
+forma ferran piernasferran 6
+tiempo 300
+forma ferran piernasferran 7
+tiempo 300
+forma ferran piernasferran 8
+tiempo 200
+forma ferran piernasferran 9
+//forma ferran brazoderechaferran camina
+tiempo 50
+forma ferran piernasferran 10
+transicionfin ferranandaunpoco
+
+tiempo 500
+
+flip ferran
+
+tiempo 500
+forma ferran ojosferran derecha
+forma ferran cejasferran admirado
+sonido xavi_estotalmentenatural.wav
+
+tiempo 100
+forma ferran ojosferran izquierda
+forma ferran cejasferran admirado
+sonido xavi_ynotengonadadeloqueavergonzarme.wav
+
+tiempo 500
+forma ferran ojosferran derecha
+forma ferran cejasferran admirado
+sonido xavi_asiquevoyparaalla.wav
+
+tiempo 500
+forma ferran ojosferran centro
+forma ferran cejasferran enojado
+sonido xavi_vale.wav
+flip ferran
+
+
+
+
+transicionini seguimientoferran2
+
+tiempo 2000
+
+camararelativa kevin
+muevecamara 0 100 512 390 1000
+
+tiempo 1000
+
+forma kevin cejaskevin admirado
+
+habla kevin aaeeaaeeaaeea guille_jajaja.wav
 
 habla kevin lloooohhaabbeeiissvviissttoooo guille_lohabeisvisto2.wav
 
+forma kevin bocakevin o
+forma kevin cejaskevin centro
+
+tiempo 200
+
 habla kevin mmeennuuddoooopprriinnggaaddooooddiioooossmmiioooo guille_menudopringadodiosmio.wav
 
+
+transicionini tio
+tiempo 200
+forma kevin cejaskevin normal
 habla kevin ttiioooo guille_tio.wav
-
+forma kevin cejaskevin oneup
 habla kevin rreeppaassaattooooddoooollooooqquueehhaasshheecchhooooeenneessttaavviiddaa guille_repasatodoloquehashechoenestavida.wav
-
+forma kevin cejaskevin normal
+forma friend bocafriend normal
 habla kevin aavveerrssiieennccuueennttrraasseennqquueemmoooommeennttooootteeeeqquuiivvooooccaasstteeddeeccaammiinnoooo guille_aversiencuentrasenquemomentoteequivocastedecamino.wav
+forma kevin bocakevin o
+transicionter tio
+camara 0 100 1024 780
+transicionfin tio
+
+
+tiempo 1000
+
+camararelativa person
+forma person bocakevin u
+muevecamara 0 100 512 390 1000
+
+tiempo 1000
 
 habla person uuff ferran_uf.wav
 
+
+tiempo 500
+
+forma person cejasperson normal
+
 habla person eessttaaccllaarrooooqquueeeessaappeerrssoooonnaattiieennee ferran_estaclaroqueesapersonatiene.wav
+
+forma person cejasperson enojado
 
 habla person ppaarrooooxxiissmmooooeessqquuiizzooooiiddeeeessppeeccuullaarr ferran_paroxismoesquizoideespecular.wav
 
+forma person bocakevin m
+
+tiempo 2000
+
+forma kevin pantaloneskevin normal
+forma kevin zapatoskevin normal
+forma kevin ojoskevin izquierda
+forma kevin bocakevin triste
+forma person ojosperson medio
+forma person cejasperson normal
+
+transicionini terapia
 habla person uunnaassccuuaannttaasssseessiioooonneessddeetteerraappiiaa ferran_unascuantassesionesdeterapia.wav
-
+forma person cejasperson oneup
 habla person ppooooddrriiaannaayyuuddaarrlleeaaaaffrroooonnttaarreellpprroooobblleemmaa ferran_podrianayudarleaafrontarelproblema.wav
+transicionter terapia
+coloca kevin 4800 580
+transicionfin terapia
 
+tiempo 500
+
+
+transicionini jamasjamas
+forma kevin cejaskevin oneup
+forma kevin bocakevin u
+forma person cejasperson normal
 habla person ppeerroooojjaammaassjjaammaass ferran_perojamasjamas.wav
-
+forma person cejasperson admirado
+forma kevin cejaskevin admirado
+forma kevin bocakevin o
+tiempo 500
 habla person ppooooddrraassuuppeerraarrllooooccoooommpplleettaammeennttee ferran_podrasuperarlocompletamente.wav
-
+transicionter jamasjamas
+camara -100 100 612 450
+transicionfin jamasjamas
+forma person cejasperson normal
 
 transicionter seguimientoferran2
 coloca ferran -500 450
@@ -1073,82 +1505,136 @@ forma ferran piernasferran 10
 transicionfin seguimientoferran2
 
 
+tiempo 500
 
+forma kevin cejaskevin normal
+forma kevin bocakevin triste
 
-
-
-
-
-
-
-
-
-
+tiempo 1000
 
 habla kevin ppeerrooooqquueeeesseessttoooo guille_peroqueesesto.wav
 
+forma person cejasperson admirado
+forma person bocakevin o
+forma person ojosperson derecha
+
+tiempo 500
+
+forma kevin cejaskevin oneup
+
 habla kevin uunnaaffoooottooooddeeuunnaattiiaaeennbbiiqquuiinnii guille_unafotodeunatiaenbiquini.wav
 
-habla kevin ppeerrooooqquueeccoooojjoooonneesseesseessttooooeehh guille_peroquecojonesesestoeh.wav
+forma kevin cejaskevin normal
+forma person cejasperson normal
+forma person bocakevin o
 
-habla kevin qquueettiieenneessqquueeddeecciirrnnoooossaahhoooorraa guille_quetienesquedecirnosahora.wav
+//habla kevin ppeerrooooqquueeccoooojjoooonneesseesseessttooooeehh guille_peroquecojonesesestoeh.wav
+
+//habla kevin qquueettiieenneessqquueeddeecciirrnnoooossaahhoooorraa guille_quetienesquedecirnosahora.wav
 
 habla kevin oooosseeaaqquueetteeddeeddiiccaassaammiirraarrffoooottoooossddeettiiaass guille_oseaquetededicasamirarfotosdetias.wav
 
+forma person cejasperson enojado
+forma person bocakevin triste
+forma kevin cejaskevin admirado
+
 habla kevin mmiieennttrraassnnoooossvvaassddeeiinntteelleeccttuuaall guille_mientrasnosvasdeintelectual.wav
+
+forma kevin cejaskevin normal
+
+quita person librointelectual
+
+camararelativa
 
 habla kevin qquueeeexxpplliiccaacciioooonnttiieenneessqquueeddaarrnnoooossaahhoooorraa guille_queexplicaciontienesquedarnosahora.wav
 
+forma kevin bocakevin normal
+forma person pantalonesperson normal
+forma person zapatosperson normal
+coloca person 4970 580
+
+tiempo 500
+
 habla kevin uunnccaassooooddeeppaarraaxxiisseessppeeccuullaarr guille_uncasodeparaxisespecular.wav
 
-habla kevin eehhlliissttiilllloooo guille_ehlistillo.wav
+//habla kevin eehhlliissttiilllloooo guille_ehlistillo.wav
+
+tiempo 500
 
 habla person ddeevvuueellvveemmeellaaffoooottooooddeemmiinnoooovviiaa ferran_devuelvemelafotodeminovia.wav
 
+tiempo 500
+
 habla kevin llaaffoooottooooddeettuunnoooovviiaa guille_lafotodetunovia.wav
+
+tiempo 500
+
+transicionini personseva
+
 
 habla kevin jjaa guille_ja.wav
 
+tiempo 500
+
 habla kevin eessttaassfflliippaannddoooottiioooo guille_estasflipandotio.wav
 
-habla kevin nniinngguunnaattiiaaeessttaarriiaaddiissppuueesstt guille_ningunatiaestariadispuest.wav
+tiempo 500
 
-habla kevin aaaagguuaannttaarrttuussffrriikkaaddaass guille_aaguantartusfrikadas.wav
+//habla kevin nniinngguunnaattiiaaeessttaarriiaaddiissppuueesstt guille_ningunatiaestariadispuest.wav
 
-habla kevin yymmeennoooossuunnaaccoooommooooeessaa guille_ymenosunacomoesa.wav
+//habla kevin aaaagguuaannttaarrttuussffrriikkaaddaass guille_aaguantartusfrikadas.wav
 
-habla kevin vveennggaaeessttaammoooosseessppeerraannddoooouunnaaeexxpplliiccaacciioooonnccoooonnvviinncceennttee guille_vengaestamosesperandounaexplicacionconvincente.wav
+//habla kevin yymmeennoooossuunnaaccoooommooooeessaa guille_ymenosunacomoesa.wav
 
+//habla kevin vveennggaaeessttaammoooosseessppeerraannddoooouunnaaeexxpplliiccaacciioooonnccoooonnvviinncceennttee guille_vengaestamosesperandounaexplicacionconvincente.wav
 
-
-
-
-
-
-
-
-
+forma kevin cejaskevin oneup
 habla kevin eehh guille_eh3.wav
+
+tiempo 200
+
+forma kevin cejaskevin admirado
 
 habla kevin nnooootteeeessccaaqquueeeessaahhoooorraa guille_noteescaqueesahora.wav
 
+tiempo 500
+
+forma kevin cejaskevin centro
+
 habla kevin vvaavveennggaavvuueellvveeqquueennooootteevvaammoooossaaddeecciirrnnaaddaammaass guille_vavengavuelvequenotevamosadecirnadamas.wav
 
+mueve kevin 4880 580 1000
 
+transicionter personseva
+coloca person 7000 650
 
+transicionfin personseva
 
+tiempo 500
 
+forma kevin brazoizquierda fuckyou
 
+tiempo 1000
 
+forma kevin brazoizquierda normal
+forma kevin cejaskevin oneup
 
-habla kevin lloooovveess guille_loves.wav
+tiempo 500
 
-habla kevin ssiieemmpprreeppaassaalloooommiissmmoooo guille_siemprepasalomismo.wav
+//habla kevin lloooovveess guille_loves.wav
+
+//habla kevin ssiieemmpprreeppaassaalloooommiissmmoooo guille_siemprepasalomismo.wav
 
 habla kevin eessttoooossttiioooossqquueevvaannddeegguuaayyss guille_estostiosquevandeguays.wav
 
+forma kevin ojoskevin derecha
+forma kevin brazoderecha palma
+forma kevin brazoizquierda palma
+forma kevin cejaskevin admirado
+
 habla kevin aallffiinnaallrreessuullttaaqquueeeessttaannttaannqquueemmaaddoooossccoooommoooolloooossddeemmaass guille_alfinalresultaqueestantanquemadoscomolosdemas.wav
 
+tiempo 1000
 
 
 
@@ -1161,18 +1647,35 @@ habla kevin aallffiinnaallrreessuullttaaqquueeeessttaannttaannqquueemmaaddooooss
 //////////////////////////////////////////////////////////////////////
 // TRANSICION DE NURIA
 
-tiempo 1000
 camara 1600 700 2560 1440
-coloca nuria 900 450
+coloca kevin 4252 650
+forma kevin brazoizquierda normal
+forma kevin brazoderecha normal
+forma kevin pantaloneskevin sentado
+forma kevin ojoskevin medio
+forma kevin cejaskevin normal
+forma kevin bocakevin m
+quita kevin zapatoskevin
+
+
+
+coloca nuria 600 450
 
 transicionini seguimientonuria
 
+tiempo 3000
+
+camararelativa nuria
+muevecamara 0 100 512 390 1000
+
 tiempo 1000
+
 forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_suspiro.wav
 
-tiempo 100
+tiempo 200
+
 forma nuria ojosnuria arriba
 forma nuria bocanuria normal
 sonido nuria_averquetostonmecuentahoymimaridodurantelacomida.wav
@@ -1187,20 +1690,30 @@ forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_solosirvepararecargarmelatargetadecreditoafinaldemes.wav
 
+transicionini semental
 tiempo 500
 forma nuria ojosnuria derecha
 forma nuria bocanuria a
 sonido nuria_encambio.wav
-
 tiempo 200
 forma nuria ojosnuria derecha
 forma nuria bocanuria normal
 sonido nuria_brunoesunautenticosemental.wav
-
 tiempo 200
+transicionter semental
+camara 0 100 1024 780
+transicionfin semental
+
+
+
+tiempo 500
+
 forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_suspiro2.wav
+
+muevecamara 0 400 400 300 500
+
 
 tiempo 100
 forma nuria ojosnuria izquierda
@@ -1208,14 +1721,19 @@ forma nuria bocanuria normal
 sonido nuria_comomehadejado.wav
 
 tiempo 500
+
+transicionini esunencanto
 forma nuria ojosnuria centro
 forma nuria bocanuria normal
 sonido nuria_esunencanto.wav
-
 tiempo 200
 forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_exceptocuantoabrelabocaparaablar.wav
+transicionter esunencanto
+camara 0 200 800 600
+transicionfin esunencanto
+
 
 tiempo 500
 forma nuria ojosnuria abajo
@@ -1223,50 +1741,74 @@ forma nuria bocanuria normal
 sonido nuria_follaycallabruno.wav
 
 tiempo 200
+
+
+transicionini follaycalla
 forma nuria ojosnuria derecha
 forma nuria bocanuria normal
 sonido nuria_follaycallabruno2.wav
-
 tiempo 200
 forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_follaycalla.wav
-
 forma nuria ojosnuria abajo
 forma nuria bocanuria normal
 forma nuria pestanyasnuria mitad
 forma nuria cejasnuria admirada
 sonido nuria_follaycalla2.wav
-
 forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_hazquemesientaliberada.wav
+tiempo 500
+transicionter follaycalla
+camara 0 70 340 230
+transicionfin follaycalla
 
-tiempo 300
+tiempo 1000
+
 forma nuria ojosnuria centro
 forma nuria bocanuria normal
 sonido nuria_suspiro3.wav
 
-tiempo 500
+forma nuria pestanyasnuria normal
 forma nuria ojosnuria arriba
+
+tiempo 1000
+
+forma nuria ojosnuria centro
+
+tiempo 1000
+
+transicionini liberada
+tiempo 500
 forma nuria bocanuria normal
 sonido nuria_aunqueelmomentoenquemesientomasliberadaescuandomequitoelanillo.wav
-
 tiempo 300
 forma nuria ojosnuria abajo
 forma nuria bocanuria a
 sonido nuria_esquemeloquito.wav
+transicionter liberada
+camara 0 200 800 600
+transicionfin liberada
 
 tiempo 100
 forma nuria ojosnuria arriba
 forma nuria bocanuria normal
 sonido nuria_ylaimagenmentaldeesesacodemierdagrasosaysebosasedesvanece.wav
 
-tiempo 200
+tiempo 1000
+
+
+
+
 forma nuria ojosnuria abajo
 forma nuria bocanuria a
-sonido nuria_meliberoy.wav
 forma nuria brazoizquierdanuria anillo
+sonido nuria_meliberoy.wav
+
+muevecamara 0 100 400 300 400
+
+
  
 tiempo 300
 forma nuria ojosnuria abajo
@@ -1279,27 +1821,29 @@ forma nuria bocanuria a
 sonido nuria_elanillo.wav
 
 tiempo 500
-forma nuria ojosnuria derecha
+forma nuria ojosnuria arriba
 forma nuria bocanuria normal
 forma nuria brazoizquierdanuria normal
 sonido nuria_mecachisvoyatenerquevolverabuscarlo.wav
 
-tiempo 300
+tiempo 500
+
+transicionini gilipollas
+tiempo 500
 forma nuria ojosnuria izquierda
 forma nuria bocanuria normal
 sonido nuria_perosimegiroderepentepareceregilipollas.wav
-
 tiempo 1000
+transicionter gilipollas
+camara 0 100 1024 780
+transicionfin gilipollas
 
-
-
-
-
-
+camararelativa
+muevecamara 4600 700 2560 1440 1000
 
 transicionter seguimientonuria
-coloca nuria 4200 450
-camara 4600 700 2560 1440
+coloca nuria 4500 450
+//camara 4600 700 2560 1440
 transicionbucle seguimientonuria
 tiempo 200
 forma nuria perronuria 1
@@ -1333,12 +1877,19 @@ forma nuria perronuria 2
 forma nuria piernasnuria 10
 transicionfin seguimientonuria
 
-transicionini seguimientonuria2
-tiempo 12000
 
+
+tiempo 1000
+
+
+
+
+transicionini seguimientonuria2
+tiempo 2000
+camararelativa kevin
+muevecamara -200 100 1024 780 1000
 transicionter seguimientonuria2
-coloca nuria 7200 450
-camara 4600 700 2560 1440
+coloca nuria 5200 450
 transicionbucle seguimientonuria2
 tiempo 200
 forma nuria perronuria 1
@@ -1373,54 +1924,104 @@ forma nuria piernasnuria 10
 transicionfin seguimientonuria2
 
 
+tiempo 3000
 
 
+forma kevin cejaskevin centro
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+habla kevin uuff ferran_uf.wav
 
 forma kevin ojoskevin medio
 habla kevin qquueeaabbuurrrriiddoooo guille_queaburrido.wav
 
+forma friend cejasfriend admirado
+forma friend ojosfriend izquierda
+forma kevin bocakevin triste
+
+flip nuria
+profundidadpersonaje nuria -1000
+coloca nuria 4700 640
+escala nuria 40 40
+
+transicionini nuriaseva
+tiempo 3000
+forma kevin cejaskevin admirado
 habla kevin eessqquueehhaacceerraattooooqquueennoooonnoooossmmeetteemmoooossccoooonnnnaaddiiee guille_esquehaceratoquenonosmetemosconnadie.wav
-
+tiempo 1000
+forma friend cejasfriend normal
+forma friend ojosfriend medio
+tiempo 2000
+forma nuria ojosnuria derecha
+forma kevin cejaskevin normal
 forma kevin ojoskevin derecha
+tiempo 2000
+forma nuria ojosnuria izquierda
+forma kevin brazoderecha indica
 habla kevin yyttuuqquuee guille_ytuque.wav
-
+forma friend cejasfriend oneup
+forma friend bocafriend oh
+forma friend ojosfriend izquierda
+tiempo 2000
+forma friend bocafriend f
+forma kevin cejaskevin centro
+forma kevin brazoderecha palma
+forma kevin brazoizquierda palma
 habla kevin ppeerrooooddiiaallggoooonnoooo guille_perodialgono.wav
+tiempo 500
+forma friend bocafriend uh
+forma friend cejasfriend admirado
+forma friend brazoderecha palma
+forma friend brazoizquierda palma
+tiempo 1000
+forma kevin brazoderecha normal
+forma kevin brazoizquierda normal
+tiempo 1000
+transicionter nuriaseva
+coloca nuria 3300 550
+transicionbucle nuriaseva
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria 1
+tiempo 200
+forma nuria perronuria 2
+//forma nuria piernasnuria 2
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria 3
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria 4
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria 5
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria 6
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria 7
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria 8
+tiempo 200
+forma nuria perronuria 1
+forma nuria piernasnuria 9
+tiempo 200
+forma nuria perronuria 2
+forma nuria piernasnuria 10
+transicionfin nuriaseva
 
 
+forma friend ojosfriend medio
+forma friend bocafriend normal
+forma friend brazoderecha normal
+forma friend brazoizquierda normal
 
+tiempo 1000
 
+mueveluz 0 2000
 
-
+//--->
 
 
 
