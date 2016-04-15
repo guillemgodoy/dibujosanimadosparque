@@ -814,6 +814,8 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,vector<inst
       int yfin=mystoi(vs[2]);
       anchofin=mystoi(vs[3]);
       altofin=mystoi(vs[4]);
+      if (altofin==0 and anchoini!=0)
+	altofin=anchofin*altoini/anchoini;
       numframes=mystoi(vs[5]);
       vc.push_back(instruccioncamara(int(ve.size()),int(ve.size())+max(0,numframes-1),xfin,yfin));
     } else {
@@ -893,15 +895,23 @@ void transformaaestados(vector<string> &vs,vector<estadogeneral> &ve,vector<inst
     //e.xcamara=mystoi(vs[1]);
     //e.ycamara=mystoi(vs[2]);
     vc.push_back(instruccioncamara(int(ve.size()),int(ve.size()),mystoi(vs[1]),mystoi(vs[2])));
+    int anchocamaraanterior=e.anchocamara;
+    int altocamaraanterior=e.altocamara;
     e.anchocamara=mystoi(vs[3]);
     e.altocamara=mystoi(vs[4]);
+    if (e.altocamara==0 and anchocamaraanterior!=0)
+      e.altocamara=e.anchocamara*altocamaraanterior/anchocamaraanterior;
   } else if (vs[0]=="posicioncamara") {
     //e.xcamara=mystoi(vs[1]);
     //e.ycamara=mystoi(vs[2]);
     vc.push_back(instruccioncamara(int(ve.size()),int(ve.size()),mystoi(vs[1]),mystoi(vs[2])));
   } else if (vs[0]=="tamanyocamara") {
+    int anchocamaraanterior=e.anchocamara;
+    int altocamaraanterior=e.altocamara;
     e.anchocamara=mystoi(vs[1]);
     e.altocamara=mystoi(vs[2]);
+    if (e.altocamara==0 and anchocamaraanterior!=0)
+      e.altocamara=e.anchocamara*altocamaraanterior/anchocamaraanterior;
   } else if (vs[0]=="camararelativa") {
     /*
     if (int(vs.size())==2) {
@@ -1007,6 +1017,8 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	      //e.ycamara=mystoi(vs[2]);
 	      e.anchocamara=mystoi(vs[3]);
 	      e.altocamara=mystoi(vs[4]);
+	      if (e.altocamara==0 and anchocamaraini!=0)
+		e.altocamara=e.anchocamara*altocamaraini/anchocamaraini;
 	      //ve[frame].xcamara=xcamaraini*factor0+e.xcamara*factor1;
 	      //ve[frame].ycamara=ycamaraini*factor0+e.ycamara*factor1;
 	      ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
@@ -1027,6 +1039,8 @@ void transformaaestados(vector<vector<string> > &vvs,vector<estadogeneral> &ve)
 	      int altocamaraini=ve[frameinitransicion].altocamara;
 	      e.anchocamara=mystoi(vs[1]);
 	      e.altocamara=mystoi(vs[2]);
+	      if (e.altocamara==0 and anchocamaraini!=0)
+		e.altocamara=e.anchocamara*altocamaraini/anchocamaraini;
 	      ve[frame].anchocamara=anchocamaraini*factor0+e.anchocamara*factor1;
 	      ve[frame].altocamara=altocamaraini*factor0+e.altocamara*factor1;
 	    } else if (vs[0]=="coloca") {

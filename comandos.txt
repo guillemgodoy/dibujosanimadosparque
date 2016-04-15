@@ -1,6 +1,6 @@
 //ventana 12 4320
 ventana 16384 3137
-camara 640 360 16384 3137
+//camara 640 360 16384 3137
 //camara 640 360 1280 720
 //ventana 640 360
 fps 30
@@ -301,7 +301,8 @@ escala ferran 100 100
 //camara 3840 2160 7680 4320
 
 
-camara 4000 700 2560 1440
+//camara 4000 700 2300 1440
+camara 4200 670 2100 1320
 
 luz 0
 //tiempo 10000
@@ -309,7 +310,7 @@ mueveluz 255 2000
 
 tiempo 500
 
-muevecamara 4252 750 760 432 1500
+muevecamara 4252 750 760 0 1500
 
 tiempo 1000
 
@@ -330,15 +331,12 @@ forma kevin cejaskevin oneup
 
 
 tiempo 1000
-coloca manu 1000 500
+coloca manu 500 500
 
-
-//camara 1600 700 2560 1440
-//coloca manu 900 450
 
 transicionini seguimientomanu
 
-muevecamara 1600 700 2560 1440 2000
+muevecamara 1600 670 2100 0 2000
 forma kevin ojoskevin izquierda
 forma kevin bocakevin normal
 forma kevin cejaskevin normal
@@ -346,7 +344,7 @@ forma kevin cejaskevin normal
 tiempo 2000
 camararelativa manu
 
-muevecamara 0 0 512 290 1000
+muevecamara 0 0 512 0 1000
 
 
 tiempo 1000
@@ -366,16 +364,11 @@ forma manu ojosmanu abajo
 forma manu cejasmanu admirado
 sonido manu_laprimeraenmeses.wav
 
-muevecamara 0 400 400 230 1000
+muevecamara 0 400 400 0 1000
 
-//transicionini laprimeraenmeses
-tiempo 500
 forma manu ojosmanu abajo
 forma manu cejasmanu enojado
 sonido manu_esquellevosietediasconlosmismoscalzoncillostu.wav
-//transicionter laprimeraenmeses
-//posicioncamara 0 400 
-//transicionfin laprimeraenmeses
 
 
 transicionini andarsolos
@@ -384,7 +377,7 @@ forma manu ojosmanu izquierda
 forma manu cejasmanu oneup
 sonido manu_yyaparecequepodrianandarsolos.wav
 transicionter andarsolos
-camara 0 200 900 600 
+camara 0 200 1000 0
 transicionfin andarsolos
 
 
@@ -410,7 +403,7 @@ forma manu ojosmanu abajo
 forma manu cejasmanu oneup
 sonido manu_yaprietaselbotondela.wav
 
-muevecamara 0 0 512 290 500
+muevecamara 0 0 512 0 500
 
 forma manu ojosmanu arriba
 forma manu cejasmanu admirado
@@ -430,16 +423,12 @@ forma manu ojosmanu derecha
 forma manu cejasmanu oneup
 sonido manu_buenosienverdaddaigualsiestoyamediacalledecasa.wav
 
-//tiempo 1000
 transicionter cercadecasa
-camara 4600 700 2560 1440
-//camara 4000 700 2560 1440
-//camara 0 500 2560 1440
+camara 4600 670 2100 0
 transicionfin cercadecasa
 
 transicionter seguimientomanu
 coloca manu 4500 450
-//camara 4600 700 2560 1440
 transicionbucle seguimientomanu
 tiempo 50
 forma manu piernasmanu 1
@@ -491,7 +480,7 @@ forma friend ojosfriend derecha
 forma person ojosperson derecha
 tiempo 1000
 
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 //forma kevin brazoderecha indica
 
 tiempo 500
@@ -521,7 +510,7 @@ forma kevin brazoderecha normal
 forma kevin ojoskevin medio
 forma friend ojosfriend medio
 
-muevecamara 0 100 1024 780 1000
+muevecamara 0 100 1024 0 1000
 
 tiempo 200
 forma kevin brazoizquierda indica
@@ -614,15 +603,16 @@ tiempo 500
 habla person mmiimmiimmooooossddeessseeeffooccaaddoosssss ferran_vivimosdesenfocados.wav
 
 forma kevin ojoskevin izquierda
-forma friend bocafriend oh
 forma kevin bocakevin o
-forma person bocakevin t
 forma kevin cejaskevin admirado
+forma friend bocafriend oh
+forma friend cejasfriend admirado
+forma person bocakevin t
 
 tiempo 1000
 
 camararelativa person
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 
 habla person llllaassoocciieeddaaddddddnnnnnnnoossddeessoorriieennrraaoonuunneexxcceessooddeinnffoorrmmaacciiooooooooommm ferran_lasociedadnosdesorientaconunexcesodeinformacion.wav
 
@@ -634,7 +624,7 @@ habla person yyffiinnaallmmeennrreeeeeeepperrddeemoooeeelsseennrriiddooddeenuuee
 // Hemos repasado hasta aqui.
 
 camararelativa kevin
-camara -200 100 1024 780
+camara -200 100 1024 0
 
 tiempo 500
 
@@ -652,11 +642,12 @@ habla person ppppeerrsseeggiimmooosseesssssppeejjiissmmoossddiissffrraazzaaddoos
 forma kevin brazoderecha normal
 forma kevin brazoizquierda normal
 forma kevin ojoskevin izquierda
-forma friend bocafriend mh
 forma kevin bocakevin m
+forma friend bocafriend mh
+forma friend cejasfriend normal
 
 camararelativa person
-camara 0 100 512 390
+camara 0 100 512 0
 
 habla person eeeeeesseessffuummaanneennsseeggiiddaaaaaa ferran_queseesfumanenseguida.wav
 
@@ -680,7 +671,7 @@ tiempo 2000
 //////////////////////////////////////////////////////////////////////
 // TRANSICION DE MONICA
 
-camara 1600 700 2560 1440
+camara 1600 670 2100 0
 coloca monica 500 450
 
 
@@ -691,9 +682,9 @@ forma monica cejasmonica normal
 tiempo 1000
 
 camararelativa monica
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 
-tiempo 1000
+tiempo 2000
 
 forma monica ojosmonica arriba
 forma monica cejasmonica admirada
@@ -711,20 +702,15 @@ forma monica cejasmonica enojada
 forma monica bocamonica normal
 sonido monica_estanochenohedormidonadaparapoderacabartuputoinforme.wav
 
-//muevecamara 0 100 1024 780 500
-
 transicionini nuevajefa
-
 tiempo 500
-
 forma monica ojosmonica izquierda
 forma monica cejasmonica normal
 forma monica bocamonica normal
 sonido monica_desdequellegoestanuevajefa.wav
 transicionter nuevajefa
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin nuevajefa
-
 tiempo 200
 forma monica ojosmonica centro
 forma monica cejasmonica enojada
@@ -739,17 +725,12 @@ sonido monica_yseguroquelamuycabronaluegodicequeelinformenoeraurgente.wav
 
 tiempo 200
 
-muevecamara 0 400 400 300 500
+muevecamara 0 400 400 0 500
 
-//transicionini lounicobueno
-//tiempo 500
 forma monica ojosmonica arriba
 forma monica cejasmonica normal
 forma monica bocamonica a
 sonido monica_lounicobuenodetodoestoesquehetenidounabuenaexcusaparanotenerquefollarconminovio.wav
-//transicionter lounicobueno
-//camara 0 300 512 390
-//transicionfin lounicobueno
 
 transicionini yademas
 tiempo 200
@@ -758,7 +739,7 @@ tiempo 200
 sonido monica_elinformemehaquedadomuybien.wav
 tiempo 500
 transicionter yademas
-camara 0 200 800 600
+camara 0 200 800 0
 transicionfin yademas
 
 
@@ -772,7 +753,7 @@ tiempo 500
 
 sonido monica_aver.wav
 
-muevecamara 0 100 400 300 400
+muevecamara 0 100 400 0 400
 
 sonido monica_eim.wav
 
@@ -791,11 +772,11 @@ sonido monica_avolverjoder.wav
 transicionini pirada
 sonido monica_perosimegiroasiaboteprontoparecereunapirada.wav
 transicionter pirada
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin pirada
 
 camararelativa
-muevecamara 4600 700 2560 1440 1000
+muevecamara 4600 670 2100 0 1000
 
 transicionter seguimientomonica
 coloca monica 4500 450
@@ -847,8 +828,7 @@ tiempo 1000
 
 camararelativa kevin
 
-muevecamara 0 100 512 390 1000
-//forma kevin brazoderecha indica
+muevecamara 0 100 512 0 1000
 
 tiempo 500
 
@@ -866,7 +846,7 @@ habla kevin uuumoomeennooooooooooo guille_unmomento2.wav
 habla kevin mmmaiaaiiaallggoorraarroonnooooooooooo guille_ahihayalgorarono.wav
 
 
-muevecamara 0 100 1024 780 1000
+muevecamara 0 100 1024 0 1000
 
 
 forma kevin ojoskevin medio
@@ -994,7 +974,7 @@ habla person mmuucchhaassppeerrssoooonnaassssiieenntteennmmiieeddooooaallrreecch
 
 camararelativa person
 forma person ojosperson derecha
-muevecamara 0 100 512 390 700
+muevecamara 0 100 512 0 700
 
 
 habla person yynneecceessiittaannaapprroooobbaacciioooonnppoooorrppaarrtteeddeelloooossddeemmaass ferran_ynecesitanaprobacionporpartedelosdemas.wav
@@ -1010,7 +990,7 @@ habla person qquueeeessaasseemmoooocciioooonneessnnaacceennddeellaaffaallttaadde
 
 
 camararelativa kevin
-camara -200 100 1024 780
+camara -200 100 1024 0
 
 habla person ppeerrooooeessttooooeennrreeaalliiddaaddnnooooeessttaaeemmppiirriiccaammeenntteeccoooommpprroooobbaaddoooo ferran_peroestoenrealidadnoestaempiricamentecomprobado.wav
 
@@ -1031,7 +1011,7 @@ habla person aauunnaassii ferran_aunasi.wav
 habla person sseegguurrooooqquueettaammbbiieennccoooonnttrriibbuuyyeenn ferran_seguroquetambiencontribuyen.wav
 
 camararelativa person
-camara 0 100 512 390
+camara 0 100 512 0
 
 
 
@@ -1058,7 +1038,7 @@ forma person bocakevin m
 tiempo 1000
 
 camararelativa kevin
-camara -200 100 1024 780
+camara -200 100 1024 0
 
 forma kevin ojoskevin izquierda
 forma friend bocafriend triste
@@ -1093,7 +1073,7 @@ tiempo 2000
 // TRANSICION DE FERRAN
 
 
-camara 1600 700 2560 1440
+camara 1400 670 2100 0
 coloca ferran 400 450
 forma kevin bocakevin normal
 forma person bocakevin normal
@@ -1115,7 +1095,7 @@ transicionini seguimientoferran
 tiempo 2000
 
 camararelativa ferran
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 
 
 tiempo 1000
@@ -1157,7 +1137,7 @@ forma ferran ojosferran arriba
 forma ferran cejasferran admirado
 sonido xavi_elmastontodetodos.wav
 transicionter paramimadre
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin paramimadre
 
 tiempo 500
@@ -1183,17 +1163,27 @@ sonido xavi_mientraslosdemassiguenconsusvidas.wav
 //tiempo 200
 //forma ferran ojosferran derecha
 //forma ferran cejasferran enojado
-//sonido xavi_consusparejas.wav
+//
 
+muevecamara 0 450 400 0 500
+
+sonido xavi_consusparejas.wav
+
+//--->
+
+transicionini playa
 tiempo 200
 forma ferran ojosferran centro
 forma ferran cejasferran enojado
 sonido xavi_consusfamilias.wav
-
 tiempo 200
 forma ferran ojosferran arriba
 forma ferran cejasferran oneup
 sonido xavi_debarbacoaodeplaya.wav
+transicionter playa
+camara 0 200 800 0
+transicionfin playa
+
 
 tiempo 500
 forma ferran ojosferran abajo
@@ -1206,7 +1196,7 @@ sonido xavi_aquiestoyyootravezconel.wav
 
 sonido xavi_putoregalo.wav
 
-muevecamara 0 100 400 300 400
+muevecamara 0 100 400 0 400
 
 
 tiempo 500
@@ -1235,7 +1225,7 @@ forma ferran ojosferran izquierda
 forma ferran cejasferran normal
 sonido xavi_parecereuntarado.wav
 transicionter sinmas
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin sinmas
 
 tiempo 500
@@ -1249,12 +1239,11 @@ forma ferran cejasferran enojado
 sonido xavi_tengoquevolver2.wav
 
 camararelativa
-muevecamara 4600 700 2560 1440 1000
+muevecamara 4600 670 2100 0 1000
 
 
 transicionter seguimientoferran
 coloca ferran 4500 450
-//camara 4600 700 2560 1440
 transicionbucle seguimientoferran
 tiempo 50
 forma ferran piernasferran 1
@@ -1326,7 +1315,7 @@ forma friend ojosfriend derecha
 
 tiempo 1500
 transicionter ferranandaunpoco
-coloca ferran 3600 450
+coloca ferran 3700 450
 transicionbucle ferranandaunpoco
 tiempo 50
 forma ferran piernasferran 1
@@ -1385,7 +1374,7 @@ transicionini seguimientoferran2
 tiempo 2000
 
 camararelativa kevin
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 
 tiempo 1000
 
@@ -1414,7 +1403,7 @@ forma friend bocafriend normal
 habla kevin aavveerrssiieennccuueennttrraasseennqquueemmoooommeennttooootteeeeqquuiivvooooccaasstteeddeeccaammiinnoooo guille_aversiencuentrasenquemomentoteequivocastedecamino.wav
 forma kevin bocakevin o
 transicionter tio
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin tio
 
 
@@ -1422,7 +1411,7 @@ tiempo 1000
 
 camararelativa person
 forma person bocakevin u
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 
 tiempo 1000
 
@@ -1472,13 +1461,12 @@ forma kevin bocakevin o
 tiempo 500
 habla person ppooooddrraassuuppeerraarrllooooccoooommpplleettaammeennttee ferran_podrasuperarlocompletamente.wav
 transicionter jamasjamas
-camara -100 100 612 450
+camara -100 100 612 0
 transicionfin jamasjamas
 forma person cejasperson normal
 
 transicionter seguimientoferran2
 coloca ferran -500 450
-//camara 4600 700 2560 1440
 transicionbucle seguimientoferran2
 tiempo 50
 forma ferran piernasferran 1
@@ -1647,7 +1635,7 @@ tiempo 1000
 //////////////////////////////////////////////////////////////////////
 // TRANSICION DE NURIA
 
-camara 1600 700 2560 1440
+camara 1600 670 2100 0
 coloca kevin 4252 650
 forma kevin brazoizquierda normal
 forma kevin brazoderecha normal
@@ -1666,7 +1654,7 @@ transicionini seguimientonuria
 tiempo 3000
 
 camararelativa nuria
-muevecamara 0 100 512 390 1000
+muevecamara 0 100 512 0 1000
 
 tiempo 1000
 
@@ -1701,7 +1689,7 @@ forma nuria bocanuria normal
 sonido nuria_brunoesunautenticosemental.wav
 tiempo 200
 transicionter semental
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin semental
 
 
@@ -1712,7 +1700,7 @@ forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_suspiro2.wav
 
-muevecamara 0 400 400 300 500
+muevecamara 0 400 400 0 500
 
 
 tiempo 100
@@ -1731,7 +1719,7 @@ forma nuria ojosnuria arriba
 forma nuria bocanuria a
 sonido nuria_exceptocuantoabrelabocaparaablar.wav
 transicionter esunencanto
-camara 0 200 800 600
+camara 0 200 800 0
 transicionfin esunencanto
 
 
@@ -1761,7 +1749,7 @@ forma nuria bocanuria a
 sonido nuria_hazquemesientaliberada.wav
 tiempo 500
 transicionter follaycalla
-camara 0 70 340 230
+camara 0 70 340 0
 transicionfin follaycalla
 
 tiempo 1000
@@ -1788,7 +1776,7 @@ forma nuria ojosnuria abajo
 forma nuria bocanuria a
 sonido nuria_esquemeloquito.wav
 transicionter liberada
-camara 0 200 800 600
+camara 0 200 800 0
 transicionfin liberada
 
 tiempo 100
@@ -1806,7 +1794,7 @@ forma nuria bocanuria a
 forma nuria brazoizquierdanuria anillo
 sonido nuria_meliberoy.wav
 
-muevecamara 0 100 400 300 400
+muevecamara 0 100 400 0 400
 
 
  
@@ -1835,15 +1823,14 @@ forma nuria bocanuria normal
 sonido nuria_perosimegiroderepentepareceregilipollas.wav
 tiempo 1000
 transicionter gilipollas
-camara 0 100 1024 780
+camara 0 100 1024 0
 transicionfin gilipollas
 
 camararelativa
-muevecamara 4600 700 2560 1440 1000
+muevecamara 4600 670 2100 0 1000
 
 transicionter seguimientonuria
 coloca nuria 4500 450
-//camara 4600 700 2560 1440
 transicionbucle seguimientonuria
 tiempo 200
 forma nuria perronuria 1
@@ -1887,7 +1874,7 @@ tiempo 1000
 transicionini seguimientonuria2
 tiempo 2000
 camararelativa kevin
-muevecamara -200 100 1024 780 1000
+muevecamara -200 100 1024 0 1000
 transicionter seguimientonuria2
 coloca nuria 5200 450
 transicionbucle seguimientonuria2
@@ -2022,43 +2009,3 @@ tiempo 1000
 mueveluz 0 2000
 
 //--->
-
-
-
-obviar
-coloca guille 150 30
-centra nuria 200 125
-//camara 30 30 300 300
-coloca nuria 30 30
-//escala nuria 50 50
-forma nuria cabeza frontal
-forma guille cabeza frontal
-profundidad guille cabeza 2
-forma nuria boca m
-profundidad nuria cabeza -1
-forma nuria pelo negro
-forma nuria ojo normal
-forma nuria pupila azulizquierda
-profundidad nuria pupila 1
-
-//camara 200 100 400 200
-
-//mueveconcamara nuria 200 100 1000
-//obviar
-//instantaneo
-mueve nuria 200 100 1000
-//fininstantaneo
-//finobviar
-
-muevecamara 200 100 200 200 1000
-
-//elimina guille
-//quita nuria pelo
-//instantaneo
-forma nuria pupila azulderecha
-habla nuria aoaoem esquenosepuedenpedirperasalholmo.wav
-tiempo 500
-//fininstantaneo
-habla nuria astalaproximam 2000
-
-finobviar
