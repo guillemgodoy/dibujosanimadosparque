@@ -1531,6 +1531,9 @@ habla kevin mmiieennttrraassnnoooossvvaassddeeiinntteelleeccttuuaall guille_mien
 forma kevin cejaskevin normal
 
 quita person librointelectual
+forma person brazoderechaintelectual abajo
+forma person brazoizquierdaintelectual abajo
+
 
 camararelativa
 
@@ -1549,6 +1552,8 @@ habla kevin uunnccaassooooddeeppaarraaxxiisseessppeeccuullaarr guille_uncasodepa
 
 tiempo 500
 
+forma person brazoderechaintelectual palma
+
 habla person ddeevvuueellvveemmeellaaffoooottooooddeemmiinnoooovviiaa ferran_devuelvemelafotodeminovia.wav
 
 tiempo 500
@@ -1559,6 +1564,7 @@ tiempo 500
 
 transicionini personseva
 
+forma person brazoderechaintelectual abajo
 
 habla kevin jjaa guille_ja.wav
 
